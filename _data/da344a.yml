@@ -1,0 +1,34 @@
+# General information
+name: Webbapplikationer för mobila enheter
+code: da344a
+credits: 7.5
+
+# Sidebar
+#
+### Item without submenu ex 1. (will direct to plan.html in /courses/da344a/)
+#   - label: Planering
+#     file: plan
+# 
+### Item without submenu ex 2. (will direct to index.html in /courses/da344a/material)
+#   - label: Material
+#     folder: material
+#
+### Item with submenu (will make a menu of mod1.html, mod2.html, ...modN.html - in /courses/da344a/modules)
+#   - label: Moduler
+#     submenu: true
+#     prefix: mod
+#     folder: modules
+#     items:
+#         - name: 1. Användbarhet
+#         - name: 2. HTML och CSS
+#         # etc.
+#
+
+menu:
+    - label: Laborationer
+      submenu: true
+      prefix: ex
+      folder: exercises
+      items:
+          - name: Laboration 1
+          # etc.
