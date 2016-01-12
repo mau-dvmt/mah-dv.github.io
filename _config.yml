@@ -13,6 +13,9 @@ analytics: xxx
 # ex. GitHub pages URL
 url: http://mah-dv.github.io/
 
+# Disqus URL
+# disqus: 
+
 # Already set as defaults in jekyll > 2.4.x
 # highlighter: pygments
 # markdown: kramdown
