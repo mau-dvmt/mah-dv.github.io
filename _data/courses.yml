@@ -1,10 +1,10 @@
 # courses
-- name: Webbapplikationer för mobila enheter
-  code: da344a
+- name: Webbapplikationer för mobila enheter/Data- och informationsvetenskap: Flerplattformsapplikationer med webbtekniker
+  code: da344a/da355a
   credits: 7.5
   info: Dagtid 50%
 
-- name: "Data- och informationsvetenskap: Flerplattformsapplikationer med webbtekniker"
-  code: da355a
-  credits: 7.5
-  info: Dagtid 50%
+#- name: "Data- och informationsvetenskap: Flerplattformsapplikationer med webbtekniker"
+#  code: da355a
+#  credits: 7.5
+# info: Dagtid 50%
