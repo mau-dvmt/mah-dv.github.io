@@ -106,7 +106,7 @@ code {
 }
 
 .highlight pre code {
-    display: block; 
+    display: block;
     position: relative;
     padding: 1.7em 1em;
     margin: 0;
@@ -215,7 +215,7 @@ table thead th {
 }
 
 table tbody td {
-   padding: 8px; 
+   padding: 8px;
    vertical-align: top;
    border-top: 1px solid #dddddd;
 }
@@ -370,7 +370,7 @@ table tbody tr:nth-child(odd) {
         a:hover {
             color: $accent-color;
         }
-    
+
         small {
             display: block;
             font-size: 0.85em;
@@ -450,7 +450,7 @@ table tbody tr:nth-child(odd) {
  * Info-boxes
  **/
 .content {
-    
+
     p.info {
         padding: 12px 24px 12px 30px;
         margin: 2em 0 2em 0.8em;
