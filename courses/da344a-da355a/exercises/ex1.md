@@ -97,7 +97,7 @@ En väldigt enkel webbsida är förberedd för er att använda. Källkoden för 
 #### 3.2.1. Andra metoder för att komma åt hemkatalogen
 
 *   Hemkatalogen går även att komma åt via krypterad FTP. FTP är ett protokoll specialdesignat för att skicka och ta emot filer (därav namnet, File Transfer Protocol). Adressen är `ftpes://webshare.mah.se` och ditt vanliga datorid och lösenord används. [FileZilla](http://filezilla-project.org/) (finns i datorsalarna) och [Cyberduck](http://cyberduck.ch/) är två bra program som kan användas.
-*   Det finns även [ett webbgränssnitt](access.mah.se).
+*   Det finns även [ett webbgränssnitt](http://access.mah.se).
 
 ## 4. Mer innehåll, mer HTML
 
