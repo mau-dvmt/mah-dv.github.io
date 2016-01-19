@@ -30,6 +30,14 @@ menu:
       prefix: ex
       folder: exercises
       items:
-          - name: Laboration 1 - Intro HTML
-          - name: Laboration 2 - Intro CSS
-          # etc.
+          - name: Laboration 1a - Intro HTML
+          - name: Laboration 1b - Formulär/tabeller
+          - name: Laboration 1c - Intro CSS
+          - name: Laboration 2 - Layout med CSS
+    - label: Föreläsningar
+      submenu: true
+      prefix: le
+      folder: lectures
+      items:
+          - name: 1. Kursintroduktion
+          #- name: 2. Intro - HTML & CSS

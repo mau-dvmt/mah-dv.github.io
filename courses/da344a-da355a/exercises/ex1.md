@@ -1,9 +1,9 @@
 ---
-title: Laboration 1
+title: Laboration 1a
 code: "da344a-da355a"
 ---
 
-# Laboration 1: En personlig webbsida
+# Laboration 1a: En personlig webbsida
 
 ## 1. Inledning
 

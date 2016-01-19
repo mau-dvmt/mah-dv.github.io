@@ -1,9 +1,9 @@
 ---
-title: Laboration 2
+title: Laboration 1b
 code: "da344a-da355a"
 ---
 
-# Laboration 2: Tabeller &amp; formulär
+# Laboration 1b: Tabeller &amp; formulär
 
 ## 1. Syfte
 
@@ -28,7 +28,7 @@ I samma HTML-dokument ska det även finnas kort information om hyresvärdens led
 
 Börja med att skapa ett nytt HTML-dokument (HTML5 standard), för att sedan producera tabellen som över lediga lägenheter. Nedan ser du vilka kolumner som ska finnas, tillsammans med exempeldata.
 
-![Tabellen ska ha följande rubriker: Objektnummer, Antal rum, Våning, Yta, Hyra och Adress](/exercises/2/2a-01.png)
+![Tabellen ska ha följande rubriker: Objektnummer, Antal rum, Våning, Yta, Hyra och Adress](2/2a-01.png)
 
 Tabellen ska byggas med taggar som beskriver innehållet så bra som möjligt. Förutom de vanligaste tabellelementen `table`, `tr` (tabellrad) och `td` (tabellcell) så ska du använda:
 
@@ -71,11 +71,11 @@ För data ska kunna skickas krävs en benämning på dessa data (något du kansk
 
 När du kommit hit kan formuläret se ut såhär:
 
-![2 enradiga textrutorn med "Förnamn" resp. "Efternamn". En knapp med texten "Ansök"](/exercises/2/2a-02.png)
+![2 enradiga textrutorn med "Förnamn" resp. "Efternamn". En knapp med texten "Ansök"](2/2a-02.png)
 
 När detta formulär skickas (man klickar på “Ansök”) bör det se ut ungefär såhär:
 
-![first_name = IFYLLT FÖRNAMN, last_name = IFYLLT_EFTERNAMN](/exercises/2/2a-03.png)
+![first_name = IFYLLT FÖRNAMN, last_name = IFYLLT_EFTERNAMN](2/2a-03.png)
 
 Exakta namn är inte jätteviktiga, bara de är beskrivande. Om det inte syns någon grön ruta alls så skickas inga data via `POST`. Om inga namn/värden syns så är det problem med `name`-attributen.
 
@@ -85,8 +85,10 @@ Nästa steg är att förbättra hur benämningarna på textrutorna är skrivna (
 
 `label` ger ingen visuell skillnad, med ökar användbarheten genom att göra benämningen klickbar, samt ökar tillgängligheten genom att göra benämningens syfte explicit. Läs mer om dessa fördelar på [Sitepoint](http://reference.sitepoint.com/html/label). Här är ett exempel:
 
-<pre><label for="pris">Pris</label>
-<input type="text" name="pris" id="pris"></pre>
+{% highlight html linenos %}
+<label for="pris">Pris</label>
+<input type="text" name="pris" id="pris">
+{% endhighlight %}
 
 *   Textrutan (`input`) har attributet `id`, som unikt identifierar den i dokumentet.
 *   Benämningen (`label`) har attributet `for`, som anger vilket element den ska kopplas ihop med.
@@ -108,4 +110,4 @@ Du har nu provat på de grundläggande koncepten kring formulärskapande. Det fi
 
 Som alltid, se till att dokumentet [validerar](http://validator.w3.org/). Be kursare och labbassistenter om feedback för en djupar bild av vad som är bra och dåligt.
 
-När du är nöjd med formulär- och tabellskapandet kan du fortsätta till [del två, om CSS](/exercises.php?title=2b)!
+När du är nöjd med formulär- och tabellskapandet kan du fortsätta till [del tre, om CSS](ex3.html)!
