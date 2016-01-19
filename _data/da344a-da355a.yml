@@ -40,4 +40,4 @@ menu:
       folder: lectures
       items:
           - name: 1. Kursintroduktion
-          #- name: 2. Intro - HTML & CSS
+          - name: 2. Intro - HTML
