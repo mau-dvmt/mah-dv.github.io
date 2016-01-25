@@ -11,21 +11,21 @@ I denna laboration vi bygga vår första responsiva webbplats. Målet är att sk
 
 Vi ska nu bygga en webbsida, med valfritt innehåll. Jag tänker bygga min enligt Star Wars-tema, eftersom det är den bästa filmen som någonsin gjorts. Eftersom ni kanske inte tycker det, så är det helt okej att välja ett annat tema, lämpligen någon som fångar ert intresse.
 
-Vi borde börja att fungera på hur vår sida ska se ut, vilka delar som sidan ska byggas upp av.
+Vi borde börja att fundera på hur vår webbsida ska se ut, och vilka delar som sidan ska struktureras upp av.
 
-Denna labb kommer att föreslå olika layouter och designval kring den webbsida som ska skapas. Detta är alltså *förslag*, som framförallt riktar sig till de som inte är efarna med responsiv design. Vill du istället göra annorlunda så är det fritt fram!
+Denna labb kommer att föreslå olika layouter och designval kring den webbsida som ska skapas. Detta är alltså **förslag**, som framförallt riktar sig till de som inte är efarna med responsiv design. Vill du istället göra annorlunda så är det fritt fram!
 {: .info}
 
 ## 2. Att tänka responsivt
 
-Vi har som mål att oavsett vilken enhet som användaren väljer att besöka vår webbplats med - så ska de få en så bra upplevelse som möjligt. Vi pratade på föreläsningen om att använda "boxar" för att strukturera upp vårt sidinnehåll. Jag tänker mig att huvudelementen på sidan är följande:
+Vi har som mål att oavsett vilken enhet som användaren väljer att besöka vår webbplats genom - så ska de få en så bra upplevelse som möjligt. Vi pratade på föreläsningen om att använda "boxar" för att strukturera upp vårt innehåll på webbplatsen. Jag tänker mig att huvudelementen på sidan är följande:
 
 - Sidhuvud
 - Meny
 - Innehåll
 - Sidfot
 
-Jag tänker även att startsidan ska marknadsföra de filmer som ingår i filmserien (här kan ni välja att presentera valfri information som relaterar till er webbplats.) En enkel struktur på sidan skulle således kunna se ut något i stil med:
+Jag tänker även att startsidan ska ha några figurer med tillhörande text, i mitt fall för att marknadsföra de filmer som ingår i filmserien (här kan ni välja att presentera valfri information som relaterar till er webbplats.) En enkel struktur på sidan skulle således kunna se ut något i stil med:
 
 ![Wireframes](5/wireframes.png)
 
@@ -113,7 +113,7 @@ Det skulle kunna se ut något i stil med:
 Tänk på att webbläsarna har  *förbestämda* CSS-egensker för olika element (t.ex. rubriker, paragrafer, etc.). Detta kan man nollställa genom s.k. *CSS-reset*, exempel på en sådan kan du hitta [här](http://meyerweb.com/eric/tools/css/reset/).
 {: .info}
 
-Kontrollera sedan att webbsidan fungerar som förväntat, t.ex. genom att besöka den genom din mobiltelefon eller [Chromes utvecklingskonsol](https://developer.chrome.com/devtools) där du kan klicka på den lilla *telefonen* i utvecklingsverktygets fält uppe till vänster. Skulle det vara några konstigheter här så fråga läraren om tips & trix.
+Kontrollera sedan att webbsidan fungerar som förväntat, t.ex. genom att besöka den genom din mobiltelefon eller genom [Chromes utvecklingskonsol](https://developer.chrome.com/devtools) där du kan klicka på den lilla *telefonen* i utvecklingsverktygets fält uppe till vänster. Skulle det vara några konstigheter här så fråga läraren om tips & trix.
 
 <details>
   <summary>När ni fått allt att fungera som det ska, kan ni jämföra med min version av CSS-koden. <strong>OBS.</strong> Jag har använt mig av <a href="5/reset.css">denna reset</a>.</summary>
@@ -153,14 +153,14 @@ Nu borde det se ut något i stil med:
 
 ![Överblick](5/mobile-wireframe.png)
 
-Glöm inte att inkludera `viewport`-egenskaper, så att den visas korrekt i mobiltelefoner!
+Glöm inte att inkludera `viewport`-egenskaper, så att webbsidan visas korrekt i mobiltelefoner!
 {: .info}
 
 ### 2.2. Tablet second
 
-När vi lyckats få till vår layout för mobilversionen utav vår webbplats är det dags att ta tag i tablet-versionen. Här tänkte jag nu att vi skulle introducera två nya sätt att positionera element i webbläsaren, nämliget positionering genom **fixed**, och då passar vi på att även nämna **absolute**.
+När vi lyckats få till vår layout för mobilversionen utav vår webbplats är det dags att ta tag i tablet-versionen. Här tänkte jag nu att vi skulle introducera två nya sätt att positionera element i webbläsaren, nämligen positionering genom **fixed**, och då passar vi på att även nämna **absolute**.
 
-Både CSS-egenskapen `position: absolute` och `position: fixed` innebär att man placerar ett HTML-element på en absolut plats i förhållande till webbläsarfönstret. Skillanden är att `position: fixed` är som "fastklistrad" på skärmen (när man skrollar så stannar den kvar på samma plats, och berörs alltså inte utav skrollningen). Detta passar ju jättebra till vår meny som vi **alltid** vill ha tillgänglig till vänster i var tablet-version. Element med `position: absolute` "följer med" när man skrollar på webbsidan och lämpar sig då till vår innehållskolumn till höger på webbsidan. Alltså:
+Både CSS-egenskapen `position: absolute` och `position: fixed` innebär att man placerar ett HTML-element på en absolut plats i förhållande till webbläsarfönstret (eller elementets förälder). Skillanden är att `position: fixed` är som "fastklistrad" på skärmen (när man skrollar så stannar den kvar på samma plats, och berörs alltså inte utav skrollningen). Detta passar ju jättebra till vår meny som vi **alltid** vill ha tillgänglig till vänster i var tablet-version. Element med `position: absolute` "följer med" när man skrollar på webbsidan och lämpar sig då till vår innehållskolumn till höger på webbsidan. Alltså:
 
 - Sidhuvud: `position: fixed`
 - Meny: `position: fixed`
@@ -173,7 +173,7 @@ Både CSS-egenskapen `position: absolute` och `position: fixed` innebär att man
 
 **Sidfoten** skulle kunna vara 20% bred och 80% hög, samt ha 90% till toppen av webbläsaren (`top: 90%`) alltså ligga under menyn, längst ner till vänster på vår sida.
 
-**Innehållet** skulle då kunna vara 80% bred och 100% hög, och ligga till höger på vår sida.
+**Innehållet** skulle då kunna vara 80% bred där höjden anpassar sig efter innehållet, och ligga till höger på vår sida.
 
 Då borde vi ha fixat till vår layout får vår tablet också!
 
