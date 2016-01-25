@@ -34,6 +34,7 @@ menu:
           - name: Laboration 1b - Formulär/tabeller
           - name: Laboration 1c - Intro CSS
           - name: Laboration 2 - Layout med CSS
+          - name: Laboration 3 - Media queries
     - label: Föreläsningar
       submenu: true
       prefix: le
@@ -41,3 +42,4 @@ menu:
       items:
           - name: 1. Kursintroduktion
           - name: 2. Intro - HTML
+          - name: 3. Responsiv design
