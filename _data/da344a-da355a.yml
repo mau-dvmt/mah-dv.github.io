@@ -35,6 +35,7 @@ menu:
           - name: Laboration 1c - Intro CSS
           - name: Laboration 2 - Layout med CSS
           - name: Laboration 3 - Media queries
+          - name: Laboration 4 - Responsiva ramverk
     - label: Föreläsningar
       submenu: true
       prefix: le
