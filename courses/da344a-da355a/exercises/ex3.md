@@ -73,14 +73,14 @@ Något som av användbarhetsmässiga skäl ofta har en distinkt stil är länkar
 
 {% highlight css linenos %}
 a{
-    /* Här definieras grundstilen för alla länkar */
+  /* Här definieras grundstilen för alla länkar */
 }
 a:visited{
-    /* Gäller bara besökta länkar */
+  /* Gäller bara besökta länkar */
 }
 a:hover, a:focus{
-    /* Gäller bara när muspekaren är över (hover), eller när
-    länken är markerad med hjälp av tangenbordet (focus) */
+  /* Gäller bara när muspekaren är över (hover), eller när
+  länken är markerad med hjälp av tangenbordet (focus) */
 }
 {% endhighlight %}
 
@@ -92,15 +92,15 @@ Studera sedan följande tre CSS-regler. Läs igenom dem, jämför med strukturen
 
 {% highlight html linenos %}
 table{
-    background-color:#ffff99;
-    border:1px solid #cccccc;
-    width:300px;
+  background-color:#ffff99;
+  border:1px solid #cccccc;
+  width:300px;
 }
 thead{
-    background-color:#ffff33;
+  background-color:#ffff33;
 }
 td, th{
-    padding:5px;
+  padding:5px;
 }
 {% endhighlight %}
 
