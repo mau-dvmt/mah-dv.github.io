@@ -36,6 +36,8 @@ menu:
           - name: Laboration 2 - Layout med CSS
           - name: Laboration 3 - Media queries
           - name: Laboration 4 - Responsiva ramverk
+          - name: Laboration 5a - Intro JavaScript
+          - name: Laboration 5b - Intro DOM
     - label: Föreläsningar
       submenu: true
       prefix: le
@@ -44,3 +46,4 @@ menu:
           - name: 1. Kursintroduktion
           - name: 2. Intro - HTML
           - name: 3. Responsiv design
+          - name: 4. Intro JavaScript
