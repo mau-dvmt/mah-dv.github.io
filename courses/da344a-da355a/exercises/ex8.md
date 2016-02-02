@@ -24,7 +24,7 @@ Innan ni börjar med laborationen rekommenderas det att läsa på om funktionern
 
 I den första uppgiften kommer ni bli tilldelad HTML och CSS, er uppgift är att genom JavaScript göra så att, exempelvis, när en användare klickar på knappen "Success" så kommer klassen "success" att läggas till på elementet `<div id="message-box">`. Detta innebär att ni kommer skapa detta för samtliga av de tre knapparna som ni finner i HTML exemplet nedan.
 
-``` html
+{% highlight html linenos %}
 <div id="message-box">
     <p>This is a very important message box!</p>
 </div>
@@ -32,7 +32,7 @@ I den första uppgiften kommer ni bli tilldelad HTML och CSS, er uppgift är att
 <button type="button" id="success">Success</button>
 <button type="button" id="error">Error</button>
 <button type="button" id="info">Info</button>
-```
+{% endhighlight %}
 
 {% highlight css linenos %}
 #message-box {
