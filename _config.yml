@@ -21,6 +21,9 @@ url: http://mah-dv.github.io/
 # markdown: kramdown
 # include: ['.htaccess']
 
+kramdown:
+    input: GFM
+
 # Default layouts for posts and pages
 defaults:
   -
