@@ -168,3 +168,76 @@ För att underlätta kommer en lista presenteras nedan med lite tips, tänk på 
 * Använd er av två globala variabler, `time` som representerar hur länge vår timer har pågått och `interval` som kan representera det intervall vi använder oss av för att öka vår timer.
 * Skapa tre funktioner, `start`, `stop` och `reset`. `start` skapar vårt intervall, ökar vår `time` variabel med `1` och ändrar textinnehållet på vår paragraf. `stop` denna raderar endast intervallet genom `clearInterval`. `reset` avbryter (stop) vårt intervall, återställer vår variabel `time` och återställer även vår paragrafs textinnehåll.
 * Applicera de tre funktionerna till eventet `"click"` på respektive HTML-knapp.
+
+### Uppgift 6
+
+Vi ska nu bygga en generell funktion för att visa/dölja delar av en artikel. Tanken är att vi ska bygga upp vårt dokument med rubriker, och till varje rubrik finns en sektion med innehåll. Jag tänker mig något i stil med (innehåller på er sida är naturligtvis valfritt):
+
+{% highlight html linenos %}
+<article>
+  <h2>Star Wars: Episode I - The Phantom Menace</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTQ4NjEwNDA2Nl5BMl5BanBnXkFtZTcwNDUyNDQzNw@@._V1_SX214_AL_.jpg" alt="Star Wars">
+    <p>Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.</p>
+  </section>
+</article>
+<article>
+  <h2>Star Wars: Episode II - Attack of the Clones</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTY5MjI5NTIwNl5BMl5BanBnXkFtZTYwMTM1Njg2._V1_SY317_CR13,0,214,317_AL_.jpg" alt="Star Wars">
+    <p>Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padmé, while Obi-Wan investigates an
+    assassination attempt on the Senator and discovers a secret clone army crafted for the Jedi.</p>
+  </section>
+</article>
+<article>
+  <h2>Star Wars: Episode III - Revenge of the Sith</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SY317_CR12,0,214,317_AL_.jpg" alt="Star Wars">
+    <p>As the Clone Wars near an end, the Sith Lord Darth Sidious steps out of the shadows, at which time Anakin succumbs to his emotions, becoming Darth Vader and putting his relationships with Obi-Wan and Padme at risk.</p>
+  </section>
+</article>
+<!-- etc. -->
+{% endhighlight %}
+
+Det jag vill ska hända nu, är när man klickar på *en rubrik i en `<article>`* så ska innehållet i den artikeln (i detta fall `<section>`, med dess innehåll) visas om det just nu döljs, eller döljas om det just nu visas.
+
+Dessutom vill jag att vi när sidan laddat klart gömmer alla artiklarnas innehåll (`<section>`-elementets innehåll) genom JavaScript. *Varför inte genom CSS?* - För att då kan de som har inaktiverat JavaScript i sin webbläsare inte se innehållet alls...
+
+Lite pseudo-kod som kan hjälpa er att komma igång:
+
+{% highlight js linenos %}
+/*
+  Funktionen toggleNextElement som som uppgift att visa/dölja ett elements
+  kommande syskon. I vårt fall när vi klickar på en rubrik så vill vi visa/dölja
+  den kommande syskonet, som är <section>-elementet.
+*/
+function toggleNextElement(){
+  // 1. Leta upp det nästkommande syskonet
+  // 2. Kontrollera om det just nu visas eller döljs
+  // 3.a. Om det visas, dölj det
+  // 4.a. Om det döljs, visa det
+}
+
+/*
+  Funktionen döljer allt innehåll för alla våra artiklar, ser till att
+  funktionen "toggleNextElement" körs när man klicka på en <h2>-rubrik
+*/
+function start(){
+  // 1. Hämta alla <h2>-element och spara dem i en variabel
+  // 2. Loopa igenom alla <h2>-elementen och:
+  // 3.a. Dölja alla <section>-element som ligger som kommande syskon till
+  // varje rubrik
+  // 3.b. Använd en event-lyssnare för att ange att funktionen "toggleNextElement"
+  // ska köras när man klickar på en av rubrikerna.
+}
+
+/*
+  Kör funktionen "start"
+*/
+start();
+{% endhighlight %}
+
+För att referera till den rubrik som användaren klickade på, använd i funktionen "toggleNextElement" `this`. För att ta reda på hur ett element just nu visas kan ni kontrollera värdet för CSS-egenskapen "display" genom `element.style.display` och för att ändra CSS-egenskapen display anger ni ett värde, t.ex. `element.style.display = "none"` för att dölja ett element eller `element.style.display = "block"` för att visa ett element.
+{:.info}
+
+När ni sedan har fått funktionaliteten att fungera, styla gärna sidan genom CSS så att den blir visuellt tilltalande.
