@@ -47,3 +47,9 @@ menu:
           - name: 2. Intro - HTML
           - name: 3. Responsiv design
           - name: 4. Intro JavaScript
+    - label: Inlämningsuppgifter
+      submenu: true
+      prefix: as
+      folder: assignments
+      items:
+          - name: 1. Inlämningsuppgift 1
