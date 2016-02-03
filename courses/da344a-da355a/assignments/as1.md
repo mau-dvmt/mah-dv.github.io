@@ -40,13 +40,32 @@ Här ska ni ha tre artiklar, som representerar olika saker:
 2. Varför du gör denna webbsidan (vilka lärandemål uppfyller du?)
 3. En lista med tre punkt på tre saker som var utmanande i denna uppgift
 
+Skärmdumpar på hur det kan se ut på de olika enheterna (och hur era delar av sidan ska anpassa sig efter skärmupplösningarna):
+
+![Resultatbild](images/desktop1.png)
+![Resultatbild](images/tablet1.png)
+![Resultatbild](images/mobile1.png)
+
 #### Presentation av figurer
 
 Denna sida ska presentera minst 4st figurer som ska lägga sig på olika sätt, beroende på vilken enhet som man surfar in på. Jag använder mig utan filmer, men ni får fritt välja vilket innehåll som ni vill ha på sidan.
 
+Skärmdumpar på hur det kan se ut på de olika enheterna (och hur era delar av sidan ska anpassa sig efter skärmupplösningarna):
+
+![Resultatbild](images/desktop2.png)
+![Resultatbild](images/tablet2.png)
+![Resultatbild](images/mobile2.png)
+![Resultatbild](images/mobile2b.png)
+
 #### VG- Bildspel
 
 Här ska bildspelet ligga, se krav för detta nedan.
+
+Skärmdumpar på hur det kan se ut på de olika enheterna (och hur era delar av sidan ska anpassa sig efter skärmupplösningarna):
+
+![Resultatbild](images/desktop3.png)
+![Resultatbild](images/tablet3.png)
+![Resultatbild](images/mobile3.png)
 
 ### Funktionalitet
 
@@ -54,7 +73,7 @@ Det ska finnas viss funktionalitet i er app:
 
 #### Interaktiv mobil-meny
 
-Er mobil-version av webbplatsen ska ha en meny som är utfällbar/ihopfällbar genom att man klickar på en menyikon i sidhuvudet. När sidan laddas ska menyn vara dold, och kunna visas genom en menyknapp. Denna funktionalitet ska skötas genom JavaScript.
+Er mobil-version av webbplatsen ska ha en meny som är utfällbar/ihopfällbar genom att man klickar på en menyikon/texten meny i sidhuvudet på er webbsida. När sidan laddas (på en mobilskärm) ska menyn vara dold (den ska visas för tablet/desktop), och kunna visas genom en menyknapp. Denna funktionalitet ska skötas genom JavaScript.
 
 #### Möjlighet att välja olika stilar på webbplatsen
 
@@ -73,12 +92,6 @@ För VG ska ni även bygga ett bildspel som ska ha följande funktionalitet:
 *   Man ska se vilken bild som visas i bildspelet, t.ex. bild "2/3"
 *   Er lösning ska vara utformad på så sätt att man ska kunna lägga till en ny bild i HTML-filen (utan att behöva ändra något i CSS eller JavaScript) och den inkluderas automatiskt i bildspelet.
 
-### Resultatvideo
-
-*Kommer inom kort*
-
-Observera att videon visar funktionerna, er lösning behöver visuellt inte likna den ovan.
-
 ## Krav
 
 ### Generella krav
@@ -94,13 +107,16 @@ Observera att videon visar funktionerna, er lösning behöver visuellt inte likn
 
 1.  Layout
     1.  Er app ska vara anpassad för desktop, mobiltelefoner och tablets
-    2.  Er app ska beté sig på ett bra sätt för olika skärmupplösningar (olika enheter)
+    2.  Er app ska beté sig på ett bra sätt för olika skärmupplösningar (olika enheter), se skärmdumpar ovan
 2.  Funktion: Offline-hantering
     1.  Ni ska på ett snyggt och smidigt sätt för användaren presentera en offline-vy, men alternativ att ladda om sidan genom en knapp
-3.  Funktion: Spara stil på sidan
+3.  Funktion: Interaktiv meny (för mobilversionen)
+    1.  Om användaren surfar in med en mobil så ska menyn vara dold, men kunna visas genom att man klickar på texten "meny", alternativt en meny-ikon
+4.  Funktion: Spara stil på sidan
     1.  Man ska kunna spara sin favoritstil av webbplatsen i appen (genom localStorage)
     2.  Sidans stil ska direkt i appen uppdateras (utan att man behöver ladda om webbsidan)
-4.  VG: Bildspel - se instruktioner ovan
+	3.  När man sedan laddar om sidan ska den förvalda stilen visas, samt vara förvald i er drop down-meny
+5.  VG: Bildspel - se instruktioner ovan
 
 **I övrigt kommer den genomgående kvalitén att bedömas.**
 
