@@ -70,7 +70,7 @@ Som ni kan se så liknade detta väldigt mycket funktionerna `document.querySele
 
 ### Ändra CSS-egenskaper genom jQuery
 
-jQuery har många [användbara CSS-funktioner](http://api.jquery.com/category/css/). En av de eknlare, för att ändra CSS-egenskaper för ett eller flera element ser ut på följande sätt `.css("egenskap", "värde")`. Exempel:
+jQuery har många [användbara CSS-funktioner](http://api.jquery.com/category/css/). En av de enklare, för att ändra CSS-egenskaper för ett eller flera element ser ut på följande sätt `.css("egenskap", "värde")`. Exempel:
 
 ```js
 // Ge alla paragrafer på sidan blå text-färg
@@ -80,9 +80,10 @@ $(".important").css("font-weight", "bold");
 // Ge elementet med id="contact" grön bakgrund
 $("#contact").css("background-color", "green");
 ```
+
 ### Er tur att testa på att ändra CSS-egenskaperna för olika element
 
-Ladda ner [denna HTML-fil](#), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+Ladda ner [denna HTML-fil](9/ex.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
 
 - Ge webbsidan grå bakgrundsfärg
 - Ge alla `<section>`-element grön bakgrundsfärg
@@ -97,9 +98,10 @@ Precis som man kan modifiera CSS-egenskaper för olika element på webbplatsen, 
 // Vilken bakgrundsfärg har elementet med id:t "start"
 $("#start").css("background-color");
 ```
+
 ### Er tur att testa på att leta upp CSS-egenskaperna för olika element
 
-Ladda ner [denna HTML-fil](#), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+Ladda ner [denna HTML-fil](9/ex2.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
 
 - Ta reda på vilken bakgrundsfärg webbsidan har
 - Ta reda på vilket text-storlek som huvudrubriken har
@@ -138,7 +140,7 @@ $(".make-green").on("click", function(){
 
 ### Övningar
 
-Ladda ner [denna HTML-fil](#), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+Ladda ner [denna HTML-fil](9/ex2.html)), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
 
 - När man klickar på en paragraf ska paragrafen man klickar på bli röd
 - När man för muspekaren över någon av rubrikerna, ska rubriken bli understruken (och när man för bort muspekaren ska den inte längre vara understruken)
@@ -295,11 +297,14 @@ Där vi använder oss utav `data-`-attribut, där vi kan spara information om fi
 
 Använd jQuery-funktionen `.val()` för att hämta indata från användaren (text-rutan och drop down-menyn). Använd sedan jQuery-funktionen `.append()` för att lägga till filmen sist i listan på era filmer.
 
+Det kan vara en idé att ha en funktion som genererar antalet stjärnor (i HTML-kod), beroende på vilket betyg man ger filmen
+{:.info}
+
 #### Bättre hantering av indata från användaren
 
 Nu ska vi se till att användaren verkligen ger oss rätt information när vi skapar en film. Kontrollera att:
 
-1. Användaren verkligen skriver in en titel
+1. Användaren skriver in en titel
 2. Att användaren väljer ett betyg (och inte *Välj betyg här...*)
 3. Återställ formuläret när filmen är tillagd (tips, använd jQuery-funktionen `.trigger("reset")` för ert formulär)
 
@@ -342,3 +347,7 @@ Visa på lämpligt ställe på er sida hur många filmer som listan innehållet.
 - Betyg 4-5: Grön bakgrundsfärg
 - Betyg 2-3: Gul bakgrundsfärg
 - Betyg 1: Röd bakgrundsfärg
+
+### Extra
+
+Lös [uppgift 6](http://mah-dv.github.io/courses/da344a-da355a/exercises/ex8.html#uppgift-6) från den förra labben, fast denna gången med jQuery. Vilka för- och nackdelar upplevde du med de olika lösningarna som du gjort?
