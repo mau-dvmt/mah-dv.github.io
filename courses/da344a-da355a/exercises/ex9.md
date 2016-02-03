@@ -1,3 +1,8 @@
+---
+title: Laboration 5b
+code: "da344a-da355a"
+---
+
 # Laboration 6 - Intro jQuery
 
 ## Introduktion

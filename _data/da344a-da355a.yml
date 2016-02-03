@@ -38,6 +38,7 @@ menu:
           - name: Laboration 4 - Responsiva ramverk
           - name: Laboration 5a - Intro JavaScript
           - name: Laboration 5b - Intro DOM
+          - name: Laboration 6 - Intro jQuery
     - label: Föreläsningar
       submenu: true
       prefix: le
