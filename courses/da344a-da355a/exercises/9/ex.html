@@ -1,67 +1,37 @@
-# coding: utf-8
-# Author: <Maria Holmberg>
-
-from bottle import route, run, template, request, redirect
-
-
-@route("/")
-def list_articles():
-    ''' This is the home page, which shows a list of links to all articles
-    in the wiki. This import and import the file static and shows the content. Returns index, the homepage.'''
-    from os import listdir
-    folder = listdir("static")
-    return template("index", files = folder)
-
-
-@route("/create")
-def create_article():
-    ''' This functions calls for the create template where user create a new article '''
-    return template("create")
-
-
-@route("/save", method="POST")
-def save_article():
-    ''' Shows a form which allows the user to write input for an article. This form should be sent via POST. '''
-    content = request.forms.get("text")
-    pagename = request.forms.get("pagename")
-    text_file = open("static/" + pagename + ".txt", "w")
-    text_file.write(content)
-    text_file.close()
-    redirect("/wiki/" + pagename)
-
-
-
-@route("/wiki/<pagename>")
-def show_article(pagename):
-    ''' Displays a single article (loaded from a text file)'''
-    from os import listdir
-    folder = listdir("static")
-
-    for page in folder:
-        if pagename + ".txt" == page:
-            newarticle = open("static/" + pagename + ".txt", "r")
-            savearticle = newarticle.read().decode("utf-8-sig").encode("utf-8")
-            newarticle.close()
-            return template("wiki", header=pagename, content=savearticle)
-
-@route("/edit/<pagename>")
-def edit_article(pagename):
-    ''' Shows a form which allows the user to correct input for an article.'''
-    article = open("static/" + pagename + ".txt", "r")
-    information = article.read()
-    article.close()
-    return template("edit", content = information, header = pagename)
-
-@route("/saveedit/<pagename>", method="POST")
-def edit_save(pagename):
-    ''' Receives new contents from a form, and creates/updates a text file for that page.'''
-    content = request.forms.get("text")
-    text_file = open("static/" + pagename + ".txt", "w")
-    text_file.write(content)
-    text_file.close()
-    redirect("/wiki/" + pagename)
-
-   
-
-
-run(host="localhost", port=8080, debug=True)
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Kom igång med jQuery</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>Kom igång med jQuery</h1>
+				<nav>
+					<a href="#" class="chosen">Länk 1</a>
+					<a href="#">Länk 2</a>
+					<a href="#">Länk 3</a>
+					<a href="#">Länk 4</a>
+				</nav>
+			</header>
+			<div id="content">
+				<section id="primary">
+					<h2>Lorem ipsum dolor</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</section>
+				<section id="secondary">
+					<h2>Ut enim ad minim</h2>
+					<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>
+						<a href="#">En exempellänk</a>.
+					</p>
+				</section>
+			</div>
+			<footer>
+				© Typisk copyrighttext 2016
+			</footer>
+		</div>
+	</body>
+</html>
