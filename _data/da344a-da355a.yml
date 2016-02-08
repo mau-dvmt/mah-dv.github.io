@@ -48,6 +48,7 @@ menu:
           - name: 2. Intro - HTML
           - name: 3. Responsiv design
           - name: 4. Intro JavaScript
+          - name: 5. Intro jQuery
     - label: Inlämningsuppgifter
       submenu: true
       prefix: as
