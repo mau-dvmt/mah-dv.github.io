@@ -1,5 +1,5 @@
 ---
-title: Laboration 5b
+title: Laboration 6
 code: "da344a-da355a"
 ---
 
@@ -32,7 +32,7 @@ Det första vi måste göra för att kunna använda oss utav jQuerys funktioner,
     </head>
     <body>
         <h1>Min fina sida</h1>
-        
+
         <!-- Länkar in jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <!-- Länkar in vår egna JavaScript-fil -->
@@ -131,9 +131,11 @@ $("p").on("click", function(){
     // Denna kod körs när användaren klickat på en paragraf
 });
 
-// När användaren klickar på elementet med klassen "make-green" ska vi göra det elementets text grön
+// När användaren klickar på elementet med klassen "make-green" ska vi göra det
+// elementets text grön
 $(".make-green").on("click", function(){
-    // Se hur vi enl. jQuery-syntax använder "this" för att göra det elementet vi klickade på grönt
+    // Se hur vi enl. jQuery-syntax använder "this" för att göra det elementet
+    // vi klickade på grönt
     $(this).css("color", "green");
 });
 ```
@@ -258,7 +260,7 @@ $("#newsletter").on("submit", function(e){
     // Hindrar formuläret från att skickas iväg.
     e.preventDefault();
     //... er kod som validerar formuläret
-    
+
     // Om allt går bra, skicka iväg formuläret
     $("#newsletter").submit();
 });

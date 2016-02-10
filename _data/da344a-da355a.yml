@@ -39,6 +39,7 @@ menu:
           - name: Laboration 5a - Intro JavaScript
           - name: Laboration 5b - Intro DOM
           - name: Laboration 6 - Intro jQuery
+          - name: Laboration 7 - LocalStorage m.m.
     - label: Föreläsningar
       submenu: true
       prefix: le
