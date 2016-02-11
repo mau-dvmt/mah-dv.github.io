@@ -79,9 +79,9 @@ Er mobil-version av webbplatsen ska ha en meny som är utfällbar/ihopfällbar g
 
 Ni ska i er webbapp kunna spara information kring vilken stil på sidan som användaren vill visa. Det ska finnas tre olika layouter (tre olika CSS-varianter på er webbplats) som användaren ska kunna välja mellan. Detta ska sparas genom **"localStorage"**, och den valda stilen ska automatiskt laddas in när användaren besöker sidan. Att välja stil på webbsidan görs lämpligen genom en drop down-meny, då den aktuella stilen är förvald.
 
-#### Hantering av offline-sida (offline manifest/cache)
+#### <strike>Hantering av offline-sida (offline manifest/cache)</strike>
 
-Skulle era användare tappa internettäckning under användandet av er app ska man inte få "sidan kan inte visas" p.g.a. dålig internetanslutning. Ni ska istället ha gjort en snygg "offline"-sida som man kommer till där det bl.a. ska finnas en knapp som tillåter användaren att ladda om sidan (och hoppas på att internettäckning finns då).
+<strike>Skulle era användare tappa internettäckning under användandet av er app ska man inte få "sidan kan inte visas" p.g.a. dålig internetanslutning. Ni ska istället ha gjort en snygg "offline"-sida som man kommer till där det bl.a. ska finnas en knapp som tillåter användaren att ladda om sidan (och hoppas på att internettäckning finns då).</strike>
 
 #### För VG - Ett bildspel
 
@@ -100,7 +100,7 @@ För VG ska ni även bygga ett bildspel som ska ha följande funktionalitet:
 2. Er JavaScript-kod ska köras utan några fel
 3. Er HTML-kod ska vara bra skriven, tydlig, med rätt element för rätt innehåll
 4. När man sparar något i er webbapp ska feedback ges till användaren (val av utseende)
-5. Om man inte har tillgång till internet ska en felsida gjord av er visas (som sparats offline)
+5. <strike>Om man inte har tillgång till internet ska en felsida gjord av er visas (som sparats offline)</strike>
 6. Innehållet på era sidor ska följa beskrivningen ovan
 
 ### Funktionella krav
@@ -108,8 +108,8 @@ För VG ska ni även bygga ett bildspel som ska ha följande funktionalitet:
 1.  Layout
     1.  Er app ska vara anpassad för desktop, mobiltelefoner och tablets
     2.  Er app ska beté sig på ett bra sätt för olika skärmupplösningar (olika enheter), se skärmdumpar ovan
-2.  Funktion: Offline-hantering
-    1.  Ni ska på ett snyggt och smidigt sätt för användaren presentera en offline-vy, men alternativ att ladda om sidan genom en knapp
+2.  <strike>Funktion: Offline-hantering</strike>
+    1.  <strike>Ni ska på ett snyggt och smidigt sätt för användaren presentera en offline-vy, men alternativ att ladda om sidan genom en knapp</strike>
 3.  Funktion: Interaktiv meny (för mobilversionen)
     1.  Om användaren surfar in med en mobil så ska menyn vara dold, men kunna visas genom att man klickar på texten "meny", alternativt en meny-ikon
 4.  Funktion: Spara stil på sidan
