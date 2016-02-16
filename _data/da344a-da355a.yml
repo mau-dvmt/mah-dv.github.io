@@ -40,6 +40,7 @@ menu:
           - name: Laboration 5b - Intro DOM
           - name: Laboration 6 - Intro jQuery
           - name: Laboration 7 - LocalStorage m.m.
+          - name: Laboration 8 - Ajax
     - label: Föreläsningar
       submenu: true
       prefix: le
@@ -50,6 +51,7 @@ menu:
           - name: 3. Responsiv design
           - name: 4. Intro JavaScript
           - name: 5. Intro jQuery
+          - name: 6. Intro Ajax
     - label: Inlämningsuppgifter
       submenu: true
       prefix: as
