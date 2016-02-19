@@ -42,6 +42,7 @@ menu:
           - name: Laboration 7 - LocalStorage m.m.
           - name: Laboration 8 - Ajax
           - name: Laboration 9 - Geolocation
+          - name: Laboration 10 - SVG och D3.js
     - label: Föreläsningar
       submenu: true
       prefix: le
