@@ -38,6 +38,10 @@ menu:
           - name: Laboration 4 - Responsiva ramverk
           - name: Laboration 5a - Intro JavaScript
           - name: Laboration 5b - Intro DOM
+          - name: Laboration 6 - Intro jQuery
+          - name: Laboration 7 - LocalStorage m.m.
+          - name: Laboration 8 - Ajax
+          - name: Laboration 9 - Geolocation
     - label: Föreläsningar
       submenu: true
       prefix: le
@@ -47,3 +51,11 @@ menu:
           - name: 2. Intro - HTML
           - name: 3. Responsiv design
           - name: 4. Intro JavaScript
+          - name: 5. Intro jQuery
+          - name: 6. Intro Ajax
+    - label: Inlämningsuppgifter
+      submenu: true
+      prefix: as
+      folder: assignments
+      items:
+          - name: 1. Inlämningsuppgift 1
