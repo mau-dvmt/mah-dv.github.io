@@ -26,7 +26,7 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 
 Första delen av uppgiften är att skapa en bra/tydlig layout för desktop, tablets och mobila enheter. Använd här ett externt CSS-ramerk för att åstakomma detta.
 
-### 3.2. Visa aktuellt väder på startsidan **VG**
+### 3.2. Visa aktuellt väder på startsidan (för **VG**)
 
 Er första funktion som ni ska implementera är att visa användaren vad det är för väder där han/hon befinner sig just nu. Detta genom att först ta reda på vår plats (genom HTML5 geolocation) och sedan genom ett valfritt väder API ta reda på:
 
@@ -56,7 +56,7 @@ Det ska också visas två knappar vid varje film:
 
 **Observera** att bilderna ovan visar på *hur* webbplatsens layout/struktur ska vara, *inte* hur den grafiska formgivningen ska vara. Använd gärna en egen design på er sida.
 
-### 3.2.3. **VG:** Funktion: Filmbibliotek
+### 3.2.3. Funktion: Filmbibliotek (för **VG**)
 
 I filmbiblioteket ska användaren kunna spara (och ta bort) filmer i sitt filmbibliotek. Dessa filmerna ska finnas sparade i localStorage. Tips för att spara filmerna är att spara dem som JSON (då localStorage endast sparar text).
 
@@ -110,7 +110,7 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 2. Er JavaScript-kod ska köras utan några fel
 3. Er HTML-kod ska vara bra skriven, tydlig, med rätt element för rätt innehåll
 4. När man sparar något i er webbapp ska feedback ges till användaren
-5. Om man inte har tillgång till internet ska ni meddela användaren om detta
+5. Er webbapp ska vara utformad med fokus på användaren
 
 ### Funktionella krav
 
@@ -118,7 +118,7 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
     - Er app ska vara anpassad för desktop, mobiltelefoner och tablets
     - Er app ska beté sig på ett bra sätt för olika skärmupplösningar (olika enheter)
     - Ni ska använda er utav ett CSS-ramverk för att skapa layouten på er webbplats
-7. Funktion: Visa aktuellt väder **VG**
+7. Funktion: Visa aktuellt väder (för **VG**)
     - Ni ska använda er utav ett externt API för att hämta information om vädret
     - Ni ska använda Ajax för att genomföra och presentera resultatet vädersökningen
     - Ni ska skriva ut: Temperatur (celcius), visa bild & beskrivning på aktuellt väder
