@@ -5,9 +5,10 @@ $return = new ArrayObject();
 
 if(isset($_FILES['media']['tmp_name'])){
 	$path = $_POST['type']."/";
+	$fileName = $path.rand().$_FILES['media']['name'];
 
-	if(move_uploaded_file($_FILES['media']['tmp_name'], $path.$_FILES['media']['name'])){
-		if(mysqli_query($db, "INSERT INTO media (title, type, path) VALUES ('".$_POST['title']."', '".$_POST['type']."', '".$path.$_FILES['media']['name']."')")){
+	if(move_uploaded_file($_FILES['media']['tmp_name'], $fileName)){
+		if(mysqli_query($db, "INSERT INTO media (title, type, path) VALUES ('".$_POST['title']."', '".$_POST['type']."', '".$fileName."')")){
 			$return['success'] = true;
 			$return['message'] = "Fil uppladdad & sparad i db";
 			echo json_encode($return);
