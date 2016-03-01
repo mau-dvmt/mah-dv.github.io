@@ -56,6 +56,7 @@ menu:
           - name: 5. Intro jQuery
           - name: 6. Intro Ajax
           - name: 7. Designing Multi Device Experiences
+          - name: 8. Media med HTML5
     - label: Inlämningsuppgifter
       submenu: true
       prefix: as
