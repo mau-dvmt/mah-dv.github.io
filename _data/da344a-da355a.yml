@@ -43,7 +43,8 @@ menu:
           - name: Laboration 8 - Ajax
           - name: Laboration 9 - Geolocation
           - name: Laboration 10 - SVG och D3.js
-          - name: Laboration 11 - Mediahantering 
+          - name: Laboration 11 - Mediahantering
+          - name: Phonegap		  
     - label: Föreläsningar
       submenu: true
       prefix: le
