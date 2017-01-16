@@ -25,43 +25,43 @@ credits: 7.5
 #
 
 menu:
-    - label: Laborationer
-      submenu: true
-      prefix: ex
-      folder: exercises
-      items:
-          - name: Laboration 1a - Intro HTML
-          - name: Laboration 1b - Formulär/tabeller
-          - name: Laboration 1c - Intro CSS
-          - name: Laboration 2 - Layout med CSS
-          - name: Laboration 3 - Media queries
-          - name: Laboration 4 - Responsiva ramverk
-          - name: Laboration 5a - Intro JavaScript
-          - name: Laboration 5b - Intro DOM
-          - name: Laboration 6 - Intro jQuery
-          - name: Laboration 7 - LocalStorage m.m.
-          - name: Laboration 8 - Ajax
-          - name: Laboration 9 - Geolocation
-          - name: Laboration 10 - SVG och D3.js
-          - name: Laboration 11 - Mediahantering
-          - name: Phonegap		  
-    - label: Föreläsningar
-      submenu: true
-      prefix: le
-      folder: lectures
-      items:
-          - name: 1. Kursintroduktion
-          - name: 2. Intro - HTML
-          - name: 3. Responsiv design
-          - name: 4. Intro JavaScript
-          - name: 5. Intro jQuery
-          - name: 6. Intro Ajax
-          - name: 7. Designing Multi Device Experiences
-          - name: 8. Media med HTML5
-    - label: Inlämningsuppgifter
-      submenu: true
-      prefix: as
-      folder: assignments
-      items:
-          - name: 1. Inlämningsuppgift 1
-          - name: 2. Inlämningsuppgift 2
+#   - label: Laborationer
+#      submenu: true
+#      prefix: ex
+#      folder: exercises
+#      items:
+#          - name: Laboration 1a - Intro HTML
+#          - name: Laboration 1b - Formulär/tabeller
+#          - name: Laboration 1c - Intro CSS
+#          - name: Laboration 2 - Layout med CSS
+#          - name: Laboration 3 - Media queries
+#          - name: Laboration 4 - Responsiva ramverk
+#          - name: Laboration 5a - Intro JavaScript
+#          - name: Laboration 5b - Intro DOM
+#          - name: Laboration 6 - Intro jQuery
+#          - name: Laboration 7 - LocalStorage m.m.
+#          - name: Laboration 8 - Ajax
+#          - name: Laboration 9 - Geolocation
+#          - name: Laboration 10 - SVG och D3.js
+#          - name: Laboration 11 - Mediahantering
+#          - name: Phonegap		  
+#    - label: Föreläsningar
+#      submenu: true
+#      prefix: le
+#      folder: lectures
+#      items:
+#          - name: 1. Kursintroduktion
+#          - name: 2. Intro - HTML
+#          - name: 3. Responsiv design
+#          - name: 4. Intro JavaScript
+#          - name: 5. Intro jQuery
+#          - name: 6. Intro Ajax
+#          - name: 7. Designing Multi Device Experiences
+#          - name: 8. Media med HTML5
+#    - label: Inlämningsuppgifter
+#      submenu: true
+#      prefix: as
+#      folder: assignments
+#      items:
+#          - name: 1. Inlämningsuppgift 1
+#          - name: 2. Inlämningsuppgift 2
