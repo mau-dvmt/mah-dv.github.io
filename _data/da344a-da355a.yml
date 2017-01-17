@@ -33,7 +33,7 @@ menu:
      folder: lectures
      items:
          - name: 1. Kursintroduktion
-#          - name: 2. Intro - HTML
+         - name: 2. Intro - HTML
 #          - name: 3. Responsiv design
 #          - name: 4. Intro JavaScript
 #          - name: 5. Intro jQuery
