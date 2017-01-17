@@ -12,7 +12,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | Vecka 3 | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | [Kursintroduktion](lectures/le1.html) | NI:A0607 | AT
-| Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till HTML & CSS](lectures/le2.html) | G8:104 | AT
+| Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till HTML](lectures/le2.html) | G8:104 | AT
 | Tisdag | 15:15 - 17:00 | **IA** - Repetition JavaScript | NI:C0315 | AF
 | Torsdag| 08:15 - 12:00 | **APP** - Labb: Intro HTML [(1)](exercises/ex1.html), [(2)](exercises/ex2.html) + [Intro CSS](exercises/ex3.html) | G8:407 | AT
 | Torsdag| 08:15 - 12:00 | **IA** - Labb: [Intro JS](exercises/ex5.html) | G8:408 | AF
