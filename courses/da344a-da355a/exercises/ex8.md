@@ -1,243 +1,355 @@
 ---
-title: Laboration 5b
+title: Laboration 4
 code: "da344a-da355a"
 ---
 
-# Laboration 5b - Intro DOM
+# Laboration 4 - Intro jQuery
 
-Syfte med laborationen:
+## Introduktion
 
-* att komma igång med JavaScript
-* att öva på att använda Document Object Model (DOM)
+jQuery är ett väldigt populärt JavaScript-bibliotek. Det är designat bl.a. för att göra det enklare att anropa och modifiera element på webbsidor, hantera händelser (t.ex. musklick), CSS-modifikationer samt skapa effekter och animationer. jQuery stödjer också plugin, och det finns många smidiga plugin som är gratis att ladda ner och använda.
 
-Övrigt:
+På [jQuerys](http://jquery.com/) webbplats hittar ni bland annat [hur man kommer igång](http://jquery.com/download/) och deras [dokumentation](http://api.jquery.com/). Det är en väldigt god kunskap att kunna läsa och förstå dokumentation när man använder biliotek/ramverk och därför kommer det att vara en del utav denna laboration.
 
-* var nogranna med att dokumentera den kod som ni anser inte beskriver sig själv
+## Uppgift 1 - Kom igång
 
-Innan ni börjar med laborationen rekommenderas det att läsa på om funktionerna `alert`, `prompt` och `confirm` som finns tillgängliga i webbläsare utan att ni själva behöver skapa dessa.
+Första uppgiften går ut på att vi ska komma igång med jQuery. Det första vi behöver göra då är att inkludera jQuery på vår webbplats. Det kan man göra på två sätt:
 
-* [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
-* [prompt](https://developer.mozilla.org/en-US/docs/Web/API/window/prompt)
-* [confirm](https://developer.mozilla.org/en-US/docs/Web/API/window/confirm)
+1. Man länkar till jQuerys JavaScript-fil(er) resurser online (där de finns tillgängliga)
+2. Man laddar ner jQuerys JavaScript-fil(er) och länkar till dem lokalt
 
-### Uppgift 1
+Alternativ 1 fungerar fint i denna labb, men tänk på att ni då hela tiden behöver ha internetuppkoppling så att resurserna ni länkar till är tillgängliga. Vi kommer i exemplen nedan att använda oss utav metod 1.
 
-I den första uppgiften kommer ni bli tilldelad HTML och CSS, er uppgift är att genom JavaScript göra så att, exempelvis, när en användare klickar på knappen "Success" så kommer klassen "success" att läggas till på elementet `<div id="message-box">`. Detta innebär att ni kommer skapa detta för samtliga av de tre knapparna som ni finner i HTML exemplet nedan.
+### Inkludera jQuery på sin webbplats.
 
-``` html
-<div id="message-box">
-    <p>This is a very important message box!</p>
-</div>
+Det första vi måste göra för att kunna använda oss utav jQuerys funktioner, är att se till att vi laddar in biblioteket. Det görs lämpligen på följande sätt:
 
-<button type="button" id="success">Success</button>
-<button type="button" id="error">Error</button>
-<button type="button" id="info">Info</button>
+```html
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Into jQuery</title>
+    </head>
+    <body>
+        <h1>Min fina sida</h1>
+
+        <!-- Länkar in jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <!-- Länkar in vår egna JavaScript-fil -->
+        <script src="script.js"></script>
+    </body>
+</html>
 ```
 
-{% highlight css linenos %}
-#message-box {
-    border: 1px solid black;
-    padding: 15px;
-    font-size: 20px;
-}
-.success {
-    background-color: #dff0d8;
-    border-color: #98B98B;
-}
-.error {
-    background-color: #f2dede;
-    border-color: #BE9090;
-}
-.info {
-    background-color: #d9edf7;
-    border-color: #7294A5;
-}
-{% endhighlight %}
+Nu kan vi alltså använda oss utav jQuerys funktioner i vårt JavaScript-dokument `script.js`. Får att testa att det verkligen fungera, så lägga till följande kod i `script.js´:
 
-**Tips!** Använd [document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) för att leta upp elementen du vill identifiera på din webbsida. För att ange ett attribut för ett element (t.ex. klass) så använd funktionen [setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute).
+```js
+// Event som körs när sidan laddats klart
+$(document).on("ready", function(){
+    // Sidan har laddat klart
+    alert("Sidan har laddat klart!");
+});
+```
+
+Fungerar allt som det ska? Toppen! Då går vi vidare! (annars fråga lärare i labbsalen)
+
+## Uppgift 2 - Lär känna jQuery
+
+Vi ska nu introduceras till jQuerys syntax, alltså hur vi skriver för att använda den funktionalitet som jQuery erbjuder. Bra att veta är att `$` används för att leta upp element genom jQuery och `$.` används för att använda funktioner genom jQuery. Här några snabba exempel på hur man hittar element i sitt HTML-dokument genom jQuery
+
+```js
+// Hämtar alla paragrafer
+$("p");
+// Hämtar alla element med klassen "center"
+$(".center");
+// Hämtar elementet med id "start"
+$("#start");
+```
+
+Som ni kan se så liknade detta väldigt mycket funktionerna `document.querySelectorAll` och `document.querySelector` som vi tidigare använt. Skillnaden är att vi använder samma funktion i jQuery för att hämta ett eller flera element.
+
+### Ändra CSS-egenskaper genom jQuery
+
+jQuery har många [användbara CSS-funktioner](http://api.jquery.com/category/css/). En av de enklare, för att ändra CSS-egenskaper för ett eller flera element ser ut på följande sätt `.css("egenskap", "värde")`. Exempel:
+
+```js
+// Ge alla paragrafer på sidan blå text-färg
+$("p").css("color", "blue");
+// Gör alla element med klassen "important" fetstilda
+$(".important").css("font-weight", "bold");
+// Ge elementet med id="contact" grön bakgrund
+$("#contact").css("background-color", "green");
+```
+
+### Er tur att testa på att ändra CSS-egenskaperna för olika element
+
+Ladda ner [denna HTML-fil](9/ex.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+
+- Ge webbsidan grå bakgrundsfärg
+- Ge alla `<section>`-element grön bakgrundsfärg
+- Ge huvudrubriken på sidan blå textfärg
+- Ge länkarna på sidan gul textfärg & gör så att de inte länge är understrukna. För att se hur man kan ange flera egenskaper för ett element [läs jQuerys dokumentation om detta](http://api.jquery.com/css/#css-properties).
+
+### Ta reda på ett värde för en CSS-egenskap för ett element
+
+Precis som man kan modifiera CSS-egenskaper för olika element på webbplatsen, så kan man även ta reda på vilket värde en viss CSS-egenskap som ett element har. Detta gör man också med funktionen `.css` men nu skickar man bara med ett argument - alltså vilken egenskap vi vill veta värdet för. Exempel:
+
+```js
+// Vilken bakgrundsfärg har elementet med id:t "start"
+$("#start").css("background-color");
+```
+
+### Er tur att testa på att leta upp CSS-egenskaperna för olika element
+
+Ladda ner [denna HTML-fil](9/ex2.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+
+- Ta reda på vilken bakgrundsfärg webbsidan har
+- Ta reda på vilket text-storlek som huvudrubriken har
+- Ta reda på vilken text-storlek som paragraferna har
+- Ta reda på höjden för elementet med id "primary"
+
+Ett smidigt sätt att se egenskaperna är att skriva ut dessa i loggen (`console.log`)
 {:.info}
 
-### Uppgift 2
+## 3. Händelser i jQuery
 
-I denna uppgiften kommer ni behöva använda er av funktionen `prompt`. Ni ska genom JavaScript göra så att när en användare klickar på knappen som ni finner nedan så ska användaren (genom `prompt`) få fylla i en text - denna text ska sedan sparas som ett nytt list-element i listan som ni också finner nedan.
+Vi har pratar en del om att webbplatser är händelsedrivna. T.ex.
 
-{% highlight html linenos %}
-<ul id="items">
-    <li>The first item is free!</li>
-</ul>
+- När användaren klickar på knappen ska vi...
+- När sidan har laddat klart ska vi...
+- När användren för muspekaren över menyn ska vi...
+- etc.
 
-<button type="button" id="add-item">Add item</button>
-{% endhighlight %}
+Vi skötte detta i förra labben genom funktionen `element.addEventListener`, där vi sedan kunde specificera vilken funktion som skulle köras (alt. en anonym funktion) när användaren utlöste en händelse (t.ex. klickade på något). jQuery har en inbyggd funktion för detta, nämligen `.on()` (och en funktion för att ta bort, `.off()`. Exempel på detta:
 
-För att kunna göra detta behöver vi lära oss tre saker:
+```js
+// När användaren klickar på elementet med id "start" ska vi köra funktionen "welcome"
+$("#start").on("click", welcome);
 
-* Att skapa element i JavaScript
-* Att skapa text-noder i JavaScript
-* Att lägga till barn (till befintligt element) i JavaScript
+// När användaren klickar på en paragraf ska vi köra en anonym funktion
+$("p").on("click", function(){
+    // Denna kod körs när användaren klickat på en paragraf
+});
 
-Här kommer ett litet exempel för att göra detta:
+// När användaren klickar på elementet med klassen "make-green" ska vi göra det
+// elementets text grön
+$(".make-green").on("click", function(){
+    // Se hur vi enl. jQuery-syntax använder "this" för att göra det elementet
+    // vi klickade på grönt
+    $(this).css("color", "green");
+});
+```
 
-{% highlight js linenos %}
-// Skapar ett <p>-element
-var p = document.createElement("p");
-// Skapar en text-nod, alltså det som ska stå i paragrafen
-var textNode = document.createTextNode("Lite torr exempeltext");
-// Lägg till text-noden till paragrafen
-p.appendChild(textNode)
-// Lägger till paragrafen som ett barn till elementet <body>
-document.querySelector("body").appendChild(p);
-{% endhighlight %}
+### Övningar
 
-Använd gärna exempelkoden ovan, men tänk på att anpassa den så att den passar er uppgift - d.v.s. ni ska ju göra ett `<li>`-element som innehåller den text som användaren matat in.
+Ladda ner [denna HTML-fil](9/ex2.html)), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
 
-### Uppgift 3
+- När man klickar på en paragraf ska paragrafen man klickar på bli röd
+- När man för muspekaren över någon av rubrikerna, ska rubriken bli understruken (och när man för bort muspekaren ska den inte längre vara understruken)
+- När man dubbelklickar på en paragraf ska texten bli större (större för varje gång man dubbelklickar)
 
-Komplettera __Uppgift 2__ med en extra knapp, `<button>` - ni väljer id och text själv, som raderar det sista elementet i listan varje gång en användare klickar på denna knappen.
+## 4. Nyttiga funktioner i jQuery
 
-**Tips** För att ta bort ett barn från ett element så använder man funktionen [removeChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild).
-{:.info}
+Det finns några funktioner gällande att lägga till/ta bort element, animera element, visa/dölja element som kan vara bra att kunna. Här kommer några:
 
-### Uppgift 4
-
-Utifrån den HTML-lista som presenteras nedan gör så att när en användare klickar på knappen "X" i ett list-element kommer detta element att raderas från listan (dvs. hela list-elementet, inte bara knappen). __Dock__ måste användaren godkänna att elementet ska raderas från listan genom att ni använder funktionen `confirm` innan ni raderar något list-element.
-
-{% highlight html linenos %}
-<ul>
-    <li>
-        This is the first item
-        <button type="button" class="remove-list-item">X</button>
-    </li>
-    <li>
-        This is the second item
-        <button type="button" class="remove-list-item">X</button>
-    </li>
-    <li>
-        This is the third item
-        <button type="button" class="remove-list-item">X</button>
-    </li>
-    <li>
-        This is the fourth item
-        <button type="button" class="remove-list-item">X</button>
-    </li>
-</ul>
-{% endhighlight %}
-
-**Tips** Använd funktionen [parentNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode) för att identifiera förälderelement till ett givet element.
-{:.info}
-
-### Uppgift 5
-
-I denna uppgiften ska ni skapa en timer, dvs. ni kommer ha en knapp som startar er timer, en knapp som stannar den och slutligen en knapp som återställer den. Det räcker att det är en timer som räknar sekunder. Inför denna uppgift rekommenderas det att kort läsa om [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval). För att kort demonstrera hur denna fungerar kan ni ta en titt på exemplet nedan. Kort kan vi beskriva det som att vi kan välja att upprepa en funktion, där varje upprepning fördröjs en viss tid (som vi själva anger i millisekunder) - vi har därmed även möjlighet att avbryta dessa uppreningar genom funktionen `clearInterval`.
-
-{% highlight js linenos %}
-function start() {
-    // Tom variabel som kommer innehålla vårt intervall
-    var printInterval;
-    // Variabel som vi använder för att kontrollera
-    // antal gånger vi upprepat vår funktion
-    var times = 0;
-    // Tiden mellan upprepningar skrivs i millisekunder
-    // vilket innebär att 1000 = 1 sekund
-    var delay = 1000;
-
-    function print() {
-        times += 1;
-
-        if (times > 10) {
-            clearInterval(printInterval);
-        }
-
-        console.log("It has been run ", times, " times");
-    }
-
-    printInterval = setInterval(print, delay);
-}
-{% endhighlight %}
-
-För denna uppgift kan ni även utgå från följande HTML-mall.
-
-{% highlight html linenos %}
-<p id="timer">0s</p>
-<button type="button" id="start-timer">Start</button>
-<button type="button" id="stop-timer">Stop</button>
-<button type="button" id="reset-timer">Reset</button>
-{% endhighlight %}
-
-För att underlätta kommer en lista presenteras nedan med lite tips, tänk på att det går att lösa problemet på en mängd olika vis och dessa tips är bara ett förslag.
-
-* Använd er av två globala variabler, `time` som representerar hur länge vår timer har pågått och `interval` som kan representera det intervall vi använder oss av för att öka vår timer.
-* Skapa tre funktioner, `start`, `stop` och `reset`. `start` skapar vårt intervall, ökar vår `time` variabel med `1` och ändrar textinnehållet på vår paragraf. `stop` denna raderar endast intervallet genom `clearInterval`. `reset` avbryter (stop) vårt intervall, återställer vår variabel `time` och återställer även vår paragrafs textinnehåll.
-* Applicera de tre funktionerna till eventet `"click"` på respektive HTML-knapp.
-
-### Uppgift 6
-
-Vi ska nu bygga en generell funktion för att visa/dölja delar av en artikel. Tanken är att vi ska bygga upp vårt dokument med rubriker, och till varje rubrik finns en sektion med innehåll. Jag tänker mig något i stil med (innehåller på er sida är naturligtvis valfritt):
-
-{% highlight html linenos %}
-<article>
-  <h2>Star Wars: Episode I - The Phantom Menace</h2>
-  <section>
-    <img src="http://ia.media-imdb.com/images/M/MV5BMTQ4NjEwNDA2Nl5BMl5BanBnXkFtZTcwNDUyNDQzNw@@._V1_SX214_AL_.jpg" alt="Star Wars">
-    <p>Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.</p>
-  </section>
-</article>
-<article>
-  <h2>Star Wars: Episode II - Attack of the Clones</h2>
-  <section>
-    <img src="http://ia.media-imdb.com/images/M/MV5BMTY5MjI5NTIwNl5BMl5BanBnXkFtZTYwMTM1Njg2._V1_SY317_CR13,0,214,317_AL_.jpg" alt="Star Wars">
-    <p>Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padmé, while Obi-Wan investigates an
-    assassination attempt on the Senator and discovers a secret clone army crafted for the Jedi.</p>
-  </section>
-</article>
-<article>
-  <h2>Star Wars: Episode III - Revenge of the Sith</h2>
-  <section>
-    <img src="http://ia.media-imdb.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SY317_CR12,0,214,317_AL_.jpg" alt="Star Wars">
-    <p>As the Clone Wars near an end, the Sith Lord Darth Sidious steps out of the shadows, at which time Anakin succumbs to his emotions, becoming Darth Vader and putting his relationships with Obi-Wan and Padme at risk.</p>
-  </section>
-</article>
-<!-- etc. -->
-{% endhighlight %}
-
-Det jag vill ska hända nu, är när man klickar på *en rubrik i en `<article>`* så ska innehållet i den artikeln (i detta fall `<section>`, med dess innehåll) visas om det just nu döljs, eller döljas om det just nu visas.
-
-Dessutom vill jag att vi när sidan laddat klart gömmer alla artiklarnas innehåll (`<section>`-elementets innehåll) genom JavaScript. *Varför inte genom CSS?* - För att då kan de som har inaktiverat JavaScript i sin webbläsare inte se innehållet alls...
-
-Lite pseudo-kod som kan hjälpa er att komma igång:
-
-{% highlight js linenos %}
+```js
 /*
-  Funktionen toggleNextElement som som uppgift att visa/dölja ett elements
-  kommande syskon. I vårt fall när vi klickar på en rubrik så vill vi visa/dölja
-  den kommande syskonet, som är <section>-elementet.
+    el  Representerar en selektor (t.ex. "p", ".min-klass", "#mitt-id")
 */
-function toggleNextElement(){
-  // 1. Leta upp det nästkommande syskonet
-  // 2. Kontrollera om det just nu visas eller döljs
-  // 3.a. Om det visas, dölj det
-  // 4.a. Om det döljs, visa det
-}
 
-/*
-  Funktionen döljer allt innehåll för alla våra artiklar, ser till att
-  funktionen "toggleNextElement" körs när man klicka på en <h2>-rubrik
-*/
-function start(){
-  // 1. Hämta alla <h2>-element och spara dem i en variabel
-  // 2. Loopa igenom alla <h2>-elementen och:
-  // 3.a. Dölja alla <section>-element som ligger som kommande syskon till
-  // varje rubrik
-  // 3.b. Använd en event-lyssnare för att ange att funktionen "toggleNextElement"
-  // ska köras när man klickar på en av rubrikerna.
-}
+// Visar ett eller flera element
+$(el).show();
+// Med animation (i milisekunder)
+$(el).show(500);
+// Visar ett element so det är dolt/döljer ett element om det visas
+$(el).toggle();
 
-/*
-  Kör funktionen "start"
-*/
-start();
-{% endhighlight %}
+// Döljer ett eller flera element
+$(el).hide();
+// Med animation (i milisekunder)
+$(el).hide(500);
 
-För att referera till den rubrik som användaren klickade på, använd i funktionen "toggleNextElement" `this`. För att ta reda på hur ett element just nu visas kan ni kontrollera värdet för CSS-egenskapen "display" genom `element.style.display` och för att ändra CSS-egenskapen display anger ni ett värde, t.ex. `element.style.display = "none"` för att dölja ett element eller `element.style.display = "block"` för att visa ett element.
+// Tonar in/ut ett element (tid i milisekunder)
+$(el).fadeIn(200);
+$(el).fadeOut(200);
+
+// Fäller ut/in ett element (tid i milisekunder)
+$(el).slideUp(200);
+$(el).slideDown(200);
+
+// Tar bort ett eller flera element
+$(el).remove();
+
+// Lägger till som första barn till ett element
+$(el).prepend("T.ex. lite text...");
+
+// Lägger till som sista barn till ett element
+$(el).append("T.ex. lite text...");
+
+// Hämtar texten för ett element
+$(el).text();
+// Ersätter texten för ett element
+$(el).text("Ny text");
+
+// Hämtar HTML för ett element
+$(el).html();
+// Ersätter HTML för ett element
+$(el).html("<b>Ny HTML</b>");
+
+// Hämtar värdet från ett element (t.ex. <input>, <select>, etc)
+$(el).val();
+// Ersätter värdet för ett element
+$(el).val("Nytt värde");
+
+// Hämtar ett attributs värde från ett element
+$(el).attr("attribut");
+// Ersätter/lägger till ett värde för ett attribut för ett element
+$(el).attr("attribut", "värde");
+
+// Lägger till en klass för ett element
+$(el).addClass("new-class");
+// Tar bort en klass för ett element
+$(el).removeClass("new-class");
+
+// Och många fler väldigt smidiga funktioner
+```
+
+Fler nytta funktioner finns ni i [jQuerys dokumentation](http://api.jquery.com/)
 {:.info}
 
-När ni sedan har fått funktionaliteten att fungera, styla gärna sidan genom CSS så att den blir visuellt tilltalande.
+## 5. Något större övningar med jQuery
+
+### 5.1. Gör miniräknare för räknesättet multiplikation
+
+Gränssnittet ska bestå utav följande:
+
+- En textruta för tal 1
+- En textruta för tal 2
+- En textruta (ej redigerbar) för resultatet
+
+Resultatet ska beräknas så fort som det finns två tal i båda rutorna. Exemepel på hur det skulle kunna se ut när det är klart:
+
+![Resultat](9/calc.png)
+
+### 5.2. Validering av formulär
+
+Ni ska nu validera ett formulärs data innan det skickas iväg. De fält som ni ska ha är följande:
+
+- Namn
+- Ålder
+- Epost
+
+När användaren vill skicka iväg formuläret (använd händelsen `submit` för formulärselementet) ska ni validera så att användaren matat in korrekt data. Om inte - så ska ni göra bakgrundsfärden röd för de fält som inte valideras. Dessutom ska ni - så fort ett fält har korrekt data i sig - göra det vitt igen. Det skulle kunna se ut t.ex. såhär:
+
+![Resultat](9/validation.png)
+
+Att utgå från i denna uppgift, HTML:
+
+```html
+<form action="#" method="get" id="newsletter">
+    <!-- Era indatafält med etiketter -->
+    <input type="submit" value="Skicka">
+</form>
+```
+
+JavaScript:
+
+```js
+// När användaren klickar på "skicka"-knappen
+$("#newsletter").on("submit", function(e){
+    // Hindrar formuläret från att skickas iväg.
+    e.preventDefault();
+    //... er kod som validerar formuläret
+
+    // Om allt går bra, skicka iväg formuläret
+    $("#newsletter").submit();
+});
+```
+
+Parametern `e` som skickar med i funktionen ovan är ett `event`-objekt som innehåller information om själva händelsen. Bland annat kan man hindra *standaradbeteende* för olika element, i detta fallet hindra att formuläret skickas iväg när man klickar på en `submit`-knapp. Andra exempel där man kan hindra standardbeteend skulle vara att man kan hindra länkar från att gå till en annan webbplats när man klickar på dem. Parametern `e` skickas alltid med (om man anger den) vid händelse-funktioner.
+
+### 5.3. Filmlista
+
+Vi ska nu skapa oss en lista på filmer som vi sett, samt ge betyg till dessa filmerna. Uppgiften börjar är uppdelad i olika steg, för olika svårighetsgrad. Men såhär tänker vi oss att det kan se ut när det är klart (jag har använt [bootstrap](http://getbootstrap.com/) för att snabbt få till ett snyggt utseende):
+
+![Result](9/movies.png)
+
+#### Kunna lägga till en film
+
+Det första vi vill göra att att ge användaren möjlighet att lägga till en film. Användaren behöver då ange två saker:
+
+1. Titel för filmen
+2. Betyget för filmen
+
+Vi ska sedan ha en knapp, *Spara film*, som när man klickar på den så ska filmen sparas i listan av filmer. Vi vill här visuellt visa filmens betyg genom stjärnor, och möjligheten att ta bort en film genom ett kryss. Ikoner för detta kan ni t.ex. hitta på [iconfinder](http://iconfinder.com/). Glöm inte att kolla licensen på bilderna, alltid bra att ha koll på! Exempel på hur ni kan bygga upp ert `<li>`-element för en film skulle kunna vara enligt följande:
+
+```html
+<li data-grade="5" data-title="Star Wars">
+	Star Wars
+	<img src="delete.png" alt="Delete movie">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+</li>
+```
+
+Där vi använder oss utav `data-`-attribut, där vi kan spara information om filmen direkt ner i HTML-koden (t.ex. om vi skulle vilja sortera filmerna efter detta senare). Mer om detta kan ni läsa [här](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes).
+
+Använd jQuery-funktionen `.val()` för att hämta indata från användaren (text-rutan och drop down-menyn). Använd sedan jQuery-funktionen `.append()` för att lägga till filmen sist i listan på era filmer.
+
+Det kan vara en idé att ha en funktion som genererar antalet stjärnor (i HTML-kod), beroende på vilket betyg man ger filmen
+{:.info}
+
+#### Bättre hantering av indata från användaren
+
+Nu ska vi se till att användaren verkligen ger oss rätt information när vi skapar en film. Kontrollera att:
+
+1. Användaren skriver in en titel
+2. Att användaren väljer ett betyg (och inte *Välj betyg här...*)
+3. Återställ formuläret när filmen är tillagd (tips, använd jQuery-funktionen `.trigger("reset")` för ert formulär)
+
+Skulle användaren inte mata in korrekt indata ska ni visa detta på ett lämpligt sätt för användare, och be denna (helst på ett vänligt sätt) att mata in korrekt information.
+
+#### Kunna ta bort en film från listan
+
+Vi vill nu kunna ta bort en film från listan, detta genom att klicka på bilden på det röda krysset. Använd funktionen `.remove()` för att göra detta. Notera att ni vill ta bort hela `<li>`-elementet och bör således navigera er upp från bild-elementet till dess förälder, vilket ni kan göra genom `.parent()`.
+
+Tänk på att det även ska fungera att ta bort en film som ni lagt till genom formuläret
+{:.info}
+
+#### Sortera våra filmer
+
+Det är dags att sortera vår lista av filmer! Eftersom sorteringsfunktionen inte alltid är självklar, och man ofta använder plugins för att underlätta sortering, så får nu följande kod:
+
+```js
+$("#movie-list").find('li').sort(function(a, b) {
+	return $(b).attr('data-grade') - $(a).attr('data-grade');
+})
+.appendTo($("#movie-list"));
+```
+
+Det som händer är helt enkelt att vi letar upp alla `<li>`-element i listan `#movie-list` (mitt `<ul>`-element) och sorterar dessa efter attributet `data-grade`, vilket ju är betyget. Vill vi istället sortera listan efter alfabetisk ordning så kan vi använda följande kod:
+
+```js
+$("#movie-list").find('li').sort(function(a, b){
+	a = a.getAttribute('data-title');
+	b = b.getAttribute('data-title');
+	return a < b ? -1 : a > b ? 1 : 0;
+}).appendTo($("#movie-list"));
+```
+
+#### Bonus: Antalet filmer
+
+Visa på lämpligt ställe på er sida hur många filmer som listan innehållet.
+
+#### Bonus: Färglägg filmerna
+
+- Betyg 4-5: Grön bakgrundsfärg
+- Betyg 2-3: Gul bakgrundsfärg
+- Betyg 1: Röd bakgrundsfärg
+
+### Extra
+
+Lös [uppgift 6](http://mah-dv.github.io/courses/da344a-da355a/exercises/ex8.html#uppgift-6) från den förra labben, fast denna gången med jQuery. Vilka för- och nackdelar upplevde du med de olika lösningarna som du gjort?

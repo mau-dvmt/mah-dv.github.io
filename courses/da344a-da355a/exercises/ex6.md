@@ -1,492 +1,243 @@
 ---
-title: Laboration 4
+title: Laboration 2
 code: "da344a-da355a"
 ---
 
-# Laboration 4: Responsiva ramverk
+# Laboration 2 - Intro DOM
 
-## 1. Introduktion
+Syfte med laborationen:
 
-När det kommer till programmering eller webbutveckling så är det inte alltid så att man behöver uppfinna hjulet varje gång man vill bygga något. Även om det ofta är väldigt roligt att bygga saker själv från grunden är det ofta tidskrävande och dyrt. Därför ska vi i denna laboration titta på färdiga ramverk som man kan använda sig utav när man vill utveckla responsiva webbplatser.
+* att komma igång med JavaScript
+* att öva på att använda Document Object Model (DOM)
 
-Det finns en hel uppsjö utav dessa ramverk, men tre av dessa som används flitigt är:
+Övrigt:
 
-1. [Bootstrap](http://getbootstrap.com)
-2. [Foundation](http://foundation.zurb.com/)
-3. [Materialize](http://materializecss.com/)
+* var nogranna med att dokumentera den kod som ni anser inte beskriver sig själv
 
-Vad dessa ramver har gemensamt är bland annat att:
+Innan ni börjar med laborationen rekommenderas det att läsa på om funktionerna `alert`, `prompt` och `confirm` som finns tillgängliga i webbläsare utan att ni själva behöver skapa dessa.
 
-- De använder ett rutnätssystem (grids) för att bygga layouter
-- De har olika "komponenter" för att förbättra de grafiska gränssnittet (allt från knappar, formulär, till tabeller och bildvisning)
-- JavaScript-tillägg, t.ex. modals, popovers, show/hide content, etc.
+* [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+* [prompt](https://developer.mozilla.org/en-US/docs/Web/API/window/prompt)
+* [confirm](https://developer.mozilla.org/en-US/docs/Web/API/window/confirm)
 
-Titta gärna runt på dessa tre alternativ ovan (eller om du har hört gott om något annat alternativ, så titta gärna på det) innan vi går vidare, så att ni får en bild av vad dessa kan erbjuda.
+### Uppgift 1
 
-## 2. Gridsystem för layout
+I den första uppgiften kommer ni bli tilldelad HTML och CSS, er uppgift är att genom JavaScript göra så att, exempelvis, när en användare klickar på knappen "Success" så kommer klassen "success" att läggas till på elementet `<div id="message-box">`. Detta innebär att ni kommer skapa detta för samtliga av de tre knapparna som ni finner i HTML exemplet nedan.
 
-Att skapa en layout till en webbplats kan lösas på en mängd olika vis. För att förenkla denna processen kan man förhålla sig till något som kallas ett "gridsystem", kort kan detta beskrivas som en uppsättning CSS regler som är återanvändbara. Det vill säga att för varje ny webbplats man skapar kan man nyttja samma mall för att strukturera upp en ny layout. Notera att det handlar om själva strukturen och inte designen.
-
-Ett exempel på just ett sådant gridsystem som är populärt idag är "12 kolumns layout". Denna layout utgår ifrån att vi delar in sidan i 12 kolumner och utefter dessa strukturerar vi upp vårat innehåll i form av rader (tänk dig en tabell).
-
-För att skapa förståelse för hur ett gridsystem fungerar - och kan byggas själv - kommer nedan en snabb introduktion till att skapa ett gridsystem. Tanken är dock att ni sedan ska använda ett färdigt gridsystem från något utav ramverken.
-
-### 2.1. Skapa eget gridsystem
-
-*Detta är inget som måste göras på labben, men det är bra om det grundläggande tänket bakom grid-system. Så läs igenom det så att ni har koll på läget.*
-
-För att skapa vår egen version av ett sådant gridsystem kommer vi huvudsakligen arbeta med tre delar: box modellen, `float` och `clear`, samt `<div>` elementet (för att gruppera).
-
-För att göra det enkelt för oss kan vi börja med vårt HTML dokument. I detta exempel kommer vi utgå ifrån att vi på vår sida har tre kolumner med lite text i varje. Vid första anblick kommer detta kännas främmande men tillsammans med CSS blir det förhoppningsvis enklare att förstå.
-
-{% highlight html linenos %}
-<!-- Vår yttersta <div> representerar en rad. -->
-<div class="row">
-    <!--
-        Nedan har vi tre <div> element som representerar
-        de tre kolumner vi ville ha på vår sida. Tänk
-        inte på klassernas namn ännu.
-    -->
-    <div class="columns-4">
-        <p>
-            The ideas of my friend Watson, though
-            limited, are exceedingly pertinacious.
-        </p>
-    </div>
-    <div class="columns-4">
-        <p>
-            For a long time he has worried me to
-            write an experience of my own.
-        </p>
-    </div>
-    <div class="columns-4">
-        <p>
-            Good old Watson! You are the one fixed
-            point in a changing age.
-        </p>
-    </div>
+``` html
+<div id="message-box">
+    <p>This is a very important message box!</p>
 </div>
-{% endhighlight %}
 
-I våran mall börjar vi med vår `<div class="row">` som representerar en rad på vår sida. I denna rad har vi våra tre kolumner med varsin paragraf. Anledning till att jag valt att döpa klasserna till "columns-4" är att om vi har en 12-kolumns-layout och vi har tre kolumner kommer varje kolumn sträcka sig över fyra layout kolumner. Detta är med stor sannolikhet ganska förvirrande men ta en titt på Figur 1 och observera namnen på klasserna och hur de relaterar till layout kolumnerna (de gråa staplarna).
-
-![Gridsystem](6/gridsystem.png) _Figur 1. Gridsystem i form av 12-kolumns-layout._
-
-Återigen - siffran i klassen representerar antalet gråa staplar i bilden. För att ytterligare demonstrera hur detta används kan vi analysera två webbplatser genom att markera vart de har använt ett gridsystem, ta en titt på Figur 2 och 3.
-
-![Gridsystem exempel 1](6/gridsystem_example_1.jpg) _Figur 2. Gridsystem exempel 1._
-
-![Gridsystem exempel 2](6/gridsystem_example_2.jpg) _Figur 3. Gridsystem exempel 2._
-
-Nästa steg är att skapa vår CSS mall för vårt gridsystem. Eftersom vi vill att våra rader (eng. rows) ska vara horisontella kommer vi använda attributen `float` och `clear` för att åstadkomma detta. För att kunna skapa ett gridsystem måste man även bestämma en bredd för webbplatsen, för att göra detta enkelt för er utgår vi ifrån 960 pixlar (väldigt vanligt idag). Anledningen till detta är att vi vill ha en centrerad webbplats och därför måste vi ange en bredd. Därmed kan vi utöka tidigare HTML mall med följande:
-
-{% highlight html linenos %}
-<div class="wrapper">
-    <!-- Placera föregående HTML mall här. -->
-</div>
-{% endhighlight %}
-
-Vidare så skapar vi vår första del av vårat gridsystem såhär:
+<button type="button" id="success">Success</button>
+<button type="button" id="error">Error</button>
+<button type="button" id="info">Info</button>
+```
 
 {% highlight css linenos %}
-.wrapper {
-    width: 960px;
-    /*
-        Automatisk marginal åt vänster/höger innebär att om vårt
-        element har en bestämd bredd så kommer det centreras.
-    */
-    margin: 0 auto 0 auto;
+#message-box {
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 20px;
+}
+.success {
+    background-color: #dff0d8;
+    border-color: #98B98B;
+}
+.error {
+    background-color: #f2dede;
+    border-color: #BE9090;
+}
+.info {
+    background-color: #d9edf7;
+    border-color: #7294A5;
+}
+{% endhighlight %}
+
+**Tips!** Använd [document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) för att leta upp elementen du vill identifiera på din webbsida. För att ange ett attribut för ett element (t.ex. klass) så använd funktionen [setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute).
+{:.info}
+
+### Uppgift 2
+
+I denna uppgiften kommer ni behöva använda er av funktionen `prompt`. Ni ska genom JavaScript göra så att när en användare klickar på knappen som ni finner nedan så ska användaren (genom `prompt`) få fylla i en text - denna text ska sedan sparas som ett nytt list-element i listan som ni också finner nedan.
+
+{% highlight html linenos %}
+<ul id="items">
+    <li>The first item is free!</li>
+</ul>
+
+<button type="button" id="add-item">Add item</button>
+{% endhighlight %}
+
+För att kunna göra detta behöver vi lära oss tre saker:
+
+* Att skapa element i JavaScript
+* Att skapa text-noder i JavaScript
+* Att lägga till barn (till befintligt element) i JavaScript
+
+Här kommer ett litet exempel för att göra detta:
+
+{% highlight js linenos %}
+// Skapar ett <p>-element
+var p = document.createElement("p");
+// Skapar en text-nod, alltså det som ska stå i paragrafen
+var textNode = document.createTextNode("Lite torr exempeltext");
+// Lägg till text-noden till paragrafen
+p.appendChild(textNode)
+// Lägger till paragrafen som ett barn till elementet <body>
+document.querySelector("body").appendChild(p);
+{% endhighlight %}
+
+Använd gärna exempelkoden ovan, men tänk på att anpassa den så att den passar er uppgift - d.v.s. ni ska ju göra ett `<li>`-element som innehåller den text som användaren matat in.
+
+### Uppgift 3
+
+Komplettera __Uppgift 2__ med en extra knapp, `<button>` - ni väljer id och text själv, som raderar det sista elementet i listan varje gång en användare klickar på denna knappen.
+
+**Tips** För att ta bort ett barn från ett element så använder man funktionen [removeChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild).
+{:.info}
+
+### Uppgift 4
+
+Utifrån den HTML-lista som presenteras nedan gör så att när en användare klickar på knappen "X" i ett list-element kommer detta element att raderas från listan (dvs. hela list-elementet, inte bara knappen). __Dock__ måste användaren godkänna att elementet ska raderas från listan genom att ni använder funktionen `confirm` innan ni raderar något list-element.
+
+{% highlight html linenos %}
+<ul>
+    <li>
+        This is the first item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+    <li>
+        This is the second item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+    <li>
+        This is the third item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+    <li>
+        This is the fourth item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+</ul>
+{% endhighlight %}
+
+**Tips** Använd funktionen [parentNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode) för att identifiera förälderelement till ett givet element.
+{:.info}
+
+### Uppgift 5
+
+I denna uppgiften ska ni skapa en timer, dvs. ni kommer ha en knapp som startar er timer, en knapp som stannar den och slutligen en knapp som återställer den. Det räcker att det är en timer som räknar sekunder. Inför denna uppgift rekommenderas det att kort läsa om [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval). För att kort demonstrera hur denna fungerar kan ni ta en titt på exemplet nedan. Kort kan vi beskriva det som att vi kan välja att upprepa en funktion, där varje upprepning fördröjs en viss tid (som vi själva anger i millisekunder) - vi har därmed även möjlighet att avbryta dessa uppreningar genom funktionen `clearInterval`.
+
+{% highlight js linenos %}
+function start() {
+    // Tom variabel som kommer innehålla vårt intervall
+    var printInterval;
+    // Variabel som vi använder för att kontrollera
+    // antal gånger vi upprepat vår funktion
+    var times = 0;
+    // Tiden mellan upprepningar skrivs i millisekunder
+    // vilket innebär att 1000 = 1 sekund
+    var delay = 1000;
+
+    function print() {
+        times += 1;
+
+        if (times > 10) {
+            clearInterval(printInterval);
+        }
+
+        console.log("It has been run ", times, " times");
+    }
+
+    printInterval = setInterval(print, delay);
+}
+{% endhighlight %}
+
+För denna uppgift kan ni även utgå från följande HTML-mall.
+
+{% highlight html linenos %}
+<p id="timer">0s</p>
+<button type="button" id="start-timer">Start</button>
+<button type="button" id="stop-timer">Stop</button>
+<button type="button" id="reset-timer">Reset</button>
+{% endhighlight %}
+
+För att underlätta kommer en lista presenteras nedan med lite tips, tänk på att det går att lösa problemet på en mängd olika vis och dessa tips är bara ett förslag.
+
+* Använd er av två globala variabler, `time` som representerar hur länge vår timer har pågått och `interval` som kan representera det intervall vi använder oss av för att öka vår timer.
+* Skapa tre funktioner, `start`, `stop` och `reset`. `start` skapar vårt intervall, ökar vår `time` variabel med `1` och ändrar textinnehållet på vår paragraf. `stop` denna raderar endast intervallet genom `clearInterval`. `reset` avbryter (stop) vårt intervall, återställer vår variabel `time` och återställer även vår paragrafs textinnehåll.
+* Applicera de tre funktionerna till eventet `"click"` på respektive HTML-knapp.
+
+### Uppgift 6
+
+Vi ska nu bygga en generell funktion för att visa/dölja delar av en artikel. Tanken är att vi ska bygga upp vårt dokument med rubriker, och till varje rubrik finns en sektion med innehåll. Jag tänker mig något i stil med (innehåller på er sida är naturligtvis valfritt):
+
+{% highlight html linenos %}
+<article>
+  <h2>Star Wars: Episode I - The Phantom Menace</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTQ4NjEwNDA2Nl5BMl5BanBnXkFtZTcwNDUyNDQzNw@@._V1_SX214_AL_.jpg" alt="Star Wars">
+    <p>Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.</p>
+  </section>
+</article>
+<article>
+  <h2>Star Wars: Episode II - Attack of the Clones</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTY5MjI5NTIwNl5BMl5BanBnXkFtZTYwMTM1Njg2._V1_SY317_CR13,0,214,317_AL_.jpg" alt="Star Wars">
+    <p>Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padmé, while Obi-Wan investigates an
+    assassination attempt on the Senator and discovers a secret clone army crafted for the Jedi.</p>
+  </section>
+</article>
+<article>
+  <h2>Star Wars: Episode III - Revenge of the Sith</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SY317_CR12,0,214,317_AL_.jpg" alt="Star Wars">
+    <p>As the Clone Wars near an end, the Sith Lord Darth Sidious steps out of the shadows, at which time Anakin succumbs to his emotions, becoming Darth Vader and putting his relationships with Obi-Wan and Padme at risk.</p>
+  </section>
+</article>
+<!-- etc. -->
+{% endhighlight %}
+
+Det jag vill ska hända nu, är när man klickar på *en rubrik i en `<article>`* så ska innehållet i den artikeln (i detta fall `<section>`, med dess innehåll) visas om det just nu döljs, eller döljas om det just nu visas.
+
+Dessutom vill jag att vi när sidan laddat klart gömmer alla artiklarnas innehåll (`<section>`-elementets innehåll) genom JavaScript. *Varför inte genom CSS?* - För att då kan de som har inaktiverat JavaScript i sin webbläsare inte se innehållet alls...
+
+Lite pseudo-kod som kan hjälpa er att komma igång:
+
+{% highlight js linenos %}
+/*
+  Funktionen toggleNextElement som som uppgift att visa/dölja ett elements
+  kommande syskon. I vårt fall när vi klickar på en rubrik så vill vi visa/dölja
+  den kommande syskonet, som är <section>-elementet.
+*/
+function toggleNextElement(){
+  // 1. Leta upp det nästkommande syskonet
+  // 2. Kontrollera om det just nu visas eller döljs
+  // 3.a. Om det visas, dölj det
+  // 4.a. Om det döljs, visa det
 }
 
 /*
-    Den klass som används för att skapa en "rad", dvs
-    där vi placerar våra olika kolumner.
+  Funktionen döljer allt innehåll för alla våra artiklar, ser till att
+  funktionen "toggleNextElement" körs när man klicka på en <h2>-rubrik
 */
-.row {
-    clear: both;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.columns-4 {
-    /*
-        För att åstadkomma ett horisontellt flöde används
-        "float" för att samtliga element ska positioneras
-        åt vänster.
-    */
-    float: left;
-    /*
-        Vi använder margin/padding för att ge lite mer luft
-        till vårt innehåll.
-    */
-    margin: 10px;
-    padding: 10px;
-    /*
-        Vi måste ange en bredd som representerar 4 layout kolumner.
-        Mer om denna uträkningen finner ni nedan.
-    */
-    width: 280px;
-
-    /* För att visuellt se detta anger vi en temporär bakgrundsfärg. */
-    background: #eeeeee;
-}
-{% endhighlight %}
-
-En viktig punkt när vi skapar dessa klasser är att vi måste räkna ut en bredd som representerar antal layout kolumner. I ovanstående exempel har vi bredden 280 pixlar och detta skulle representera fyra gråa staplar i Figur 1. Det finns givetvis en liten formel för att räkna ut denna bredd, observera att efter ni skapat de tolv klasser som behövs för ett komplett gridsystem behövs detta inte göras igen.
-
-I vårt exempel utgår vi från en bredd på 960 pixlar, detta innebär att _en_ grå stapel är 80 pixlar (960 / 12 = 80). I vårat fall hade vi fyra gråa staplar, det vill säga 4 * 80 = 320. Detta stämmer inte precis överens om med vårt resultat (280), anledningen till detta är att när du räknat ut bredden (320) måste man räkna bort attributen `margin`, `padding` och `border` i vänster samt höger riktning. I vårt exempel hade vi `margin: 10px;` vilket är 10 pixlar åt vänster och höger, summa: 20. Samma sak för `padding: 10px`, summa: 20. Om vi subtraherar dessa summor med 320 får vi 280, detta är den bredd vi anger i CSS.
-
-Formeln för att räkna ut den bredd som anges i CSS är följande (förutsatt en bredd på 960 pixlar): `80 * (antal gråa staplar) - (margin + padding + border)`. Använd kalkylatorn nedan för att se vilket resultat ni får.
-{: .info}
-
-<form id="grid-calculator" action="" method="get">
-    <input type="number" id="grid-width" placeholder="Sidobredd" value="960">
-    <span id="grid-column">80</span>
-    <span class="other">&times;</span>
-    <select id="grid-columns">
-        <option value="1">1</option><option value="2">2</option>
-        <option value="3">3</option><option value="4">4</option>
-        <option value="5">5</option><option value="6">6</option>
-        <option value="7">7</option><option value="8">8</option>
-        <option value="9">9</option><option value="10">10</option>
-        <option value="11">11</option><option value="12">12</option>
-    </select>
-    <input type="number" id="grid-margin" placeholder="Margin">
-    <input type="number" id="grid-padding" placeholder="Padding">
-    <input type="number" id="grid-border" placeholder="Border">
-    <span class="other">=</span>
-    <span id="grid-result">80</span>
-</form>
-
-För att fortsätta med att testa vårt gridsystem kan vi ändra vår HTML mall till följande:
-
-{% highlight html linenos %}
-<!-- Fyll på med eget innehåll. -->
-<div class="wrapper">
-    <!--
-        Vi använder oss utav två rader,
-        en med tre kolumner och en med två.
-    -->
-    <div class="row">
-        <div class="columns-4"></div>
-        <div class="columns-4"></div>
-        <div class="columns-4"></div>
-    </div>
-    <div class="row">
-        <div class="columns-6"></div>
-        <div class="columns-6"></div>
-    </div>
-</div>
-{% endhighlight %}
-
-{% highlight css linenos %}
-.wrapper {
-    width: 960px;
-    margin: 0 auto 0 auto;
+function start(){
+  // 1. Hämta alla <h2>-element och spara dem i en variabel
+  // 2. Loopa igenom alla <h2>-elementen och:
+  // 3.a. Dölja alla <section>-element som ligger som kommande syskon till
+  // varje rubrik
+  // 3.b. Använd en event-lyssnare för att ange att funktionen "toggleNextElement"
+  // ska köras när man klickar på en av rubrikerna.
 }
 
 /*
-    Den klass som används för att skapa en "rad", dvs
-    där vi placerar våra olika kolumner.
+  Kör funktionen "start"
 */
-.row {
-    clear: both;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Gemensam mall för alla våra kolumner. */
-.columns-4,
-.columns-6 {
-    float: left;
-    margin: 10px;
-    padding: 10px;
-
-    /* För att visuellt visa hur det ser ut. */
-    background: #eeeeee;
-}
-
-/* De individuella bredderna för våra kolumner. */
-.columns-4 {
-    width: 280px;
-}
-.columns-6 {
-    width: 440px;
-}
+start();
 {% endhighlight %}
 
-Med utgångspunkt i ovanstående exempel och det som presenterats borde ni ha kunskap nog att fortsätta med detta gridsystem för att fylla på med alla klasser (1-12). Experimentera!
+För att referera till den rubrik som användaren klickade på, använd i funktionen "toggleNextElement" `this`. För att ta reda på hur ett element just nu visas kan ni kontrollera värdet för CSS-egenskapen "display" genom `element.style.display` och för att ändra CSS-egenskapen display anger ni ett värde, t.ex. `element.style.display = "none"` för att dölja ett element eller `element.style.display = "block"` för att visa ett element.
+{:.info}
 
-Anledningen till att just detta vis att arbeta med layouter presenteras är för det är ett vedertaget system i dagens industri. Ett bra exempel på detta är de två ledande CSS ramverken (ett ramverk är egentligen bara en stor återanvändbar CSS mall) [Bootstrap](http://getbootstrap.com), [Foundation](http://foundation.zurb.com/) och [Materialize](http://materializecss.com/). Dessa ramverk har en utgångspunkt i sitt gridsystem som är till ytan mycket likt vårat, besök sidorna och ta en titt!
-
-## 3. Gridsystem i de olika ramverken
-
-[Gridsystemet i bootstrap](http://getbootstrap.com/css/#grid) tillför mer funktionalitet än det vi tittat på ovan. I exemeplet ovan har vi endast desktop som mål, då vi bestämmer en exakt bredd på våra "kolumner". Vi vill ju istället använda gridsystemet för att ha mobil, tabelet och desktop som mål. Detta möjliggör bootstrap.
-
-De har olika klasser för hur olika kolumner ska visas för olika enheter, så att vi kan bestämma t.ex. att två kolumner ska ligga bredvid varandra (ha en bredd på 6) för desktop och tablet, medan de ska ligga under varandra för mobil (ha en bredd på 12). För att se hur man kan ha olika enheter som mål så kan vi studera deras översiktstabell.
-
-![Bootstrap-grids](6/bootstrap-grid.jpg) _Figur 4. Här kan vi se att vi använder olika prefix för olika mål (mobil/tablet/mindre dektop/större desktop)._
-
-### 3.1. Exempellayout i bootstrap
-
-Låt säga att vi nu vill göra en enkel layout, som ska innehållande
-
-- Ett sidhvuvud
-  - Titel på sidan
-  - Sökruta
-- Plats för innehåll
-  - Tre kolumner med information
-- Sidfot
-  - Adresskolumn
-  - Kontaktkolum
-
-Vi kan nu använda bootstraps gridsystem för att göra detta, så att vi anpassar det efter olika eneheter. I detta exemplet anpassar vi bara specifik till mobil och desktop. För mobilsidan ska sidhuvudets kolumner ligga under varandra (titel/sökruta) medan för desktop ska de ligga bredvid varandra där titeln är 8/12 av sidans bredd medan sökrutan är 4/12 bred. För mobilsidan ska kolumnerna ligga två och två, medan för desktop ska de ligga tre och tre. I båda fallen ska adress- och kontaktkolumnen ligga bredvid varandra. Vi vill alltså att det ska se ut något i stil med:
-
-![Bootstrap-ex](6/bootstrap-ex.png) _Figur 5. Exempellayout i bootstrap_
-
-Vår källkod för detta ser ut på följande sätt:
-
-{% highlight html linenos %}
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Bootstrap test</title>
-    <!-- Boostrap CSS: Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <style>
-      /* Enkel CSS för att få en liten layout på sidan */
-      #wrapper{margin:auto; max-width: 1200px; text-align: center; background-color: #eee;}
-      .row > div{min-height: 100px; line-height: 100px; background-color: #eee;}
-    </style>
-  </head>
-  <body>
-    <div id="wrapper">
-      <div class="row header">
-        <!-- 12 i bredd för mobiler, 8 i bred för desktop -->
-        <div class="col-xs-12 col-md-8" style="background-color: lightblue;">Logotyp</div>
-        <!-- 12 i bredd för mobiler, 4 i bred för desktop -->
-        <div class="col-xs-12 col-md-4" style="background-color: lightgreen;">Sökruta</div>
-      </div>
-
-      <div class="row content">
-        <!-- Varje kolum har en bredd på 6 för mobiler, 4 för desktop -->
-        <div class="col-xs-6 col-md-4">Presentationsbild</div>
-        <div class="col-xs-6 col-md-4">Presentationsbild</div>
-        <div class="col-xs-6 col-md-4">Presentationsbild</div>
-      </div>
-
-      <div class="row footer">
-        <!-- Kolumnerna har alltid 6 i bredd -->
-        <div class="col-xs-6" style="background-color: yellow;">Adress</div>
-        <div class="col-xs-6"style="background-color: pink;">Kontaktuppgifter</div>
-      </div>
-    </div>
-  </body>
-</html>
-{% endhighlight %}
-
-*Tänk på att* om det inte finns någon specifik kolumnbredd angiven för en enhet (`xs`, `sm`, `md`, `lg`) så används kolumnbredden som är angiven för alternetivet minde (t.ex. `sm` får `xs` kolumnegenskaper om `sm` inte har någon kollumnbredd definierad).
-{: .info}
-
-För bättre förståelse kring hur man kan använda gridsystemet så rekommenderar jag att ni läser mer i [bootstraps dokumentation om grids](http://getbootstrap.com/css/#grid).
-
-### 3.2. Foundation & Materialize
-
-Upplägget är samma, även om syntaxen är något annorlunda. Har ni förstått poängen kring grids ovan är det inga problem att läsa in sig på dessa ramverken.
-
-- [Dokumentation för grids i Foundation](http://foundation.zurb.com/sites/docs/grid.html)
-- [Dokumentation för grids i Materialize](http://materializecss.com/grid.html)
-
-## 4. Övningar
-
-### 4.1. Layout med grids
-
-Som övningsuppgift ska ni skapa en komplett webbplats där layout och struktur styrs genom det gridsystem som finns tillgängligt i något utav de nämnda ramverken. Detta innebär att ni behöver följa den dokumentation som finns på valt ramverks webbplats, tveka inte att ställa frågor om ni har några. De två krav som ställs är följande:
-
-* Layout och struktur styrs genom ett gridsystem.
-* Webbplatsen måste ha komplett innehåll gällande text och grafik, dvs. är det inte tillåtet att använda "lorem ipsum" och dylikt. Dock är det tillåtet att kopiera text samt grafik från webben (för att vi i denna övning ska få lite vettigt innehåll).
-
-För att underlätta processen kommer det nedan presenteras ett fåtal exempel på strukturer som kan följas, välj *en* av dessa (men ni kan såklart skapa en *egen* layout för er webbplats om önskar det). Observera att ett gridsystem kan skapas på ett flertal olika vis, så länge du själv förstår vad som sker och du finner det enkelt så är det med stor sannolikhet korrekt!
-
-**Fundera även på hur dessa ska fungerar i en mobiltelefon - och implementera även detta**
-
-![Övningsuppgift exempel 1](6/position_ovning_exempel_1.png) _Figur 6. Struktursexempel 1_
-
-![Övningsuppgift exempel 2](6/position_ovning_exempel_2.png) _Figur 7. Struktursexempel 2_
-
-![Övningsuppgift exempel 3](6/position_ovning_exempel_3.png) _Figur 8. Struktursexempel 3_
-
-### 4.2. Remake av labb 3
-
-Nu ska ni göra om ert resultat från labb 3 till att använda sig utav grid-system. När ni gjort detta så reflektera över följande:
-
-- Vilket tyckte ni var enklast att arbeta med? Varför?
-- I vilka lägen bör man använda färdiga grid-system, i vilka lägen bör man undvika dessa?
-
-Här kommer bilderna återigen på hur er webbplats kan se ut (det måste inte följa detta till punkt och pricka, men grundtanken):
-
-![Överblick](5/starwars-desktop.png) _Figur 9. Exempelutseende för desktop_
-
-![Tablet](5/starwars-tablet.png) _Figur 10. Exempelutseende för tablet_
-
-![Mobil](5/starwars-mobile.png) _Figur 11. Exempelutseende för mobil_
-
-
-## 5. Nu då?
-
-När ni börjat få pejl på grid-systemen så finns det massor utav andra bra saker med de olika ramverken, t.ex. inbyggd styling. Titta gärna på följande komponenter:
-
-- Knappar: [Bootstrap](http://getbootstrap.com/css/#buttons), [Foundation](http://foundation.zurb.com/sites/docs/button.html) [Materialize](http://materializecss.com/buttons.html)
-- Formulär: [Bootstrap](http://getbootstrap.com/css/#forms), [Foundation](http://foundation.zurb.com/sites/docs/forms.html) [Materialize](http://materializecss.com/forms.html)
-- Tabeller: [Bootstrap](http://getbootstrap.com/css/#tables), [Foundation](http://foundation.zurb.com/sites/docs/table.html) [Materialize](http://materializecss.com/table.html)
-- Olika JavaScript-componenter: [Bootstrap](http://getbootstrap.com/javascript/), [Foundation](foundation.zurb.com/sites/docs/), [Materialize](http://materializecss.com/)
-
-Titta gärna på länkarna ovan och berika era webbplatser med det ny tycker ser bra ut!
-
-## 6. Andra bra länkar
-
-* [All About Floats][css floats]
-* `position` [referens][css position]
-* [The Magic of CSS][magic of css]
-* [Bootstrap][bootstrap]
-* [Foundation][foundation]
-* [Don't Overthink It Grids][csstricks]
-
-[css floats]: http://css-tricks.com/all-about-floats/
-[css position]: https://developer.mozilla.org/en-US/docs/Web/CSS/position
-[magic of css]: http://adamschwartz.co/magic-of-css/
-[bootstrap]: http://getbootstrap.com/
-[foundation]: http://foundation.zurb.com/
-[csstricks]: http://css-tricks.com/dont-overthink-it-grids/
-
-<script>
-// Exercise grid calculator
-    (function() {
-        var calculator = document.getElementById( 'grid-calculator' );
-
-        if ( ! calculator ) {
-            return false;
-        }
-        var columns = document.getElementById( 'grid-columns' ),
-            margin = document.getElementById( 'grid-margin' ),
-            padding = document.getElementById( 'grid-padding' ),
-            border = document.getElementById( 'grid-border' ),
-            column = document.getElementById( 'grid-column' ),
-            width = document.getElementById( 'grid-width' );
-
-        var result = document.getElementById( 'grid-result' );
-
-        function calculateWidth() {
-            var m = margin.value || 0,
-                p = padding.value || 0,
-                b = border.value || 0;
-
-            var w = column.innerHTML * columns.value - ( ( m * 2 ) + ( p * 2 ) + ( b * 2 ) );
-
-            result.innerHTML = +w;
-        }
-
-        width.addEventListener( 'change', function() {
-            column.innerHTML = Math.round( width.value / 12 );
-            calculateWidth();
-        });
-        width.addEventListener( 'keyup', function() {
-            column.innerHTML = Math.round( width.value / 12 );
-            calculateWidth();
-        });
-
-        [columns, margin, padding, border].forEach( function( input ) {
-            input.addEventListener( 'change', function() {
-                calculateWidth();
-            }, false );
-        });
-
-        [margin, padding, border].forEach( function( input ) {
-            input.addEventListener( 'keyup', function() {
-                calculateWidth();
-            }, false );
-        })
-    })();
-
-    (function() {
-        var calculator = document.getElementById( 'percent-calculator' );
-
-        if ( ! calculator ) {
-            return false;
-        }
-
-        var target = document.getElementById( 'target-width' ),
-            context = document.getElementById( 'context-width' ),
-            percent = document.getElementById( 'percent-result' );
-
-        function calculatePercent() {
-            if ( target.value <= 0 || context.value <= 0 ) {
-                percent.innerHTML = "0%";
-                return;
-            }
-
-            percent.innerHTML = ( ( target.value / context.value ) * 100 ).toFixed(6) + "%";
-        }
-
-        [target, context].forEach( function( input ) {
-            input.addEventListener( 'change', calculatePercent );
-            input.addEventListener( 'keyup', calculatePercent );
-        });
-
-        calculatePercent();
-    })();
-</script>
-
-<style>
-/**
- * Gridcalculator
- **/
-#grid-calculator {
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 30px;
-}
-
-#grid-calculator #grid-width,
-#grid-calculator #grid-column,
-#grid-calculator .other,
-#grid-calculator #grid-columns,
-#grid-calculator #grid-margin,
-#grid-calculator #grid-padding,
-#grid-calculator #grid-border,
-#grid-calculator #grid-result {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-#grid-calculator #grid-width,
-#grid-calculator #grid-margin,
-#grid-calculator #grid-padding,
-#grid-calculator #grid-border {
-    width: 90px;
-    border: 1px solid #dddddd;
-    padding: 4px 8px;
-}
-
-#grid-calculator #grid-width:focus,
-#grid-calculator #grid-margin:focus,
-#grid-calculator #grid-padding:focus,
-#grid-calculator #grid-border:focus {
-    outline: none;
-    border-color: #42b983;
-}
-
-#grid-calculator #grid-column,
-#grid-calculator .other,
-#grid-calculator #grid-result {
-    font-size: 1.2em;
-}
-</style>
+När ni sedan har fått funktionaliteten att fungera, styla gärna sidan genom CSS så att den blir visuellt tilltalande.

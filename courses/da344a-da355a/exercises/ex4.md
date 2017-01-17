@@ -1,9 +1,9 @@
 ---
-title: Laboration 2
+title: Laboration 1d
 code: "da344a-da355a"
 ---
 
-# Laboration 2: Layout med CSS
+# Laboration 1d: Layout med CSS
 
 I denna laboration ska du öva på positionering genom CSS och att få flera element i en webbsida att samverka. Du kommer lära dig att göra grunden till en webbplats och att använda denna på flera webbsidor.
 

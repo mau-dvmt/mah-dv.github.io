@@ -103,7 +103,7 @@ En väldigt enkel webbsida är förberedd för er att använda. Källkoden för 
 
 Nu när du har ett startdokument så kan det vara bra att repetera den grundläggande strukturen för HTML. Här finns artikel som kan vara bra att läsa:
 
-1.  [Basic Structure of a Web Page](http://reference.sitepoint.com/html/page-structure)
+1.  [Struktur för ett HTML-dokument](http://www.w3schools.com/html/html_intro.asp)
 
 Med den genomgången är det dags för dig att fylla på med valfritt innehåll!
 

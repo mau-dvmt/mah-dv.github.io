@@ -1,355 +1,190 @@
 ---
-title: Laboration 6
+title: Laboration 5
 code: "da344a-da355a"
 ---
 
-# Laboration 6 - Intro jQuery
+# Laboration 5 - LocalStorage m.m.
 
 ## Introduktion
 
-jQuery är ett väldigt populärt JavaScript-bibliotek. Det är designat bl.a. för att göra det enklare att anropa och modifiera element på webbsidor, hantera händelser (t.ex. musklick), CSS-modifikationer samt skapa effekter och animationer. jQuery stödjer också plugin, och det finns många smidiga plugin som är gratis att ladda ner och använda.
+Vi ska i denna labboration utgå ifrån [5.3. Filmlista](ex8.html#filmlista). Men istället för att de filmer man lägger in försvinner när man laddar om sidan, så ska dessa sparas lokalt hos användaren genom localStorage. Vi tittade även i uppgiften hur vi kunde sortera våra filmer, denna sortering ska vi komma ihåg så länge användaren besöker vår webbsida, alltså den sessionen. När användaren sedan stänger webbläsaren och besöker webbsidan igen ska sorteringen vara nollställd.
 
-På [jQuerys](http://jquery.com/) webbplats hittar ni bland annat [hur man kommer igång](http://jquery.com/download/) och deras [dokumentation](http://api.jquery.com/). Det är en väldigt god kunskap att kunna läsa och förstå dokumentation när man använder biliotek/ramverk och därför kommer det att vara en del utav denna laboration.
+### Att spara filmerna i localStorage
 
-## Uppgift 1 - Kom igång
+Nu när vi ska spara våra filmer i localStorage, snarare än bara tillfälligt på webbsidan, så behöver vi fundera på hur vi ska strukturera upp våra filmer. Ett förslag skulle kunna vara något i stil med:
 
-Första uppgiften går ut på att vi ska komma igång med jQuery. Det första vi behöver göra då är att inkludera jQuery på vår webbplats. Det kan man göra på två sätt:
+```js
+var movies = [
+  {
+    title: "Star Wars",
+    grade: 5
+  },
+  {
+    title: "Titanic",
+    grade: 4
+  }
+];
+```
 
-1. Man länkar till jQuerys JavaScript-fil(er) resurser online (där de finns tillgängliga)
-2. Man laddar ner jQuerys JavaScript-fil(er) och länkar till dem lokalt
+Alltså, vi har en array, men filmernas information. För att sedan kunna sortera filmerna (utöver titel och betyg) kanske vi skulle lägga till ett id, alternativt tiden som de lades till i listan - så att vi har möjlighet att sortera filmerna efter detta också.
 
-Alternativ 1 fungerar fint i denna labb, men tänk på att ni då hela tiden behöver ha internetuppkoppling så att resurserna ni länkar till är tillgängliga. Vi kommer i exemplen nedan att använda oss utav metod 1.
+För att spara arrayen med filmerna i localStorage - som bara sparar strängar - behöver vi göra om vår array till JSON. Detta genom funktionen `JSON.stringify(movies)`
+{:.info}
 
-### Inkludera jQuery på sin webbplats.
+En enkel funktion för att spara filmerna i localStorage som JSON skulle kunna se ut på följande sätt (när man klickar på elementet `#save-movies` ):
 
-Det första vi måste göra för att kunna använda oss utav jQuerys funktioner, är att se till att vi laddar in biblioteket. Det görs lämpligen på följande sätt:
+```js
+$("#save-movies").on("click", function(){
+	var JSONMovies = JSON.stringify(movies);
+	localStorage.setItem("movies", JSONMovies);
+});
+```
+
+Det som händer är att vi tar vår array med filmer, omvandlar detta till JSON-format (sträng), och sedan sparar det i localStorage genom nyckeln *movies*. Vi kan nu om vi tittar i utvecklingskonsolen i t.ex. Chrome, under fliken *Resources* se vad som finns sparat i localStorage, i vårt fall följande:
+
+<a href="10/developer-console.png">![developer-console](10/developer-console.png)</a>
+
+Såhär långt har vi följande lösning att utgå från:
+
+```js
+// Vår array med filmer, två filmer inlagda som exempeldata
+var movies = [
+  {
+	title: "Star Wars",
+	grade: 5
+  },
+  {
+	title: "Titanic",
+	grade: 4
+  }
+];
+
+function printMovies(){
+  /* @TODO Skriver ut alla filmerna i vår array "movies" */
+}
+
+$("#save-movie").on("click", function(e){
+  /* @TODO Sparar en film i vår array "movies" när vi klickar på knappen "Spara film"
+    och skriver sedan ut den uppdaterade listan av filmer genom funktionen "printMovies"
+  */
+});
+
+$("#save-movies").on("click", function(){
+  /* Sparar vår array med filmer som JSON i localStorage */
+	var JSONMovies = JSON.stringify(movies);
+	localStorage.setItem("movies", JSONMovies);
+});
+
+$("#load-movies").on("click", function(){
+  /* @TODO Läser in våra filmer från localStorage och skriver ut dessa i vår lista på sidan,
+    samt sparar filmerna i vår array "movies"
+  */
+});
+
+$("#order-alphabetic").on("click", function(){
+  /* @TODO Sorterar filmerna alfabetiskt */
+});
+
+$("#order-grade").on("click", function(){
+  /* @TODO Sorterar filmerna efter betyg */
+});
+
+$(".delete-movie").on("click", function(){
+  /* @TODO Tar bort en film från vår array */
+});
+
+function getStars(grade){
+  /* @TODO genererar stjärnor till när filmerna ska visas
+    Returnerar HTML-kod för så många stjärnor som parametern "grade" anger */
+}
+
+// Skriver ut att filmerna i vår lista när sidan laddats klart
+printMovies();
+```
+
+Era uppifter nu består av att färdigställa koden ovan, så att den fungerar enligt specifikation.
+
+#### 1. Skriv klart funktionen *printMovies()*
+
+Detta så att när sidan laddas klart, så ska filmerna i listan vara de som finns i vår array "movies".
+
+#### 2. Skriv klart funktionen för att spara en ny film
+
+Så att vi kan lägga till fler filmer i vår lista! Det kan vara idé att automatiskt spara filmerna i localStorage när man sparar en ny film så att man inte glömmer att spara dem sedan. *Men detta får ni själva välja hur ni vill göra*. [Här kan ni läsa mer om localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+
+För att lägga till en sak sist i en array i JavaScript skriver man `.push()`. Ni kan läsa mer om detta [här](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+{:.info}
+
+#### 3. Skriv klart funktionen för att ladda in filmer från localStorage
+
+Istället för att vår array "movies" ska ha filmer hårdkodade i sig, ska ni när sidan laddas nu istället läsa in de filmer som finns sparade i localStorage. Dessa filmerna ska sedan visas på webbsidan för användaren.
+
+För att läsa in JSON till en array igen (från localStorage) kan ni använda `JSON.parse(localStorage.getItem("movies"))`.
+{:.info}
+
+#### 4. Ta bort filmer
+
+Gör det möjligt att ta bort filmer från vår lista. Tänk på att dessa ska tas bort från vår array "movies". Det kan vara idé att automatiskt uppdatera filmerna i localStorage när man tar bort en film så att man inte glömmer att spara dem sedan. *Men detta får ni själva välja hur ni vill göra*.
+
+För att ta bort en sak från en array kan ni använda `.splice()` som ni kan läsa om [här](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice). [Här finns ett exempel](http://stackoverflow.com/questions/5767325/remove-a-particular-element-from-an-array-in-javascript) från stackoverflow som man kan inspireras av.
+
+#### 5. Sortera filmerna efter betyg eller titel
+
+Skriv klart funktionerna för att sortera filmerna efter titel eller betyg. Om ni väljer att sortera dem direkt i HTML-koden (som i förra laborationen) eller genom att sortera arrayen med filmern är upp till er. Men sidan ska komma ihåg hur ni sorterat filmerna under hela sessionen som användaren besöker webbsidan (tills användaren stänger webbläsaren).
+
+Ni användaren `sessionStorage` på samma sätt som `localStorage` och kan läsa mer om [sessionStorage här](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
+{:.info}
+
+#### 6. BONUS! Filtrera era filmer
+
+Ni kan nu om ni vill genom attributet `data-*` (samt i er array med filmer egenskaper) lägga till information om filmens:
+
+- genre
+- år den släpptes
+
+Gör sedan en drop down-lista för att välja genre att sortera efter, eller fråga användaren efter ett årtal att filtrera filmerna efter. **OBS.** Detta förutsätter också att ni skapar två nya text-fält där användaren, när denna skapar en ny film, kan lägga till genre och årtal.
+
+Ni kan läsa mer om `data-*`-attributet [här](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes)
+{:.info}
+
+### Exempel på HTML-kod att utgå från
+
+Denna exempelkod använder sig utav bootstap för sitt utseende:
 
 ```html
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Into jQuery</title>
-    </head>
-    <body>
-        <h1>Min fina sida</h1>
+<div class="row container-fluid" style="padding:0 50px;">
+  <div class="xs-col-12">
+    <h1>Min filmlista</h1>
+    <form>
+      <fieldset>
+        <legend>Lägg till en film</legend>
+        <div class="form-group">
+          <label for="title">Titel:</label>
+          <input type="text" class="form-control" id="title" placeholder="Titel här...">
+        </div>
+        <div class="form-group">
+        <label for="Grade">Betyg:</label>
+          <select id="grade"  class="form-control">
+            <option value="0">Välj betyg här...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button id="save-movie" class="btn btn-success">Spara film</button>
+        </div>
+      </fieldset>
+    </form>
+    <h2>Inlagda filmer</h2>
+    <ul id="movie-list">
 
-        <!-- Länkar in jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <!-- Länkar in vår egna JavaScript-fil -->
-        <script src="script.js"></script>
-    </body>
-</html>
+    </ul>
+    <button id="save-movies" class="btn btn-default">Spara filmer</button>
+    <button id="order-alphabetic" class="btn btn-primary">Alfabetisk ordning</button>
+    <button id="order-grade" class="btn btn-primary">Betygsordning</button>
+  </div>
+</div>
 ```
-
-Nu kan vi alltså använda oss utav jQuerys funktioner i vårt JavaScript-dokument `script.js`. Får att testa att det verkligen fungera, så lägga till följande kod i `script.js´:
-
-```js
-// Event som körs när sidan laddats klart
-$(document).on("ready", function(){
-    // Sidan har laddat klart
-    alert("Sidan har laddat klart!");
-});
-```
-
-Fungerar allt som det ska? Toppen! Då går vi vidare! (annars fråga lärare i labbsalen)
-
-## Uppgift 2 - Lär känna jQuery
-
-Vi ska nu introduceras till jQuerys syntax, alltså hur vi skriver för att använda den funktionalitet som jQuery erbjuder. Bra att veta är att `$` används för att leta upp element genom jQuery och `$.` används för att använda funktioner genom jQuery. Här några snabba exempel på hur man hittar element i sitt HTML-dokument genom jQuery
-
-```js
-// Hämtar alla paragrafer
-$("p");
-// Hämtar alla element med klassen "center"
-$(".center");
-// Hämtar elementet med id "start"
-$("#start");
-```
-
-Som ni kan se så liknade detta väldigt mycket funktionerna `document.querySelectorAll` och `document.querySelector` som vi tidigare använt. Skillnaden är att vi använder samma funktion i jQuery för att hämta ett eller flera element.
-
-### Ändra CSS-egenskaper genom jQuery
-
-jQuery har många [användbara CSS-funktioner](http://api.jquery.com/category/css/). En av de enklare, för att ändra CSS-egenskaper för ett eller flera element ser ut på följande sätt `.css("egenskap", "värde")`. Exempel:
-
-```js
-// Ge alla paragrafer på sidan blå text-färg
-$("p").css("color", "blue");
-// Gör alla element med klassen "important" fetstilda
-$(".important").css("font-weight", "bold");
-// Ge elementet med id="contact" grön bakgrund
-$("#contact").css("background-color", "green");
-```
-
-### Er tur att testa på att ändra CSS-egenskaperna för olika element
-
-Ladda ner [denna HTML-fil](9/ex.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
-
-- Ge webbsidan grå bakgrundsfärg
-- Ge alla `<section>`-element grön bakgrundsfärg
-- Ge huvudrubriken på sidan blå textfärg
-- Ge länkarna på sidan gul textfärg & gör så att de inte länge är understrukna. För att se hur man kan ange flera egenskaper för ett element [läs jQuerys dokumentation om detta](http://api.jquery.com/css/#css-properties).
-
-### Ta reda på ett värde för en CSS-egenskap för ett element
-
-Precis som man kan modifiera CSS-egenskaper för olika element på webbplatsen, så kan man även ta reda på vilket värde en viss CSS-egenskap som ett element har. Detta gör man också med funktionen `.css` men nu skickar man bara med ett argument - alltså vilken egenskap vi vill veta värdet för. Exempel:
-
-```js
-// Vilken bakgrundsfärg har elementet med id:t "start"
-$("#start").css("background-color");
-```
-
-### Er tur att testa på att leta upp CSS-egenskaperna för olika element
-
-Ladda ner [denna HTML-fil](9/ex2.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
-
-- Ta reda på vilken bakgrundsfärg webbsidan har
-- Ta reda på vilket text-storlek som huvudrubriken har
-- Ta reda på vilken text-storlek som paragraferna har
-- Ta reda på höjden för elementet med id "primary"
-
-Ett smidigt sätt att se egenskaperna är att skriva ut dessa i loggen (`console.log`)
-{:.info}
-
-## 3. Händelser i jQuery
-
-Vi har pratar en del om att webbplatser är händelsedrivna. T.ex.
-
-- När användaren klickar på knappen ska vi...
-- När sidan har laddat klart ska vi...
-- När användren för muspekaren över menyn ska vi...
-- etc.
-
-Vi skötte detta i förra labben genom funktionen `element.addEventListener`, där vi sedan kunde specificera vilken funktion som skulle köras (alt. en anonym funktion) när användaren utlöste en händelse (t.ex. klickade på något). jQuery har en inbyggd funktion för detta, nämligen `.on()` (och en funktion för att ta bort, `.off()`. Exempel på detta:
-
-```js
-// När användaren klickar på elementet med id "start" ska vi köra funktionen "welcome"
-$("#start").on("click", welcome);
-
-// När användaren klickar på en paragraf ska vi köra en anonym funktion
-$("p").on("click", function(){
-    // Denna kod körs när användaren klickat på en paragraf
-});
-
-// När användaren klickar på elementet med klassen "make-green" ska vi göra det
-// elementets text grön
-$(".make-green").on("click", function(){
-    // Se hur vi enl. jQuery-syntax använder "this" för att göra det elementet
-    // vi klickade på grönt
-    $(this).css("color", "green");
-});
-```
-
-### Övningar
-
-Ladda ner [denna HTML-fil](9/ex2.html)), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
-
-- När man klickar på en paragraf ska paragrafen man klickar på bli röd
-- När man för muspekaren över någon av rubrikerna, ska rubriken bli understruken (och när man för bort muspekaren ska den inte längre vara understruken)
-- När man dubbelklickar på en paragraf ska texten bli större (större för varje gång man dubbelklickar)
-
-## 4. Nyttiga funktioner i jQuery
-
-Det finns några funktioner gällande att lägga till/ta bort element, animera element, visa/dölja element som kan vara bra att kunna. Här kommer några:
-
-```js
-/*
-    el  Representerar en selektor (t.ex. "p", ".min-klass", "#mitt-id")
-*/
-
-// Visar ett eller flera element
-$(el).show();
-// Med animation (i milisekunder)
-$(el).show(500);
-// Visar ett element so det är dolt/döljer ett element om det visas
-$(el).toggle();
-
-// Döljer ett eller flera element
-$(el).hide();
-// Med animation (i milisekunder)
-$(el).hide(500);
-
-// Tonar in/ut ett element (tid i milisekunder)
-$(el).fadeIn(200);
-$(el).fadeOut(200);
-
-// Fäller ut/in ett element (tid i milisekunder)
-$(el).slideUp(200);
-$(el).slideDown(200);
-
-// Tar bort ett eller flera element
-$(el).remove();
-
-// Lägger till som första barn till ett element
-$(el).prepend("T.ex. lite text...");
-
-// Lägger till som sista barn till ett element
-$(el).append("T.ex. lite text...");
-
-// Hämtar texten för ett element
-$(el).text();
-// Ersätter texten för ett element
-$(el).text("Ny text");
-
-// Hämtar HTML för ett element
-$(el).html();
-// Ersätter HTML för ett element
-$(el).html("<b>Ny HTML</b>");
-
-// Hämtar värdet från ett element (t.ex. <input>, <select>, etc)
-$(el).val();
-// Ersätter värdet för ett element
-$(el).val("Nytt värde");
-
-// Hämtar ett attributs värde från ett element
-$(el).attr("attribut");
-// Ersätter/lägger till ett värde för ett attribut för ett element
-$(el).attr("attribut", "värde");
-
-// Lägger till en klass för ett element
-$(el).addClass("new-class");
-// Tar bort en klass för ett element
-$(el).removeClass("new-class");
-
-// Och många fler väldigt smidiga funktioner
-```
-
-Fler nytta funktioner finns ni i [jQuerys dokumentation](http://api.jquery.com/)
-{:.info}
-
-## 5. Något större övningar med jQuery
-
-### 5.1. Gör miniräknare för räknesättet multiplikation
-
-Gränssnittet ska bestå utav följande:
-
-- En textruta för tal 1
-- En textruta för tal 2
-- En textruta (ej redigerbar) för resultatet
-
-Resultatet ska beräknas så fort som det finns två tal i båda rutorna. Exemepel på hur det skulle kunna se ut när det är klart:
-
-![Resultat](9/calc.png)
-
-### 5.2. Validering av formulär
-
-Ni ska nu validera ett formulärs data innan det skickas iväg. De fält som ni ska ha är följande:
-
-- Namn
-- Ålder
-- Epost
-
-När användaren vill skicka iväg formuläret (använd händelsen `submit` för formulärselementet) ska ni validera så att användaren matat in korrekt data. Om inte - så ska ni göra bakgrundsfärden röd för de fält som inte valideras. Dessutom ska ni - så fort ett fält har korrekt data i sig - göra det vitt igen. Det skulle kunna se ut t.ex. såhär:
-
-![Resultat](9/validation.png)
-
-Att utgå från i denna uppgift, HTML:
-
-```html
-<form action="#" method="get" id="newsletter">
-    <!-- Era indatafält med etiketter -->
-    <input type="submit" value="Skicka">
-</form>
-```
-
-JavaScript:
-
-```js
-// När användaren klickar på "skicka"-knappen
-$("#newsletter").on("submit", function(e){
-    // Hindrar formuläret från att skickas iväg.
-    e.preventDefault();
-    //... er kod som validerar formuläret
-
-    // Om allt går bra, skicka iväg formuläret
-    $("#newsletter").submit();
-});
-```
-
-Parametern `e` som skickar med i funktionen ovan är ett `event`-objekt som innehåller information om själva händelsen. Bland annat kan man hindra *standaradbeteende* för olika element, i detta fallet hindra att formuläret skickas iväg när man klickar på en `submit`-knapp. Andra exempel där man kan hindra standardbeteend skulle vara att man kan hindra länkar från att gå till en annan webbplats när man klickar på dem. Parametern `e` skickas alltid med (om man anger den) vid händelse-funktioner.
-
-### 5.3. Filmlista
-
-Vi ska nu skapa oss en lista på filmer som vi sett, samt ge betyg till dessa filmerna. Uppgiften börjar är uppdelad i olika steg, för olika svårighetsgrad. Men såhär tänker vi oss att det kan se ut när det är klart (jag har använt [bootstrap](http://getbootstrap.com/) för att snabbt få till ett snyggt utseende):
-
-![Result](9/movies.png)
-
-#### Kunna lägga till en film
-
-Det första vi vill göra att att ge användaren möjlighet att lägga till en film. Användaren behöver då ange två saker:
-
-1. Titel för filmen
-2. Betyget för filmen
-
-Vi ska sedan ha en knapp, *Spara film*, som när man klickar på den så ska filmen sparas i listan av filmer. Vi vill här visuellt visa filmens betyg genom stjärnor, och möjligheten att ta bort en film genom ett kryss. Ikoner för detta kan ni t.ex. hitta på [iconfinder](http://iconfinder.com/). Glöm inte att kolla licensen på bilderna, alltid bra att ha koll på! Exempel på hur ni kan bygga upp ert `<li>`-element för en film skulle kunna vara enligt följande:
-
-```html
-<li data-grade="5" data-title="Star Wars">
-	Star Wars
-	<img src="delete.png" alt="Delete movie">
-	<img src="star.png" alt="Star">
-	<img src="star.png" alt="Star">
-	<img src="star.png" alt="Star">
-	<img src="star.png" alt="Star">
-	<img src="star.png" alt="Star">
-</li>
-```
-
-Där vi använder oss utav `data-`-attribut, där vi kan spara information om filmen direkt ner i HTML-koden (t.ex. om vi skulle vilja sortera filmerna efter detta senare). Mer om detta kan ni läsa [här](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes).
-
-Använd jQuery-funktionen `.val()` för att hämta indata från användaren (text-rutan och drop down-menyn). Använd sedan jQuery-funktionen `.append()` för att lägga till filmen sist i listan på era filmer.
-
-Det kan vara en idé att ha en funktion som genererar antalet stjärnor (i HTML-kod), beroende på vilket betyg man ger filmen
-{:.info}
-
-#### Bättre hantering av indata från användaren
-
-Nu ska vi se till att användaren verkligen ger oss rätt information när vi skapar en film. Kontrollera att:
-
-1. Användaren skriver in en titel
-2. Att användaren väljer ett betyg (och inte *Välj betyg här...*)
-3. Återställ formuläret när filmen är tillagd (tips, använd jQuery-funktionen `.trigger("reset")` för ert formulär)
-
-Skulle användaren inte mata in korrekt indata ska ni visa detta på ett lämpligt sätt för användare, och be denna (helst på ett vänligt sätt) att mata in korrekt information.
-
-#### Kunna ta bort en film från listan
-
-Vi vill nu kunna ta bort en film från listan, detta genom att klicka på bilden på det röda krysset. Använd funktionen `.remove()` för att göra detta. Notera att ni vill ta bort hela `<li>`-elementet och bör således navigera er upp från bild-elementet till dess förälder, vilket ni kan göra genom `.parent()`.
-
-Tänk på att det även ska fungera att ta bort en film som ni lagt till genom formuläret
-{:.info}
-
-#### Sortera våra filmer
-
-Det är dags att sortera vår lista av filmer! Eftersom sorteringsfunktionen inte alltid är självklar, och man ofta använder plugins för att underlätta sortering, så får nu följande kod:
-
-```js
-$("#movie-list").find('li').sort(function(a, b) {
-	return $(b).attr('data-grade') - $(a).attr('data-grade');
-})
-.appendTo($("#movie-list"));
-```
-
-Det som händer är helt enkelt att vi letar upp alla `<li>`-element i listan `#movie-list` (mitt `<ul>`-element) och sorterar dessa efter attributet `data-grade`, vilket ju är betyget. Vill vi istället sortera listan efter alfabetisk ordning så kan vi använda följande kod:
-
-```js
-$("#movie-list").find('li').sort(function(a, b){
-	a = a.getAttribute('data-title');
-	b = b.getAttribute('data-title');
-	return a < b ? -1 : a > b ? 1 : 0;
-}).appendTo($("#movie-list"));
-```
-
-#### Bonus: Antalet filmer
-
-Visa på lämpligt ställe på er sida hur många filmer som listan innehållet.
-
-#### Bonus: Färglägg filmerna
-
-- Betyg 4-5: Grön bakgrundsfärg
-- Betyg 2-3: Gul bakgrundsfärg
-- Betyg 1: Röd bakgrundsfärg
-
-### Extra
-
-Lös [uppgift 6](http://mah-dv.github.io/courses/da344a-da355a/exercises/ex8.html#uppgift-6) från den förra labben, fast denna gången med jQuery. Vilka för- och nackdelar upplevde du med de olika lösningarna som du gjort?
