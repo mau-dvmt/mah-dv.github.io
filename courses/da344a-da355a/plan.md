@@ -14,7 +14,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | Måndag | 10:15 - 12:00 | [Kursintroduktion](lectures/le1.html) | NI:A0607 | AT
 | Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till HTML](lectures/le2.html) | G8:104 | AT
 | Tisdag | 15:15 - 17:00 | **IA** - [Repetition JavaScript](lectures/le3.html) | NI:C0315 | AF
-| Torsdag| 08:15 - 12:00 | **APP** - Labb: Intro HTML [(1)](exercises/ex1.html), [(2)](exercises/ex2.html) + [Intro CSS](exercises/ex3.html) | G8:407 | AT
+| Torsdag| 08:15 - 12:00 | **APP** - Fö: [Intro CSS](lectures/le4.html) Labb: [(1a)](exercises/ex1.html), [(1b)](exercises/ex2.html) + [(1c)](exercises/ex3.html) | G8:407 | AT
 | Torsdag| 08:15 - 12:00 | **IA** - Labb: [Intro JS](exercises/ex5.html) | G8:408 | AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 4** | | | |
@@ -41,7 +41,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | **Vecka 7** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | HTML 5 & Responsiva ramverk | NI:A0407 | AT
-| Tisdag | **13:15 - 17:00** | **Labb: LocalStorage** | NI:A0407 | AT
+| Tisdag | 13:15 - 17:00 | Labb: LocalStorage | G8:405, G8:423 | AT
 | Torsdag| 08:15 - 12:00 | Labb: HTML 5 & ramverk | G8:407, G8:408 | AT, AF
 | Söndag | Midnatt | **Deadline inl.1** | | |
 | ------------- |-------------| ---------| -------- |

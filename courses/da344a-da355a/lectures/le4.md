@@ -3,11 +3,11 @@ title: Introduktion till JavaScript
 code: "da344a-da355a"
 ---
 
-# Introduktion till JavaScript
+# Introduktion till CSS
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/vrpqpz81JRPWxJ" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/AntonTibblin/javascript-intro-57743384" title="JavaScript - Intro" target="_blank">JavaScript - Intro</a> </strong> from <strong><a href="//www.slideshare.net/AntonTibblin" target="_blank">Anton Tibblin</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/8AnmUAumDyXagq" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/AntonTibblin/vt17-da355a-introduktion-till-css" title="VT17 - DA355A - Introduktion till CSS" target="_blank">VT17 - DA355A - Introduktion till CSS</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/AntonTibblin">Anton Tibblin</a></strong> </div>
 
-
+<!--
 ## Dagens Exempel
 
 ### Att ändra bakgrundsfärg (och spara valet)
@@ -82,3 +82,4 @@ function colorize(){
 	this.style.backgroundColor = "#aaa";
 }
 {% endhighlight %}
+-->

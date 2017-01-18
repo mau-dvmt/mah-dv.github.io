@@ -35,7 +35,7 @@ menu:
          - name: 1. Kursintroduktion
          - name: 2. Intro - HTML
          - name: 3. Javascript intro
-#          - name: 4. Intro JavaScript
+         - name: 4. Introduktion till CSS
 #          - name: 5. Intro jQuery
 #          - name: 6. Intro Ajax
 #          - name: 7. Designing Multi Device Experiences
