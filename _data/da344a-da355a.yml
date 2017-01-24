@@ -37,8 +37,9 @@ menu:
          - name: 3. Javascript intro [AF]
          - name: 4. Introduktion till CSS [AT]
          - name: 5. Layout med CSS [AT]
-#          - name: 6. Intro Ajax
-#          - name: 7. Designing Multi Device Experiences
+         - name: 6. Javascript intro 2 [AF]
+         - name: 7. App, Intro JS [AT]
+
 #          - name: 8. Media med HTML5
 #    - label: Inlämningsuppgifter
 #      submenu: true
