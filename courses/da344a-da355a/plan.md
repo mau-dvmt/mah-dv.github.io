@@ -29,13 +29,14 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | **Vecka 5** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | Responsiv design | NI:A0506 | AT
-| Tisdag | **13:15 - 17:00** | **Labb: [JS DOM](exercises/ex6.html)**  | TBD | AT, AF
+| Tisdag | 13:15 - 15:00 | Labb: [JS DOM](exercises/ex6.html)  | OR:F103 | AT, AF
+| Tisdag | 15:15 - 17:00 | Labb: [JS DOM](exercises/ex6.html)  | NI:A0306 | AT, AF
 | Torsdag| 08:15 - 12:00 | Labb: Responsiv design | G8:407, G8:408 | AT, AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 6** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | Introduktion till jQuery & ajax | NI:A0506 | AT
-| Tisdag | **13:15 - 17:00** | **Labb: jQuery** | TBD | AT, AF
+| Tisdag | 13:15 - 17:00 | Labb: jQuery | NI:A0406, OR:D326 | AT, AF
 | Torsdag| 08:15 - 12:00 | Labb: Ajax | G8:407, G8:408 | AT, AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 7** | | | |
