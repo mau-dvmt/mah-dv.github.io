@@ -7,8 +7,6 @@ code: "da344a-da355a"
 
 Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabijan):
 
-**OBSERVERA ATT PLANERING FÖR VECKA 5 OCH FRAMÅT ÄR PRELIMINÄR OCH INNEHÅLLET KAN FÖRÄNDRAS. FETMARKERADE LABBAR NEDAN ÄR UNDER UPPDATERING I SCHEMAT.**
-
 | Vecka 3 | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | [Kursintroduktion](lectures/le1.html) | NI:A0607 | AT
