@@ -39,8 +39,7 @@ menu:
          - name: 5. Layout med CSS [AT]
          - name: 6. Javascript intro 2 [AF]
          - name: 7. App, Intro JS [AT]
-
-#          - name: 8. Media med HTML5
+         - name: 8. Responsive design [AT]
 #    - label: Inlämningsuppgifter
 #      submenu: true
 #      prefix: as
