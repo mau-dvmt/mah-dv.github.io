@@ -9,7 +9,7 @@ I denna laboration vi bygga vår första responsiva webbplats. Målet är att sk
 
 ## 1. Uppgift
 
-Vi ska nu bygga en webbsida, med valfritt innehåll. Jag tänker bygga min enligt Star Wars-tema, eftersom det är den bästa filmen som någonsin gjorts. Eftersom ni kanske inte tycker det, så är det helt okej att välja ett annat tema, lämpligen någon som fångar ert intresse.
+Vi ska nu bygga en webbsida, med valfritt innehåll. Jag tänker bygga min enligt Star Wars-tema, eftersom det är den bästa filmen som någonsin gjorts. Eftersom ni kanske inte tycker det, så är det helt okej att välja ett annat tema, lämpligen något som fångar ert intresse.
 
 Vi borde börja att fundera på hur vår webbsida ska se ut, och vilka delar som sidan ska struktureras upp av.
 
@@ -30,6 +30,9 @@ Jag tänker även att startsidan ska ha några figurer med tillhörande text, i 
 ![Wireframes](5/wireframes.png)
 
 Större versioner av bilderna hittar du här: [Överblick](5/wireframes.png), [Mobile](5/mobile-wireframe.png), [Tablet](5/tablet-wireframe.png), [Desktop](5/desktop-wireframe.png). *Notera att de vita mellanrummen mellan de olika delarna på sidan är för att tydligt visa deras gränser, och behöver inte återskapas senare i labben*.
+
+Jag kommer i denna labb utgå från det klassiska sättet att bygga upp layoter, genom CSS-egenskapen `float`. Det är helt okej att istället använda sig av `flexbox`, som nämndes på dagens föreläsning. Mer information och bra guide kring flexbox hittar ni [här](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+{: .info}
 
 ### 2.1. Mobile first
 

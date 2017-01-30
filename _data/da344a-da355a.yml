@@ -58,7 +58,7 @@ menu:
          - name: Laboration 1d (APP) - Layout med CSS
          - name: Laboration 1e (APP/IA) - Intro JavaScript
          - name: Laboration 2 - Intro DOM
-#         - name: Laboration 3 - Media Queries
+         - name: Laboration 3 - Media Queries
 #         - name: Laboration 4 - Intro jQuery
 #         - name: Laboration 5 - LocalStorage m.m.
 #         - name: Laboration 6 - Responsiva ramverk

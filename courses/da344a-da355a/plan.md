@@ -31,7 +31,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | Måndag | 10:15 - 12:00 | [Responsiv design ](lectures/le8.html)| NI:A0506 | AT
 | Tisdag | 13:15 - 15:00 | Labb: [JS DOM](exercises/ex6.html)  | OR:F103 | AT
 | Tisdag | 15:15 - 17:00 | Labb: [JS DOM](exercises/ex6.html)  | NI:A0306 | AT
-| Torsdag| 08:15 - 12:00 | Labb: [Responsiv design](exercises/ex6.html) | G8:407, G8:408 | AT
+| Torsdag| 08:15 - 12:00 | Labb: [Responsiv design](exercises/ex7.html) | G8:407, G8:408 | AT
 | ------------- |-------------| ---------| -------- |
 | **Vecka 6** | | | |
 | ------------- |-------------| ---------| -------- |
