@@ -9,6 +9,8 @@ code: "da344a-da355a"
 
 ## Dagens exempel
 
+Ni kan ladda ner alla dages exempel [Här](7.zip)
+
 ### 1. Valutakonverterare (1)
 
 #### HTML
