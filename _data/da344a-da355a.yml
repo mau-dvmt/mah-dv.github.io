@@ -40,12 +40,12 @@ menu:
          - name: 6. Javascript intro 2 [AF]
          - name: 7. App, Intro JS [AT]
          - name: 8. Responsive design [AT]
-#    - label: Inlämningsuppgifter
-#      submenu: true
-#      prefix: as
-#      folder: assignments
-#      items:
-#          - name: 1. Inlämningsuppgift 1
+   - label: Inlämningsuppgifter
+     submenu: true
+     prefix: as
+     folder: assignments
+     items:
+         - name: 1. Inlämningsuppgift 1
 #          - name: 2. Inlämningsuppgift 2
    - label: Laborationer
      submenu: true

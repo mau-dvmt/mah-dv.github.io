@@ -16,7 +16,6 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 *   Kunskap kring att anpassa en webbplats för olika enheter genom CSS
 *   Grundläggande JavaScript
 *   Kunna använda sig utav `localStorage` för att spara data lokalt hos besökaren.
-*   Kunna använda sig utav HTML5 cache för att spara data "offline" på användarens enhet.
 
 **Observera att i denna uppgift är det inte tillåtet att använda några externa ramverk/bibliotek som t.ex. Bootstrap, Foundation, MaterilizeCSS, jQuery, etc.**
 
@@ -40,6 +39,8 @@ Här ska ni ha tre artiklar, som representerar olika saker:
 2. Varför du gör denna webbsidan (vilka lärandemål uppfyller du?)
 3. En lista med tre punkt på tre saker som var utmanande i denna uppgift
 
+**Ni ska följa strukturen på hur boxarna (innehållssektionerna) ligger nedan på er sida**
+
 Skärmdumpar på hur det kan se ut på de olika enheterna (och hur era delar av sidan ska anpassa sig efter skärmupplösningarna):
 
 ![Resultatbild](images/desktop1.png)
@@ -48,7 +49,7 @@ Skärmdumpar på hur det kan se ut på de olika enheterna (och hur era delar av 
 
 #### Presentation av figurer
 
-Denna sida ska presentera minst 4st figurer som ska lägga sig på olika sätt, beroende på vilken enhet som man surfar in på. Jag använder mig utan filmer, men ni får fritt välja vilket innehåll som ni vill ha på sidan.
+Denna sida ska presentera minst 6st figurer (bild + bildtext) som ska lägga sig på olika sätt, beroende på vilken enhet som man surfar in på. Jag använder mig utan filmer, men ni får fritt välja vilket innehåll som ni vill ha på sidan.
 
 Skärmdumpar på hur det kan se ut på de olika enheterna (och hur era delar av sidan ska anpassa sig efter skärmupplösningarna):
 
@@ -73,24 +74,22 @@ Det ska finnas viss funktionalitet i er app:
 
 #### Interaktiv mobil-meny
 
-Er mobil-version av webbplatsen ska ha en meny som är utfällbar/ihopfällbar genom att man klickar på en menyikon/texten meny i sidhuvudet på er webbsida. När sidan laddas (på en mobilskärm) ska menyn vara dold (den ska visas för tablet/desktop), och kunna visas genom en menyknapp. Denna funktionalitet ska skötas genom JavaScript.
+Er mobil-version av webbplatsen ska ha en meny som är utfällbar/ihopfällbar genom att man klickar på en menyikon/texten meny i sidhuvudet på er webbsida. När sidan laddas (på en mobilskärm) ska menyn vara dold (den ska visas för tablet/desktop), och kunna visas genom en menyknapp. Denna funktionalitet ska skötas genom JavaScript. Knappen som visar/döljer er meny ska bara visas på mobilvyn.
 
 #### Möjlighet att välja olika stilar på webbplatsen
 
-Ni ska i er webbapp kunna spara information kring vilken stil på sidan som användaren vill visa. Det ska finnas tre olika layouter (tre olika CSS-varianter på er webbplats) som användaren ska kunna välja mellan. Detta ska sparas genom **"localStorage"**, och den valda stilen ska automatiskt laddas in när användaren besöker sidan. Att välja stil på webbsidan görs lämpligen genom en drop down-meny, då den aktuella stilen är förvald.
-
-#### <strike>Hantering av offline-sida (offline manifest/cache)</strike>
-
-<strike>Skulle era användare tappa internettäckning under användandet av er app ska man inte få "sidan kan inte visas" p.g.a. dålig internetanslutning. Ni ska istället ha gjort en snygg "offline"-sida som man kommer till där det bl.a. ska finnas en knapp som tillåter användaren att ladda om sidan (och hoppas på att internettäckning finns då).</strike>
+Ni ska i er webbapp kunna spara information kring vilken stil på sidan som användaren vill visa. Det ska finnas tre olika layouter (tre olika CSS-varianter (olika CSS-dokument) på er webbplats) som användaren ska kunna välja mellan. Detta ska sparas genom **"localStorage"**, och den valda stilen ska automatiskt laddas in när användaren besöker sidan. Att välja stil på webbsidan görs lämpligen genom en drop down-meny, då den aktuella stilen är förvald.
 
 #### För VG - Ett bildspel
 
-För VG ska ni även bygga ett bildspel som ska ha följande funktionalitet:
+För VG ska ni även bygga ett bildspel i JavaScript som ska ha följande funktionalitet:
 
 *   Bildspelet ska byta bild var tredje sekund när sidan laddas (när listan på bilder är slut, då börjar bildspelet om)
 *   Bilderna ska i någon mån aninmeras (t.ex. genom CSS-egenskapen `transition`)
 *   Man ska se vilken bild som visas i bildspelet, t.ex. bild "2/3"
 *   Er lösning ska vara utformad på så sätt att man ska kunna lägga till en ny bild i HTML-filen (utan att behöva ändra något i CSS eller JavaScript) och den inkluderas automatiskt i bildspelet.
+
+**Återigen, er kod ska var egenskriven, utan hjälp av ramverk**
 
 ## Krav
 
@@ -100,26 +99,31 @@ För VG ska ni även bygga ett bildspel som ska ha följande funktionalitet:
 2. Er JavaScript-kod ska köras utan några fel
 3. Er HTML-kod ska vara bra skriven, tydlig, med rätt element för rätt innehåll
 4. När man sparar något i er webbapp ska feedback ges till användaren (val av utseende)
-5. <strike>Om man inte har tillgång till internet ska en felsida gjord av er visas (som sparats offline)</strike>
-6. Innehållet på era sidor ska följa beskrivningen ovan
+5. Innehållet på era sidor ska följa uppgiftbeskrivningen ovan
+6. Designen på er sida ska vara väl strukturerad, och fokusera på att vara användbar
+    - T.ex. ska centrerade element ha lika mycket luft till höger/vänster om sig (inte vara förskjutna)
+    - T.ex. ska man inte kunna skrolla i sidled på någon version av er webbplatsen
+    - T.ex. bör element på mobilvyn vara 100% breda (med ev. padding, eller liknande) för att utnyttja skärmytan
+7. En generell helhetsbedömning av kvalitén på er uppgift kommer också att göras
 
 ### Funktionella krav
 
 1.  Layout
     1.  Er app ska vara anpassad för desktop, mobiltelefoner och tablets
     2.  Er app ska beté sig på ett bra sätt för olika skärmupplösningar (olika enheter), se skärmdumpar ovan
-2.  <strike>Funktion: Offline-hantering</strike>
-    1.  <strike>Ni ska på ett snyggt och smidigt sätt för användaren presentera en offline-vy, men alternativ att ladda om sidan genom en knapp</strike>
-3.  Funktion: Interaktiv meny (för mobilversionen)
+2.  Funktion: Interaktiv meny (för mobilversionen)
     1.  Om användaren surfar in med en mobil så ska menyn vara dold, men kunna visas genom att man klickar på texten "meny", alternativt en meny-ikon
-4.  Funktion: Spara stil på sidan
+3.  Funktion: Spara stil på sidan
     1.  Man ska kunna spara sin favoritstil av webbplatsen i appen (genom localStorage)
     2.  Sidans stil ska direkt i appen uppdateras (utan att man behöver ladda om webbsidan)
 	3.  När man sedan laddar om sidan ska den förvalda stilen visas, samt vara förvald i er drop down-meny
-5.  VG: Bildspel - se instruktioner ovan
+4.  VG: Bildspel - se instruktioner ovan
 
 **I övrigt kommer den genomgående kvalitén att bedömas.**
 
 ## Redovisning
 
-När ni är klara med en uppgift, dubbelkollat mot kravlistan och jämfört med videon ovan och allt ser bra ut, lämnar ni in alla filer i en ZIP-fil på It's Learning. Ni ska även publicera er lösning på dvwebb.mah.se (eller webshare.mah.se) och bifoga en länk till er sida vid inlämningen på It's Learning.
+När ni är klara med en uppgift, dubbelkollat mot kravlistan och allt ser bra ut, lämnar ni in alla filer i en **ZIP-fil** på It's Learning. Ni ska även publicera er lösning på **dvwebb.mah.se** (eller webshare.mah.se) och **bifoga en länk** till er sida vid inlämningen på It's Learning.
+
+Inlämningar som inte uppfyller dessa inlämningskrav kommer inte att rättas, utan direkt skickas tillbaka som komplettering.
+{: .info}
