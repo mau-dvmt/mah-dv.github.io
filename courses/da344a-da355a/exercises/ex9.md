@@ -3,188 +3,103 @@ title: Laboration 5
 code: "da344a-da355a"
 ---
 
-# Laboration 5 - LocalStorage m.m.
+# Laboration 5 - Ajax
 
 ## Introduktion
 
-Vi ska i denna labboration utgå ifrån [5.3. Filmlista](ex8.html#filmlista). Men istället för att de filmer man lägger in försvinner när man laddar om sidan, så ska dessa sparas lokalt hos användaren genom localStorage. Vi tittade även i uppgiften hur vi kunde sortera våra filmer, denna sortering ska vi komma ihåg så länge användaren besöker vår webbsida, alltså den sessionen. När användaren sedan stänger webbläsaren och besöker webbsidan igen ska sorteringen vara nollställd.
+Vi ska i denna laboration börja med att använda ajax för att dynamiskt ladda in extern data i våra webbsidor, genom att använda oss utav [API](https://en.wikipedia.org/wiki/Web_API). Detta kan till exempel vara Chuck Norris-skämt, eller filminformation för en given söksträng, eller given film.
 
-### Att spara filmerna i localStorage
+Börja med att kolla in [veckans föreläsning](../lectures/le6.html) för en snabb introduktion till vad vi kommer att jobba mer här i labben.
 
-Nu när vi ska spara våra filmer i localStorage, snarare än bara tillfälligt på webbsidan, så behöver vi fundera på hur vi ska strukturera upp våra filmer. Ett förslag skulle kunna vara något i stil med:
+## Del 1 - Förbättra Chuck Norris-tjänsten
 
-```js
-var movies = [
-  {
-    title: "Star Wars",
-    grade: 5
-  },
-  {
-    title: "Titanic",
-    grade: 4
-  }
-];
+Vi byggde på föreläsning en mycket enkelt tjänst som hämtade in ett slumpis skämt om Chuck Norris när man klickade på en knapp. Tjänsten såg ut på följande sätt:
+
+![Chuck Norris](11/cn1.jpg)
+
+Och när man klickade på knappen "Give me a joke!" så visades ett skämt (som hämtades från [detta api](http://www.icndb.com/api/)):
+
+![Chuck Norris](11/cn2.jpg)
+
+Koden för detta exempel, som vi kommer att utgå från, kan ni hämta [här](../lectures/6/cn.zip).
+
+### A) Bygg ut tjänsten - Välj kategori på skämt
+
+Chuck Norris-skämten som hämtas från vårt [api](http://www.icndb.com/api/) kan delas in i olika kategorier. Vi vill nu att användaren ska kunna välja kategori på skämtet som hämtas - genom en drop-down menu. Detta gör att ni i ert ajax-anrop till api:t behöver skicka med parametern `limitTo`, som ni kan läsa mer om under rubriken `Limiting categories` [i dokumentationen för api:t](http://www.icndb.com/api/).
+
+Ett exempel-anrop för att får ett slumpvist skämt från kategorin "nerdy", skulle kuna se ut på följande sätt:
+
+```
+http://api.icndb.com/jokes/random?limitTo=[nerdy]
 ```
 
-Alltså, vi har en array, men filmernas information. För att sedan kunna sortera filmerna (utöver titel och betyg) kanske vi skulle lägga till ett id, alternativt tiden som de lades till i listan - så att vi har möjlighet att sortera filmerna efter detta också.
+Gör nu så att man kan välja mellan kategorierna:
 
-För att spara arrayen med filmerna i localStorage - som bara sparar strängar - behöver vi göra om vår array till JSON. Detta genom funktionen `JSON.stringify(movies)`
-{:.info}
+- all categories
+- nerdy
+- explicit
 
-En enkel funktion för att spara filmerna i localStorage som JSON skulle kunna se ut på följande sätt (när man klickar på elementet `#save-movies` ):
+Er tjänst borde därefter se ut enligt följande:
 
-```js
-$("#save-movies").on("click", function(){
-	var JSONMovies = JSON.stringify(movies);
-	localStorage.setItem("movies", JSONMovies);
-});
-```
+![Chuck Norris](11/cn3.jpg)
 
-Det som händer är att vi tar vår array med filmer, omvandlar detta till JSON-format (sträng), och sedan sparar det i localStorage genom nyckeln *movies*. Vi kan nu om vi tittar i utvecklingskonsolen i t.ex. Chrome, under fliken *Resources* se vad som finns sparat i localStorage, i vårt fall följande:
+- **Bonus**: Tänk på att validera så att användaren väljer en av kategorierna (all categories/nerd/explict), annars ska inget ajax-anrop ske. Utan användaren ska istället meddelas att en kategori måste väljas.
 
-<a href="10/developer-console.png">![developer-console](10/developer-console.png)</a>
+När detta fungerar bra, så går vi vidare till nästa del!
 
-Såhär långt har vi följande lösning att utgå från:
+### B) Bygg ut tjänsten - Välja namn för skämten (istället för Chuck Norris)
 
-```js
-// Vår array med filmer, två filmer inlagda som exempeldata
-var movies = [
-  {
-	title: "Star Wars",
-	grade: 5
-  },
-  {
-	title: "Titanic",
-	grade: 4
-  }
-];
+Vi ska nu skräddarsy tjänsten ännu mer! Detta så att istället för namnet "Chuck Norris" i våra skämt, så ska vi kunna ange vilket namn som skämtet ska handla om. Något i stil med:
 
-function printMovies(){
-  /* @TODO Skriver ut alla filmerna i vår array "movies" */
-}
+![Chuck Norris](11/cn4.jpg)
 
-$("#save-movie").on("click", function(e){
-  /* @TODO Sparar en film i vår array "movies" när vi klickar på knappen "Spara film"
-    och skriver sedan ut den uppdaterade listan av filmer genom funktionen "printMovies"
-  */
-});
+Läser man dokumentationen för [api:t under rubriken "Changing the name of the main character"](http://www.icndb.com/api/) så ser man att vi kan skicka med följande parametrar för att ange för och efternamn för skämtet:
 
-$("#save-movies").on("click", function(){
-  /* Sparar vår array med filmer som JSON i localStorage */
-	var JSONMovies = JSON.stringify(movies);
-	localStorage.setItem("movies", JSONMovies);
-});
+- firstName
+- lastName
 
-$("#load-movies").on("click", function(){
-  /* @TODO Läser in våra filmer från localStorage och skriver ut dessa i vår lista på sidan,
-    samt sparar filmerna i vår array "movies"
-  */
-});
+Det är nu er uppgift att implementera detta, så att vi kan skicka med namnet. Det borde se ut något i stil med detta när det är klart:
 
-$("#order-alphabetic").on("click", function(){
-  /* @TODO Sorterar filmerna alfabetiskt */
-});
+![Chuck Norris](11/cn5.jpg)
 
-$("#order-grade").on("click", function(){
-  /* @TODO Sorterar filmerna efter betyg */
-});
+- **Bonus**: Tänk på att validera så att användaren skriver in något namn. Validera detta och meddela användaren att ett för- och efternamn måste finnas.
+- **Bonus 2**: Gör så att namnet "Chuck Norris" är förinskrivet i text-fälten.
 
-$(".delete-movie").on("click", function(){
-  /* @TODO Tar bort en film från vår array */
-});
+### C) Bygg ut tjänsten - Ange antal skämt som ska hämtas
 
-function getStars(grade){
-  /* @TODO genererar stjärnor till när filmerna ska visas
-    Returnerar HTML-kod för så många stjärnor som parametern "grade" anger */
-}
+Just nu hämtas bara ett skämt åt gången, er uppgift nu blir att användaren kan ange hur många skämt som ska hämtas. Detta genom att ange en valfri siffra. I API-dokumentationen läs under rubriken `Fetching multiple random jokes`.
 
-// Skriver ut att filmerna i vår lista när sidan laddats klart
-printMovies();
-```
+![Chuck Norris](11/cn6.jpg)
 
-Era uppifter nu består av att färdigställa koden ovan, så att den fungerar enligt specifikation.
+Ni ska sedan skriva ut alla skämten som hämtas och resultatet borde se ut såhär:
 
-#### 1. Skriv klart funktionen *printMovies()*
+![Chuck Norris](11/cn7.jpg)
 
-Detta så att när sidan laddas klart, så ska filmerna i listan vara de som finns i vår array "movies".
+- **Bonus**: Kontrollera att användare skriver in en siffra mellan 1 och 10.
 
-#### 2. Skriv klart funktionen för att spara en ny film
+---
 
-Så att vi kan lägga till fler filmer i vår lista! Det kan vara idé att automatiskt spara filmerna i localStorage när man sparar en ny film så att man inte glömmer att spara dem sedan. *Men detta får ni själva välja hur ni vill göra*. [Här kan ni läsa mer om localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+## Del 2 - Filmsökning
 
-För att lägga till en sak sist i en array i JavaScript skriver man `.push()`. Ni kan läsa mer om detta [här](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-{:.info}
+Denna del kommer vara mer fristående, men kommer att likna en av deluppgifterna i inlämingsuppgift 2 - så har ni gjort denna så kan ni återanvända delar av er arbete senare.
 
-#### 3. Skriv klart funktionen för att ladda in filmer från localStorage
+### A) Filmsökning
 
-Istället för att vår array "movies" ska ha filmer hårdkodade i sig, ska ni när sidan laddas nu istället läsa in de filmer som finns sparade i localStorage. Dessa filmerna ska sedan visas på webbsidan för användaren.
+Vi ska nu kunna söka efter olika filmer genom att ange en titel för en film. För kunna söka efter filmer (och få svar på sökningen) behöver vi ett API som tillhandahåller denna tjänst. Ett sådant API är [OMDb API](https://www.omdbapi.com/). Gå in på sidan och läs dokumentation för att förstå möjligheterna med API:t och svara på följande frågor:
 
-För att läsa in JSON till en array igen (från localStorage) kan ni använda `JSON.parse(localStorage.getItem("movies"))`.
-{:.info}
+- Vilka tjänster tillhandahåller API:t?
+- Vilken tjänst ska användas vid en filmsökning?
+- Vilken information måste skickas med vid en filmsökning?
+  - Hur ser en exempel-URL ut för filmen `Star Wars`?
+- Hur kommer mitt svar att se ut (i JSON)?
+  - Hur kan jag skriva ut alla svar som jag får tillbaka (alla filmerna)?
 
-#### 4. Ta bort filmer
+När ovanstående frågor är besvarade så är det dags att gå vidare! Jag tänker mig att filmsökningstjänsen ska se ut något i stil med:
 
-Gör det möjligt att ta bort filmer från vår lista. Tänk på att dessa ska tas bort från vår array "movies". Det kan vara idé att automatiskt uppdatera filmerna i localStorage när man tar bort en film så att man inte glömmer att spara dem sedan. *Men detta får ni själva välja hur ni vill göra*.
+![MovieFinder](11/mf1.jpg)
 
-För att ta bort en sak från en array kan ni använda `.splice()` som ni kan läsa om [här](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice). [Här finns ett exempel](http://stackoverflow.com/questions/5767325/remove-a-particular-element-from-an-array-in-javascript) från stackoverflow som man kan inspireras av.
+Vi vill nu, när användaren skrivit in *minst 3 tecken i sökrutan* kalla på API:t, göra en sökning och sedan visa upp svaren på ett lämpligt sätt. T.ex.
 
-#### 5. Sortera filmerna efter betyg eller titel
+![MovieFinder](11/mf2.jpg)
 
-Skriv klart funktionerna för att sortera filmerna efter titel eller betyg. Om ni väljer att sortera dem direkt i HTML-koden (som i förra laborationen) eller genom att sortera arrayen med filmern är upp till er. Men sidan ska komma ihåg hur ni sorterat filmerna under hela sessionen som användaren besöker webbsidan (tills användaren stänger webbläsaren).
-
-Ni användaren `sessionStorage` på samma sätt som `localStorage` och kan läsa mer om [sessionStorage här](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
-{:.info}
-
-#### 6. BONUS! Filtrera era filmer
-
-Ni kan nu om ni vill genom attributet `data-*` (samt i er array med filmer egenskaper) lägga till information om filmens:
-
-- genre
-- år den släpptes
-
-Gör sedan en drop down-lista för att välja genre att sortera efter, eller fråga användaren efter ett årtal att filtrera filmerna efter. **OBS.** Detta förutsätter också att ni skapar två nya text-fält där användaren, när denna skapar en ny film, kan lägga till genre och årtal.
-
-Ni kan läsa mer om `data-*`-attributet [här](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes)
-{:.info}
-
-### Exempel på HTML-kod att utgå från
-
-Denna exempelkod använder sig utav bootstap för sitt utseende:
-
-```html
-<div class="row container-fluid" style="padding:0 50px;">
-  <div class="xs-col-12">
-    <h1>Min filmlista</h1>
-    <form>
-      <fieldset>
-        <legend>Lägg till en film</legend>
-        <div class="form-group">
-          <label for="title">Titel:</label>
-          <input type="text" class="form-control" id="title" placeholder="Titel här...">
-        </div>
-        <div class="form-group">
-        <label for="Grade">Betyg:</label>
-          <select id="grade"  class="form-control">
-            <option value="0">Välj betyg här...</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <button id="save-movie" class="btn btn-success">Spara film</button>
-        </div>
-      </fieldset>
-    </form>
-    <h2>Inlagda filmer</h2>
-    <ul id="movie-list">
-
-    </ul>
-    <button id="save-movies" class="btn btn-default">Spara filmer</button>
-    <button id="order-alphabetic" class="btn btn-primary">Alfabetisk ordning</button>
-    <button id="order-grade" class="btn btn-primary">Betygsordning</button>
-  </div>
-</div>
-```
+Fundera på hur ni ska lösa detta, fråga gärna. Men denna delen av laborationen är det meningen att ni själva ska förstå det API som ni använder (läs dokumentationen) samt hur ni skriver ut filmernas resultat. Tankesättet liknar väldigt mycket det som ni har gjort i Chuck Norris-delen av denna labb.

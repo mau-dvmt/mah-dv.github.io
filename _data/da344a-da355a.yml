@@ -40,6 +40,7 @@ menu:
          - name: 6. Javascript intro 2 [AF]
          - name: 7. App, Intro JS [AT]
          - name: 8. Responsive design [AT]
+         - name: 9. jQuery & ajax [AT]
    - label: Inlämningsuppgifter
      submenu: true
      prefix: as
@@ -59,8 +60,8 @@ menu:
          - name: Laboration 1e (APP/IA) - Intro JavaScript
          - name: Laboration 2 - Intro DOM
          - name: Laboration 3 - Media Queries
-#         - name: Laboration 4 - Intro jQuery
-#         - name: Laboration 5 - LocalStorage m.m.
+         - name: Laboration 4 - Intro jQuery
+         - name: Laboration 5 - Ajax
 #         - name: Laboration 6 - Responsiva ramverk
 #         - name: Laboration 7 - Ajax
 #         - name: Laboration 8 - Geolocation

@@ -33,9 +33,9 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | **Vecka 6** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | Introduktion till jQuery & ajax | NI:A0506 | AT
-| Tisdag | 13:15 - 17:00 | Labb: jQuery | NI:A0406, OR:D326 | AT, AF
-| Torsdag| 08:15 - 12:00 | Labb: Ajax | G8:407, G8:408 | AT, AF
+| Måndag | 10:15 - 12:00 | [Introduktion till jQuery & ajax](lectures/le9.html) | NI:A0506 | AT
+| Tisdag | 13:15 - 17:00 | Labb: [jQuery](exercises/ex8.html)  | NI:A0406, OR:D326 | AT, AF
+| Torsdag| 08:15 - 12:00 | Labb: [Ajax](exercises/ex9.html)  | G8:407, G8:408 | AT, AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 7** | | | |
 | ------------- |-------------| ---------| -------- |

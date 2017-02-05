@@ -352,4 +352,4 @@ Visa på lämpligt ställe på er sida hur många filmer som listan innehållet.
 
 ### Extra
 
-Lös [uppgift 6](http://mah-dv.github.io/courses/da344a-da355a/exercises/ex8.html#uppgift-6) från den förra labben, fast denna gången med jQuery. Vilka för- och nackdelar upplevde du med de olika lösningarna som du gjort?
+Lös [uppgift 6](http://mah-dv.github.io/courses/da344a-da355a/exercises/ex6.html#uppgift-6) från den förra labben, fast denna gången med jQuery. Vilka för- och nackdelar upplevde du med de olika lösningarna som du gjort?
