@@ -41,6 +41,7 @@ menu:
          - name: 7. App, Intro JS [AT]
          - name: 8. Responsive design [AT]
          - name: 9. jQuery & ajax [AT]
+         - name: 10. Bootstrap & LocalStorage [AT]
    - label: Inlämningsuppgifter
      submenu: true
      prefix: as
