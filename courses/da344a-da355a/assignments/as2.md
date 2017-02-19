@@ -18,7 +18,7 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 - Utökad kunskap om CSS-ramverk
 - Kunna utöka tillgänglighet kring en webbapp genom att knyta en "skrivbords"-ikon till er webbapp
 
-**Vi ska i denna uppgift alltså använda oss utav ett ramverk (valfritt vilket) för att skapa vår responsiva webbplats. Exempel på ramver är [bootstrap](http://getbootstrap.com), [foundation](http://foundation.zurb.com) och [materialazeCSS](http://materializecss.com)**
+**Vi ska i denna uppgift alltså använda oss utav ett ramverk (valfritt vilket) för att skapa vår responsiva webbplats. Exempel på ramverk är [bootstrap](http://getbootstrap.com), [foundation](http://foundation.zurb.com) och [materialazeCSS](http://materializecss.com)**
 
 ## 3. Uppgiften
 
@@ -73,19 +73,22 @@ Det ska också finnas en knapp för att ta bort filmer från ert filmarkiv.
 
 ![Tablet](images/ass2-movies-tablet.png)*Exempellayout för tablet*
 
+Observera att bilderna kan hindras att visas genom `hotlinking`, det är okej. Men grunden för att visa bilderna ska vara byggd.
+{:.info}
+
 ### 3.3. Funktion: Fånga media
 
-På denna sida ska vi fånga media från användarens enhet. Det vi ska fånga är antingen foto/ljud/video. Varje media ska ha en typ (audio/video/photo) och en titel (en sträng). Dessa ska sparas i databasen tillsammans med sökvägen för bilden/ljudklippet/videon). Media-objektet ska sparas på servern och informationen ska sparas i en MySQL-databas. Själva sparande sker genom PHP (*Vi kommer labba på detta i vecka 9). Formuläret ska skickas genom AJAX och lämpligt meddelande, samt hur feedback kring uppladdningen (t.ex. % klar av uppladdningen), ska visas så att användaren vet om media-objektet sparades eller inte. Efter lyckad uppladdning ska formuläret återställas.
+På denna sida ska vi fånga media från användarens enhet. Det vi ska fånga är antingen foto/ljud/video. Varje media ska ha en typ (audio/video/photo) och en titel (en sträng). Dessa ska sparas i databasen tillsammans med sökvägen för bilden/ljudklippet/videon). Media-objektet ska sparas på servern och informationen ska sparas i en MySQL-databas. Själva sparande sker genom PHP (*[Vi kommer labba på detta i vecka 8](../exercises/ex13.html)*). Formuläret ska skickas genom AJAX och lämpligt meddelande, samt hur feedback kring uppladdningen (t.ex. % klar av uppladdningen), ska visas så att användaren vet om media-objektet sparades eller inte. Efter lyckad uppladdning ska formuläret återställas.
 
 Knappen som man klickar på ska vara någon av följande:
 
 ```html
 <!-- Kamera -->
-<input type="file" name="media" accept="image/*" capture="camera">
+<input type="file" name="media" accept="image/*" capture>
 <!-- Ljud -->
-<input type="file" name="media" accept="audio/*" capture="microphone">
+<input type="file" name="media" accept="audio/*" capture>
 <!-- Video -->
-<input type="file" name="media" accept="video/*" capture="camcorder">
+<input type="file" name="media" accept="video/*" capture>
 ```
 
 Detta beroende på vilken typ av media man väljer i drop-down-menyn.
@@ -149,3 +152,6 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 ## Redovisning
 
 När ni är klara med en uppgift, dubbelkollat mot kravlistan och jämfört med videon ovan och allt ser bra ut, lämnar ni in alla filer i en ZIP-fil på It's Learning. Ni ska även publicera er lösning på dvwebb.mah.se och bifoga en länk till er sida vid inlämningen på It's Learning.
+
+Bifogas ingen länk till dvwebb så kommer inlämningsuppgiften inte att rättas. Det samma gäller att ladda upp en ZIP-fil med alla filer till er webbplats.
+{:.info}

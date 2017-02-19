@@ -41,21 +41,21 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | [HTML 5 & Responsiva ramverk](lectures/le10.html) | NI:A0407 | AT
 | Tisdag | 13:15 - 17:00 | [Labb: LocalStorage](exercises/ex10.html) | G8:405, G8:423 | AT, AF
-| Torsdag| 08:15 - 12:00 | [Labb: HTML 5 & ramverk ](exercises/ex10.html) | G8:407, G8:408 | AT, AF
+| Torsdag| 08:15 - 12:00 | [Labb: HTML 5 & ramverk ](exercises/ex11.html) | G8:407, G8:408 | AT, AF
 | Söndag | Midnatt | **[Deadline inl.1](assignments/as1.html)** | | |
 | ------------- |-------------| ---------| -------- |
 | **Vecka 8** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | Media & Geolocation | NI:A0407 | AT
+| Måndag | 10:15 - 12:00 | [Media & Geolocation](lectures/le11.html) | NI:A0407 | AT
 | Tisdag | 13:15 - 15:00 | Development methodology | OR:F410 | AF
-| Torsdag| 08:15 - 12:00 | Labb: Media & Geolocation | G8:407, G8:408 | AT, AF
+| Torsdag| 08:15 - 12:00 | Labb: [Media](exercises/ex13.html) & [Geolocation](exercises/ex12.html) | G8:407, G8:408 | AT, AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 9** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | Phonegap | NI:A0407 | AT
 | Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0513 | AT, AF
 | Torsdag| 08:15 - 12:00 | Labb: Phonegap | G8:408, G8:423 | AT
-| Söndag | Midnatt | **Deadline inl.2** | | |
+| Söndag | Midnatt | **[Deadline inl.2](assignments/as2.html)** | | |
 | ------------- |-------------| ---------| -------- |
 | **Vecka 10** | | | |
 | ------------- |-------------| ---------| -------- |

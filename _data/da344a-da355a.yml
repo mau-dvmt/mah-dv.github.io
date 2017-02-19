@@ -42,13 +42,14 @@ menu:
          - name: 8. Responsive design [AT]
          - name: 9. jQuery & ajax [AT]
          - name: 10. Bootstrap & LocalStorage [AT]
+         - name: 11. Geolocation & media [AT]
    - label: Inlämningsuppgifter
      submenu: true
      prefix: as
      folder: assignments
      items:
          - name: 1. Inlämningsuppgift 1
-#          - name: 2. Inlämningsuppgift 2
+         - name: 2. Inlämningsuppgift 2
    - label: Laborationer
      submenu: true
      prefix: ex
@@ -65,9 +66,7 @@ menu:
          - name: Laboration 5 - Ajax
          - name: Laboration 6 - LocalStorage
          - name: Laboration 7 - Ramverk
-#         - name: Laboration 6 - Responsiva ramverk
-#         - name: Laboration 7 - Ajax
-#         - name: Laboration 8 - Geolocation
-#         - name: Laboration 9 - SVG och D3.js
-#         - name: Laboration 10 - Mediahantering
+         - name: Laboration 8 - Geolocation
+         - name: Laboration 9 - Mediahantering
+         - name: Laboration 10 - Bonus: SVG och D3.js
 #         - name: Laboration 11 - Phonegap
