@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect("localhost", "TSANTI", "demo", "TSANTI");
+$db = mysqli_connect("localhost", "Ditt användarid", "Ditt lösenord", "Ditt användarid");
 
 $return = new ArrayObject();
 
