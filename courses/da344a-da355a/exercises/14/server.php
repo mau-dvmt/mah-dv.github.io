@@ -43,7 +43,7 @@ if(isset($_GET['action']) and $_GET['action'] == "getMedia"){
 		$m['path'] = $row['path'];
 		$m['type'] = $row['type'];
 		$m['title'] = $row['title'];
-		$m['uploaded'] = $row['timestamp'];
+		$m['timestamp'] = $row['timestamp'];
 		//$m['id'] = $row['id'];
 		$media['files'][] = $m;
 	}
