@@ -43,6 +43,7 @@ menu:
          - name: 9. jQuery & ajax [AT]
          - name: 10. Bootstrap & LocalStorage [AT]
          - name: 11. Geolocation & media [AT]
+         - name: 12. JavaScript development methodology [AF]
    - label: Inlämningsuppgifter
      submenu: true
      prefix: as
