@@ -54,7 +54,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | [Phonegap](lectures/le13.html) & D3.js | NI:A0407 | AT, AF
 | Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0513 | AT
-| Torsdag| 08:15 - 12:00 | Labb: Phonegap | G8:408, G8:423 | AT
+| Torsdag| 08:15 - 12:00 | Labb: [Phonegap](exercises/ex15.html) & [D3.js](exercises/ex14.html) | G8:408, G8:423 | AT
 | Söndag | Midnatt | **[Deadline inl.2](assignments/as2.html)** | | |
 | ------------- |-------------| ---------| -------- |
 | **Vecka 10** | | | |
