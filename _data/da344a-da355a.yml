@@ -45,6 +45,7 @@ menu:
          - name: 11. Geolocation & media [AT]
          - name: 12. JavaScript development methodology [AF]
          - name: 13. Hybridapplikationer [AT]
+         - name: 14. D3.js [AF]
    - label: Inlämningsuppgifter
      submenu: true
      prefix: as
