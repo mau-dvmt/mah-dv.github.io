@@ -61,7 +61,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | *Projekthandledning* | NI:A0311 | AT, AF
 | Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0513 | AT, AF
-| Torsdag| 08:15 - 12:00 | Labb: Extra | G8:407 | AT
+| Torsdag| 08:15 - 12:00 | Labb: Extra | G8:407 | AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 11** | | | |
 | ------------- |-------------| ---------| -------- |
