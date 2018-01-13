@@ -32,27 +32,27 @@ menu:
      prefix: le
      folder: lectures
      items:
-         - name: 1. Kursintroduktion [AT]
-         - name: 2. Intro - HTML [AT]
-         - name: 3. Javascript intro [AF]
-         - name: 4. Introduktion till CSS [AT]
-         - name: 5. Layout med CSS [AT]
-         - name: 6. Javascript intro 2 [AF]
-         - name: 7. App, Intro JS [AT]
-         - name: 8. Responsive design [AT]
-         - name: 9. jQuery & ajax [AT]
-         - name: 10. Bootstrap & LocalStorage [AT]
-         - name: 11. Geolocation & media [AT]
-         - name: 12. JavaScript development methodology [AF]
-         - name: 13. Hybridapplikationer [AT]
-         - name: 14. D3.js [AF]
+#         - name: 1. Kursintroduktion [AT]
+#         - name: 2. Intro - HTML [AT]
+#         - name: 3. Javascript intro [AF]
+#         - name: 4. Introduktion till CSS [AT]
+#         - name: 5. Layout med CSS [AT]
+#         - name: 6. Javascript intro 2 [AF]
+#         - name: 7. App, Intro JS [AT]
+#         - name: 8. Responsive design [AT]
+#         - name: 9. jQuery & ajax [AT]
+#         - name: 10. Bootstrap & LocalStorage [AT]
+#         - name: 11. Geolocation & media [AT]
+#         - name: 12. JavaScript development methodology [AF]
+#         - name: 13. Hybridapplikationer [AT]
+#         - name: 14. D3.js [AF]
    - label: Inlämningsuppgifter
      submenu: true
      prefix: as
      folder: assignments
      items:
-         - name: 1. Inlämningsuppgift 1
-         - name: 2. Inlämningsuppgift 2
+#         - name: 1. Inlämningsuppgift 1
+#         - name: 2. Inlämningsuppgift 2
    - label: Laborationer
      submenu: true
      prefix: ex
@@ -64,12 +64,12 @@ menu:
          - name: Laboration 1d (APP) - Layout med CSS
          - name: Laboration 1e (APP/IA) - Intro JavaScript
          - name: Laboration 2 - Intro DOM
-         - name: Laboration 3 - Media Queries
-         - name: Laboration 4 - Intro jQuery
-         - name: Laboration 5 - Ajax
-         - name: Laboration 6 - LocalStorage
-         - name: Laboration 7 - Ramverk
-         - name: Laboration 8 - Geolocation
-         - name: Laboration 9 - Mediahantering
-         - name: Laboration 10 - Bonus, SVG och D3.js
-         - name: Laboration 11 - Bonus, PhoneGap
+#         - name: Laboration 3 - Media Queries
+#         - name: Laboration 4 - Intro jQuery
+#         - name: Laboration 5 - Ajax
+#         - name: Laboration 6 - LocalStorage
+#         - name: Laboration 7 - Ramverk
+#         - name: Laboration 8 - Geolocation
+#         - name: Laboration 9 - Mediahantering
+#         - name: Laboration 10 - Bonus, SVG och D3.js
+#         - name: Laboration 11 - Bonus, PhoneGap

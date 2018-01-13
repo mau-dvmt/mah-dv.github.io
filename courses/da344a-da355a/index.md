@@ -39,6 +39,6 @@ Det rekommenderas att läsa igenom den kompletta [kursplanen](https://edu.mah.se
 
 ## Länkar
 
-* [Malmö högskola](http://mah.se)
+* [Malmö universitet](http://mau.se)
 * [It's Learning](https://mah.itslearning.com/Index.aspx)
 * [Kursplan](https://edu.mah.se/sv/Course/DA344A#Syllabus)
