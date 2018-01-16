@@ -59,11 +59,7 @@ Du behöver några verktyg/resurser för att skapa din webbsida:
     *   w3School har en HTML-referens för olika HTML-element [w3School](http://www.w3schools.com/tags/)
     *   Sitepoint publicerar ett slags upppslagsverk för många aspekter kring HTML: [Sitepoint HTML Reference](http://reference.sitepoint.com/html).
 
-### 3.2\. Ett startdokument
-
-_Har du gjort första labben i kursen Introduktion till datavetenskap? Då känner du nog igen nedanstående steg._
-
-Du kanske har noterat att det finns nätverksplats som heter `Webshare` (L:\) när du öppnar "Den här datorn" (om platsen inte finns måste du aktivera tjänsten Webshare [här](http://idservice.mah.se)). Detta är en speciell plats, då alla filer som läggs där i automatiskt blir tillgängliga över Internet. Om du redan provat att publicera filer via Webshare kan du hoppa till nästa rubrik. Annars bör du gå igenom följande steg för att testa på webbpublicering via Webshare:
+### 3.2. Ett startdokument
 
 En väldigt enkel webbsida är förberedd för er att använda. Källkoden för sidan är:
 
@@ -83,21 +79,14 @@ En väldigt enkel webbsida är förberedd för er att använda. Källkoden för 
 </html>
 {% endhighlight %}
 
-1.  Skapa ett nytt dokument i t.ex. Notepad++ och klistra in ovanstående kod i dokumentet. Spara filen i din `Webshare`-plats, med filnamnet `index.html`.
+1.  Skapa ett nytt dokument i t.ex. Notepad++ (eller valfri textredigerare) och klistra in ovanstående kod i dokumentet. Spara filen i valfri mapp med filnamnet `index.html`.
 
-2.  För att nu surfa in till sidan som ni precis publicerade, surfar ni till `http://webshare.mah.se/datorid`, där datorid är din egen datoridentitet.
-
-3.  Om du får felet `404 - File or directory not found` så betyder det att ingen fil med namnet `index.html` (eller `index.htm`) hittas. Använd i så fall utforskaren för att kontrollera att filen från steg 1 är sparad i nätverksplatsen `Webshare`. Börja om från steg 1 om du inte hittar filen alls. Om filen finns, men har fel filnamn - använd utforskaren rätta till namnet.
+2.  För att nu öppna filen, och besöka till webbsida, i mappen öppna filen i valfri webbläsare.
 
     Ser tecknet "å" konstigt ut när du öppnar webbsidan i webbläsaren? I så fall tolkas dokumentet på ett annat vis än det är sparat. Rekommenderad lösning: används "spara som" och ange Encoding/Teckenkodning till `UTF-8`.
     {: .info}
 
-4.  Öppna den nyss parade filen i ett textredigeringsprogram - det är dags att lägga till ditt eget innehåll.
-
-#### 3.2.1. Andra metoder för att komma åt hemkatalogen
-
-*   Hemkatalogen går även att komma åt via krypterad FTP. FTP är ett protokoll specialdesignat för att skicka och ta emot filer (därav namnet, File Transfer Protocol). Adressen är `ftpes://webshare.mah.se` och ditt vanliga datorid och lösenord används. [FileZilla](http://filezilla-project.org/) (finns i datorsalarna) och [Cyberduck](http://cyberduck.ch/) är två bra program som kan användas.
-*   Det finns även [ett webbgränssnitt](http://access.mah.se).
+3.  Öppna den nyss parade filen i ett textredigeringsprogram - det är dags att lägga till ditt eget innehåll.
 
 ## 4. Mer innehåll, mer HTML
 
@@ -168,7 +157,48 @@ Det är lätt att göra misstag, så även när man skriver HTML5\. Använd där
 
 Ett bra dokument saknar fel (som rödmarkeras i validatorn) - och helst även varningar.
 
-## 6. Feedback
+## 6. Att publicera din webbplats på internet
+
+_Har du gjort första labben i kursen Introduktion till datavetenskap? Då känner du nog igen nedanstående steg._
+
+#### Alternativ 1: Om du använder en dator i skolan (läs igenom även om du använder egen dator)
+
+Du kanske har noterat att det finns nätverksplats som heter `Webshare` (L:\) när du öppnar "Den här datorn" (om platsen inte finns måste du aktivera tjänsten Webshare [här](http://idservice.mah.se)). Detta är en speciell plats, då alla filer som läggs där i automatiskt blir tillgängliga över Internet. Om du redan provat att publicera filer via Webshare kan du hoppa till nästa rubrik. Annars bör du gå igenom följande steg för att testa på webbpublicering via Webshare:
+
+1.  Spara din HTML-fil i din `Webshare`-plats, med filnamnet `index.html`.
+
+2.  För att nu surfa in till sidan som ni precis publicerade, surfar ni till `http://webshare.mah.se/datorid`, där datorid är din egen datoridentitet.
+
+3.  Om du får felet `404 - File or directory not found` så betyder det att ingen fil med namnet `index.html` (eller `index.htm`) hittas. Använd i så fall utforskaren för att kontrollera att filen från steg 1 är sparad i nätverksplatsen `Webshare`. Börja om från steg 1 om du inte hittar filen alls. Om filen finns, men har fel filnamn - använd utforskaren rätta till namnet.
+
+    Ser tecknet "å" konstigt ut när du öppnar webbsidan i webbläsaren? I så fall tolkas dokumentet på ett annat vis än det är sparat. Rekommenderad lösning: används "spara som" och ange Encoding/Teckenkodning till `UTF-8`.
+    {: .info}
+
+4.  Öppna den nyss parade filen i ett textredigeringsprogram - det är dags att lägga till ditt eget innehåll.
+
+#### 3.2.1. Andra metoder för att komma åt hemkatalogen
+
+*   Hemkatalogen går även att komma åt via krypterad FTP. FTP är ett protokoll specialdesignat för att skicka och ta emot filer (därav namnet, File Transfer Protocol). Adressen är `ftpes://webshare.mah.se` och ditt vanliga datorid och lösenord används. [FileZilla](http://filezilla-project.org/) (finns i datorsalarna) och [Cyberduck](http://cyberduck.ch/) är två bra program som kan användas.
+*   Det finns även [ett webbgränssnitt](http://access.mah.se).
+
+##### Genom FTP (rekommenderat)
+
+1. Ladda ner och installera [FileZilla](http://filezilla-project.org/).
+
+2. Anslut till FTP-platsen webshare. Ange följande uppgifter:
+    - Adress: *ftpes://webshare.mah.se*
+    - Användarenamn: *ditt datorid till Its Learning*
+    - Lösenord: *ditt lösenord till Its Learning*
+
+![Anslut till filezilla](1/filezilla1.png)
+
+3. Överför filer från din dator till webshare:
+
+![Överför filer till filezilla](1/filezilla2.png)
+
+4. Om du nu överfört filen `index.html` till root-mappen i webshare, så kan du surfa till den genom följande adress: `http://webshare.mah.se/datorid`, där datorid är din egen datoridentitet.
+
+## 7. Feedback
 
 Hur ska du veta om du skapat bra eller dålig HTML? Kontrollera först följande punkter:
 
