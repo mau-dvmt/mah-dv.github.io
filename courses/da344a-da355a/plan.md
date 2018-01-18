@@ -11,7 +11,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | [Kursintroduktion](lectures/le1.html) | G8:425 | AT
 | Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till HTML](lectures/le2.html) | NI:A0507 | AT
-| Torsdag| 08:15 - 12:00 | **APP** - Fö: Intro CSS Labb: [(1a)](exercises/ex1.html), [(1b)](exercises/ex2.html) + [(1c)](exercises/ex3.html) | G8:423 | AT
+| Torsdag| 08:15 - 12:00 | **APP** - Fö: [Intro CSS Labb](lectures/le4.html): [(1a)](exercises/ex1.html), [(1b)](exercises/ex2.html) + [(1c)](exercises/ex3.html) | G8:423 | AT
 | Torsdag| 08:15 - 12:00 | **IA** - Labb: [Intro JS](exercises/ex5.html) | G8:408 | AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 4** | | | |

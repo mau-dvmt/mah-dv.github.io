@@ -35,7 +35,7 @@ menu:
          - name: 1. Kursintroduktion [AT]
          - name: 2. Intro - HTML [AT]
 #         - name: 3. Javascript intro [AF]
-#         - name: 4. Introduktion till CSS [AT]
+         - name: 4. Introduktion till CSS [AT]
 #         - name: 5. Layout med CSS [AT]
 #         - name: 6. Javascript intro 2 [AF]
 #         - name: 7. App, Intro JS [AT]
