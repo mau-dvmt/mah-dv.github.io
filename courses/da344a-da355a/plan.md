@@ -16,7 +16,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | **Vecka 4** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | **APP** - Layout med CSS | NI:A0502	 | AT
+| Måndag | 10:15 - 12:00 | **APP** - [Layout med CSS](lectures/le5.html) | NI:A0502	 | AT
 | Måndag | 10:15 - 12:00 | **IA** - Repetition JavaScript 2 | NI:A0506 | AF
 | Tisdag | 13:15 - 15:00 | **APP** - Introduktion till JavaScript| NI:A0307 | AT
 | Tisdag | 13:15 - 15:00 | **IA** - Extra: JavaScript | G8:507 | AF
