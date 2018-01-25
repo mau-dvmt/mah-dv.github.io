@@ -12,3 +12,5 @@ Ni kan ladda ner dagens föreläsning [Här](7.pdf)
 ## Dagens exempel
 
 Ni kan ladda ner alla dages exempel [Här](7.zip)
+
+Ni kan ladda ner alla labbens (torsdagens) exempel [Här](7b.zip)
