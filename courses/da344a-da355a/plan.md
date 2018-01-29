@@ -25,27 +25,27 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | **Vecka 5** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | Responsiv design| NI:A0506 | AT
-| Tisdag | 13:15 - 17:00 | Labb: JS DOM  | 	NI:A0418, NI:A0506 | AT + AF
-| Torsdag| 08:15 - 12:00 | Labb: Responsiv design | G8:408, G8:423 | AT + AF
+| Måndag | 10:15 - 12:00 | [Responsiv design](lectures/le8.html)| NI:A0506 | AT
+| Tisdag | 13:15 - 17:00 | Labb: [JS DOM](exercises/ex6.html)  | 	NI:A0418, NI:A0506 | AT + AF
+| Torsdag| 08:15 - 12:00 | Labb: [Responsiv design](exercises/ex7.html) | G8:408, G8:423 | AT + AF
 | ------------- |-------------| ---------| -------- |
 | **Vecka 6** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | Introduktion till jQuery & ajax | NI:A0506 | AT
-| Tisdag | 13:15 - 17:00 | Labb: jQuery  | NI:A0407 | AT
-| Torsdag| 08:15 - 12:00 | Labb: Ajax  | G8:408, G8:423 | AT
+| Tisdag | 13:15 - 17:00 | Labb: [jQuery](exercises/ex8.html)  | NI:A0407 | AT
+| Torsdag| 08:15 - 12:00 | Labb: [Ajax](exercises/ex9.html)  | G8:408, G8:423 | AT
 | ------------- |-------------| ---------| -------- |
 | **Vecka 7** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | HTML 5 & Responsiva ramverk | NI:A0506 | AT
-| Tisdag | 13:15 - 17:00 | Labb: LocalStorage | NI:A0418, NI:A0506 | AT
+| Tisdag | 13:15 - 17:00 | Labb: [LocalStorage](exercises/ex10.html) | NI:A0418, NI:A0506 | AT
 | Torsdag| 08:15 - 12:00 | Labb: HTML 5 & ramverk  | G8:408, G8:423 | AT
-| Söndag | Midnatt | **Deadline inl.1** | | |
+| Söndag | Midnatt | [**Deadline inl.1**](assignments/as1.html) | | |
 | ------------- |-------------| ---------| -------- |
 | **Vecka 8** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | Media & Geolocation | NI:A0506 | AT
-| Tisdag | 13:15 - 15:00 | Development methodology | NI:A0506 | AF
+| Tisdag | 13:15 - 15:00 | Development methodology | NI:A0506 | AT
 | Torsdag| 08:15 - 12:00 | Labb: Media & Geolocation | G8:408, G8:423 | AT
 | ------------- |-------------| ---------| -------- |
 | **Vecka 9** | | | |
