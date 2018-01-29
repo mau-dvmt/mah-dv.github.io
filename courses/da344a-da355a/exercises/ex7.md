@@ -31,7 +31,7 @@ Jag tänker även att startsidan ska ha några figurer med tillhörande text, i 
 
 Större versioner av bilderna hittar du här: [Överblick](5/wireframes.png), [Mobile](5/mobile-wireframe.png), [Tablet](5/tablet-wireframe.png), [Desktop](5/desktop-wireframe.png). *Notera att de vita mellanrummen mellan de olika delarna på sidan är för att tydligt visa deras gränser, och behöver inte återskapas senare i labben*.
 
-Jag kommer i denna labb utgå från det klassiska sättet att bygga upp layoter, genom CSS-egenskapen `float`. Det är helt okej att istället använda sig av `flexbox`, som nämndes på dagens föreläsning. Mer information och bra guide kring flexbox hittar ni [här](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+Jag kommer i denna labb utgå från det klassiska sättet att bygga upp layoter, genom CSS-egenskapen `float`. Det är helt okej att istället använda sig av `grids` för den övergripande layouten och `flexbox` för placering av innehåll. Mer information och bra guide kring flexbox hittar ni [här](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), och för grids [här](https://css-tricks.com/snippets/css/complete-guide-grid/).
 {: .info}
 
 ### 2.1. Mobile first

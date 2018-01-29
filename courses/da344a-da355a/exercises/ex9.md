@@ -9,7 +9,7 @@ code: "da344a-da355a"
 
 Vi ska i denna laboration börja med att använda ajax för att dynamiskt ladda in extern data i våra webbsidor, genom att använda oss utav [API](https://en.wikipedia.org/wiki/Web_API). Detta kan till exempel vara Chuck Norris-skämt, eller filminformation för en given söksträng, eller given film.
 
-Börja med att kolla in [veckans föreläsning](../lectures/le6.html) för en snabb introduktion till vad vi kommer att jobba mer här i labben.
+Börja med att kolla in [veckans föreläsning](#) (kommer när föreläsningen är publicerad) för en snabb introduktion till vad vi kommer att jobba mer här i labben.
 
 ## Del 1 - Förbättra Chuck Norris-tjänsten
 
@@ -85,7 +85,7 @@ Denna del kommer vara mer fristående, men kommer att likna en av deluppgifterna
 
 ### A) Filmsökning
 
-Vi ska nu kunna söka efter olika filmer genom att ange en titel för en film. För kunna söka efter filmer (och få svar på sökningen) behöver vi ett API som tillhandahåller denna tjänst. Ett sådant API är [OMDb API](https://www.omdbapi.com/). Gå in på sidan och läs dokumentation för att förstå möjligheterna med API:t och svara på följande frågor:
+Vi ska nu kunna söka efter olika filmer genom att ange en titel för en film. För kunna söka efter filmer (och få svar på sökningen) behöver vi ett API som tillhandahåller denna tjänst. Ett sådant API är [OMDb API](https://www.omdbapi.com/) (notera att ni måste skapa en gratis API-nyckeln [här](http://www.omdbapi.com/apikey.aspx). Gå in på sidan och läs dokumentation för att förstå möjligheterna med API:t och svara på följande frågor:
 
 - Vilka tjänster tillhandahåller API:t?
 - Vilken tjänst ska användas vid en filmsökning?

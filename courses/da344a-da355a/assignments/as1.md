@@ -25,7 +25,7 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 
 Första delen av uppgiften är att skapa en bra/tydlig layout för desktop, tablets och mobila enheter. Det är viktigt att ni använder er av god struktur i ert dokument och element ska i så stor utsträckning som möjligt motsvara det innehåll som de har. Alltså ska ni använda nya HTML5-taggar (t.ex. `<header>`, `<footer>`, `<section>`, `<article>`, `<figure>` m.fl.) där det passar istället för massor utav `<div>`-taggar.
 
-**Observera** att bilderna nedan visar på *hur* webbplatsens layout/struktur ska vara, *inte* hur den grafiska formgivningen ska vara. Använd gärna en egen design på er sida.
+**Observera** att bilderna nedan visar på *hur* webbplatsens layout/struktur ska vara (**viktigt att layouten/strukturen är samma!**), *inte* hur den grafiska formgivningen ska vara. Använd gärna en egen formgivning på er sida.
 
 ### De olika sidorna
 
@@ -93,13 +93,17 @@ För VG ska ni även bygga ett bildspel i JavaScript som ska ha följande funkti
 
 ## Krav
 
+**Observera att alla krav ska vara uppfyllda för att bli godkänd**. Tänk även på att er inlämningsuppgift ska hålla hög kvalité, vilket kommer att bedömas vid redovisning.
+
 ### Generella krav
 
 1. Er HTML- och CSS-kod ska validera enligt nuvarande standarder
 2. Er JavaScript-kod ska köras utan några fel
 3. Er HTML-kod ska vara bra skriven, tydlig, med rätt element för rätt innehåll
 4. När man sparar något i er webbapp ska feedback ges till användaren (val av utseende)
-5. Innehållet på era sidor ska följa uppgiftbeskrivningen ovan
+5. Innehållet på era sidor ska följa uppgiftbeskrivningen ovan, inkluderat men ej exkluderat till:
+    - Rätt layout på "boxarna" på startsidan för de olika enheterna
+    - Rätt antal bilder på bildsidorna för de olika enheterna
 6. Designen på er sida ska vara väl strukturerad, och fokusera på att vara användbar
     - T.ex. ska centrerade element ha lika mycket luft till höger/vänster om sig (inte vara förskjutna)
     - T.ex. ska man inte kunna skrolla i sidled på någon version av er webbplatsen
@@ -125,5 +129,7 @@ För VG ska ni även bygga ett bildspel i JavaScript som ska ha följande funkti
 
 När ni är klara med en uppgift, dubbelkollat mot kravlistan och allt ser bra ut, lämnar ni in alla filer i en **ZIP-fil** på It's Learning. Ni ska även publicera er lösning på **dvwebb.mah.se** (eller webshare.mah.se) och **bifoga en länk** till er sida vid inlämningen på It's Learning.
 
-Inlämningar som inte uppfyller dessa inlämningskrav kommer inte att rättas, utan direkt skickas tillbaka som komplettering.
+**Inlämningsuppgiften ska sedan presenteras muntligt, via en tid [som bokas här](https://doodle.com/poll/95gvnnhnsgkmxukr)**. Vi detta redovisningstillfället ska studenten presentera sin uppgift, svara på frågor kring sin lösning samt reflektera kring ev. bra / mindre bra lösningar av uppgiften. Studenten behöver kunna redogöra för alla delar av sin kod.
+
+Inlämningar som inte uppfyller dessa inlämningskrav ovan kommer inte att rättas, utan direkt skickas tillbaka som komplettering.
 {: .info}

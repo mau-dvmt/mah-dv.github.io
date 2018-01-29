@@ -39,7 +39,7 @@ menu:
          - name: 5. Layout med CSS [AT]
          - name: 6. Javascript intro 2 [AF]
          - name: 7. App, Intro JS [AT]
-#         - name: 8. Responsive design [AT]
+         - name: 8. Responsive design [AT]
 #         - name: 9. jQuery & ajax [AT]
 #         - name: 10. Bootstrap & LocalStorage [AT]
 #         - name: 11. Geolocation & media [AT]
@@ -64,10 +64,10 @@ menu:
          - name: Laboration 1d (APP) - Layout med CSS
          - name: Laboration 1e (APP/IA) - Intro JavaScript
          - name: Laboration 2 - Intro DOM
-#         - name: Laboration 3 - Media Queries
-#         - name: Laboration 4 - Intro jQuery
-#         - name: Laboration 5 - Ajax
-#         - name: Laboration 6 - LocalStorage
+         - name: Laboration 3 - Media Queries
+         - name: Laboration 4 - Intro jQuery
+         - name: Laboration 5 - Ajax
+         - name: Laboration 6 - LocalStorage
 #         - name: Laboration 7 - Ramverk
 #         - name: Laboration 8 - Geolocation
 #         - name: Laboration 9 - Mediahantering
