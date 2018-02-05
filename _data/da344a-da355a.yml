@@ -40,7 +40,7 @@ menu:
          - name: 6. Javascript intro 2 [AF]
          - name: 7. App, Intro JS [AT]
          - name: 8. Responsive design [AT]
-#         - name: 9. jQuery & ajax [AT]
+         - name: 9. jQuery [AT]
 #         - name: 10. Bootstrap & LocalStorage [AT]
 #         - name: 11. Geolocation & media [AT]
 #         - name: 12. JavaScript development methodology [AF]
