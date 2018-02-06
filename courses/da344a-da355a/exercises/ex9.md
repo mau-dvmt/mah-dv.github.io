@@ -9,7 +9,7 @@ code: "da344a-da355a"
 
 Vi ska i denna laboration börja med att använda ajax för att dynamiskt ladda in extern data i våra webbsidor, genom att använda oss utav [API](https://en.wikipedia.org/wiki/Web_API). Detta kan till exempel vara Chuck Norris-skämt, eller filminformation för en given söksträng, eller given film.
 
-Börja med att kolla in [veckans föreläsning](#) (kommer när föreläsningen är publicerad) för en snabb introduktion till vad vi kommer att jobba mer här i labben.
+Börja med att kolla in [veckans föreläsning](../lectures/10.html) (kommer när föreläsningen är publicerad) för en snabb introduktion till vad vi kommer att jobba mer här i labben.
 
 ## Del 1 - Förbättra Chuck Norris-tjänsten
 
@@ -21,7 +21,7 @@ Och när man klickade på knappen "Give me a joke!" så visades ett skämt (som 
 
 ![Chuck Norris](11/cn2.jpg)
 
-Koden för detta exempel, som vi kommer att utgå från, kan ni hämta [här](../lectures/6/cn.zip).
+Koden för detta exempel, som vi kommer att utgå från, kan ni hämta [här](../lectures/6/ajax.zip).
 
 ### A) Bygg ut tjänsten - Välj kategori på skämt
 

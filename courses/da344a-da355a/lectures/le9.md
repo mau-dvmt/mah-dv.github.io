@@ -1,5 +1,5 @@
 ---
-title: jQuery & ajax
+title: jQuery
 code: "da344a-da355a"
 ---
 
