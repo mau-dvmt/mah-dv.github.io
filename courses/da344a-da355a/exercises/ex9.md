@@ -21,7 +21,7 @@ Och när man klickade på knappen "Give me a joke!" så visades ett skämt (som 
 
 ![Chuck Norris](11/cn2.jpg)
 
-Koden för detta exempel, som vi kommer att utgå från, kan ni hämta [här](../lectures/6/ajax.zip).
+Koden för detta exempel, som vi kommer att utgå från, kan ni hämta [här](../lectures/ajax.zip).
 
 ### A) Bygg ut tjänsten - Välj kategori på skämt
 
