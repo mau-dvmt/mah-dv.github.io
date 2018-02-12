@@ -37,7 +37,7 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | **Vecka 7** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | HTML 5 & Responsiva ramverk | NI:A0506 | AT
+| Måndag | 10:15 - 12:00 | [HTML 5 & Responsiva ramverk](lectures/le11.html)  | NI:A0506 | AT
 | Tisdag | 13:15 - 17:00 | Labb: [LocalStorage](exercises/ex10.html) | NI:A0418, NI:A0506 | AT
 | Torsdag| 08:15 - 12:00 | Labb: HTML 5 & ramverk  | G8:408, G8:423 | AT
 | Söndag | Midnatt | [**Deadline inl.1**](assignments/as1.html) | | |
