@@ -53,7 +53,7 @@ menu:
      folder: assignments
      items:
          - name: 1. Inlämningsuppgift 1
-#         - name: 2. Inlämningsuppgift 2
+         - name: 2. Inlämningsuppgift 2
    - label: Laborationer
      submenu: true
      prefix: ex
@@ -70,7 +70,7 @@ menu:
          - name: Laboration 5 - Ajax
          - name: Laboration 6 - LocalStorage
          - name: Laboration 7 - Ramverk
-#         - name: Laboration 8 - Geolocation
-#         - name: Laboration 9 - Mediahantering
+         - name: Laboration 8 - Geolocation
+         - name: Laboration 9 - Mediahantering
 #         - name: Laboration 10 - Bonus, SVG och D3.js
 #         - name: Laboration 11 - Bonus, PhoneGap

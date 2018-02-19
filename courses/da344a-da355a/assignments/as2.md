@@ -8,6 +8,8 @@ code: "da344a-da355a"
 
 I den andra inlämningsuppgiften ska vi fokusera på funktionalitet som ofta används i webbappar. Vi kommer främst att titta på hantering av externa API, samt hur vi kan lagra inforamtion kring detta hos klienten. Dessutom ska vi göra det möjligt för användaren att ladda upp media (bild, ljud, video), och sedan visa upp denna media enligt användarens önskemål. Slutligen ska vi även göra appen lättillgänglig för användarna genom att knyta en ikon till appen som visas om användaren bokmärker er webbplats på "skrivbordet" för iOS- och Android-enheter.
 
+**Läs noga igenom uppgiften innan ni börjar på den**.
+
 ## 2. Syfte
 
 Uppgiften har som syfte att bl.a. examinera följande punkter:
@@ -18,9 +20,11 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 - Utökad kunskap om CSS-ramverk
 - Kunna utöka tillgänglighet kring en webbapp genom att knyta en "skrivbords"-ikon till er webbapp
 
-**Vi ska i denna uppgift alltså använda oss utav ett ramverk (valfritt vilket) för att skapa vår responsiva webbplats. Exempel på ramverk är [bootstrap](http://getbootstrap.com), [foundation](http://foundation.zurb.com) och [materialazeCSS](http://materializecss.com)**
+**Vi ska i denna uppgift alltså använda oss utav ett ramverk (valfritt vilket) för att skapa vår responsiva webbplats. Exempel på ramverk är [bootstrap](http://getbootstrap.com), [foundation](http://foundation.zurb.com), [semantic UI](https://semantic-ui.com/) och [materialazeCSS](http://materializecss.com)**.
 
 ## 3. Uppgiften
+
+Notera att designen för webbplatsen är **helt fri** för denna uppgift (så länge den fokuserar på att vara användbar för besökaren) - nedan är bara exempel-layout för att visa *hur det kan* se ut.
 
 ### 3.1. Layout i HTML/CSS
 
@@ -34,13 +38,13 @@ Er första funktion som ni ska implementera är att visa användaren vad det är
 - En bild på det aktuella väderläget
 - Beskrivning av det aktuella väderläget
 
-Ni får som använda vilket API ni vill, men detta är ett förslag (enkelt att använda): [Open Weather Map](http://openweathermap.org/API)
+Ni får som använda vilket API ni vill, men detta är ett förslag (enkelt att använda): [Open Weather Map](http://openweathermap.org/API).
 
 ![Weather](images/ass2-weather.png)*Exempel på utseende för mobiltelefon*
 
 ### 3.2. Funktion: Söka efter filmer
 
-Ni ska i er app ha en sida där man kan söka efter filmer. Sökningen ska ske genom ajax till ett lämpligt API (jag rekommenderar detta: [omdbapi](http://www.omdbapi.com)). Resultatet av sökningen ska presenteras för användaren i form av:
+Ni ska i er app ha en sida där man kan söka efter filmer. Sökningen ska ske genom ajax till ett lämpligt API (jag rekommenderar detta: [omdbapi](http://www.omdbapi.com), gratis API-nyckel kan ni skapa [här](http://www.omdbapi.com/apikey.aspx)). Resultatet av sökningen ska presenteras för användaren i form av:
 
 - Titel på film
 - Årtal på film
@@ -62,10 +66,10 @@ I filmbiblioteket ska användaren kunna spara (och ta bort) filmer i sitt filmbi
 
 Egenskaper som ska visas för varje film är:
 
-- Bild på film
+- Bild på poster för film
 - Titel
 - År
-- Speltid
+- Länk till IMDB (lös detta på valfritt sätt)
 
 Det ska också finnas en knapp för att ta bort filmer från ert filmarkiv.
 
@@ -112,8 +116,10 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 1. Er HTML- och CSS-kod ska validera enligt nuvarande standarder
 2. Er JavaScript-kod ska köras utan några fel
 3. Er HTML-kod ska vara bra skriven, tydlig, med rätt element för rätt innehåll
-4. När man sparar något i er webbapp ska feedback ges till användaren
-5. Er webbapp ska vara utformad med fokus på användaren
+4. Ni ska använda er av ett CSS-ramverk för er layout och formgivning av webbsidorna
+5. När man sparar något i er webbapp ska lämplig feedback ges till användaren
+6. Er webbapp ska vara utformad med fokus på användaren
+7. Generell kvalité på er lösning kommer att bedömas
 
 ### Funktionella krav
 
@@ -141,9 +147,10 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
     - Formuläret ska skickas via AJAX
     - Användaren ska meddelas när objektet lyckats/misslyckats att laddas upp, genom lämpligt felmeddelande
     - När filen är uppladdad (lyckats) ska formläret återställas
+    - Ni ska validera att man inte kan skicka iväg formuläret utan *titel*, *media* eller *typ*
 11. Funktion: Visa media
     - Ni ska visa upp de media-objekt som är sparade på er server/i databasen på ett användarvänligt och smidigt sätt för användaren
-    - Användaren ska kunna välja om han/hon vill se alla/foto/video/ljud-objekt i en drop-down lista
+    - Användaren ska kunna välja om han/hon vill se alla/foto/video/ljud-objekt i en drop-down lista (eller annan lämplig metod)
 12. Funktion: Spara webbapp på "skrivbord"
     - Korrekt ikon och namn ska finnas när man sparar webbappen som bokmärkepå sitt "skrivbord" i iOS och Android
 
@@ -152,6 +159,8 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 ## Redovisning
 
 När ni är klara med en uppgift, dubbelkollat mot kravlistan och jämfört med videon ovan och allt ser bra ut, lämnar ni in alla filer i en ZIP-fil på It's Learning. Ni ska även publicera er lösning på dvwebb.mah.se och bifoga en länk till er sida vid inlämningen på It's Learning.
+
+**Uppgiften ska även presenteras muntligt, tider för att boka detta kommer att komma upp när deadline närmar sig.** Tänk på att alla kraven ska vara uppfyllda när ni muntligt redovisar er uppgift.
 
 Bifogas ingen länk till dvwebb så kommer inlämningsuppgiften inte att rättas. Det samma gäller att ladda upp en ZIP-fil med alla filer till er webbplats.
 {:.info}
