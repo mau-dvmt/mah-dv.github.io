@@ -26,6 +26,7 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 ## 3. Uppgiften
 
 Notera att designen för webbplatsen är **helt fri** för denna uppgift (så länge den fokuserar på att vara användbar för besökaren) - nedan är bara exempel-layout för att visa *hur det kan* se ut.
+{:.info}
 
 ### 3.1. Layout i HTML/CSS
 
