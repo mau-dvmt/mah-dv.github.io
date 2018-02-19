@@ -44,9 +44,9 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | **Vecka 8** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | Media & Geolocation | NI:A0506 | AT
-| Tisdag | 13:15 - 15:00 | Development methodology | NI:A0506 | AT
-| Torsdag| 08:15 - 12:00 | Labb: Media & Geolocation | G8:408, G8:423 | AT
+| Måndag | 10:15 - 12:00 | <del>Media & Geolocation</del> | NI:A0506 | AT
+| Tisdag | 13:15 - 15:00 | Geolocation, media, pakethanterare | NI:A0506 | AT
+| Torsdag| 08:15 - 12:00 | Labb: [Media](exercises/ex13.html) & [Geolocation](exercises/ex12.html)  | G8:408, G8:423 | AT
 | ------------- |-------------| ---------| -------- |
 | **Vecka 9** | | | |
 | ------------- |-------------| ---------| -------- |
