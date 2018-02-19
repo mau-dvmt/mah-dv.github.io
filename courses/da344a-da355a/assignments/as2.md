@@ -8,7 +8,8 @@ code: "da344a-da355a"
 
 I den andra inlämningsuppgiften ska vi fokusera på funktionalitet som ofta används i webbappar. Vi kommer främst att titta på hantering av externa API, samt hur vi kan lagra inforamtion kring detta hos klienten. Dessutom ska vi göra det möjligt för användaren att ladda upp media (bild, ljud, video), och sedan visa upp denna media enligt användarens önskemål. Slutligen ska vi även göra appen lättillgänglig för användarna genom att knyta en ikon till appen som visas om användaren bokmärker er webbplats på "skrivbordet" för iOS- och Android-enheter.
 
-**Läs noga igenom uppgiften innan ni börjar på den**.
+Läs noga igenom uppgiften innan ni börjar på den
+{:.info}
 
 ## 2. Syfte
 
