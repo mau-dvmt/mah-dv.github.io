@@ -43,8 +43,7 @@ menu:
          - name: 9. jQuery [AT]
          - name: 10. Ajax [AT]
          - name: 11. Bootstrap & LocalStorage [AT]
-#         - name: 11. Geolocation & media [AT]
-#         - name: 12. JavaScript development methodology [AF]
+         - name: 12. Geolocation, media, pakethanterare [AT]
 #         - name: 13. Hybridapplikationer [AT]
 #         - name: 14. D3.js [AF]
    - label: Inlämningsuppgifter
