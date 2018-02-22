@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 $db = mysqli_connect("localhost", "Ditt användarid", "Ditt lösenord", "Ditt användarid");
 
 $return = new ArrayObject();
