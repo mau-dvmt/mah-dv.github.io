@@ -50,10 +50,10 @@ Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabij
 | ------------- |-------------| ---------| -------- |
 | **Vecka 9** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | Om Phonegap, React, Vue | NI:A0506 | AT
+| Måndag | 10:15 - 12:00 | [Phonegap, React, Vue](lectures/le13.html) | NI:A0506 | AT
 | Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0506 | AT
 | Tisdag | 15:15 - 17:00 | *Projekthandledning* | NI:A0314, NI:A0318 | AT
-| Torsdag| 08:15 - 12:00 | Labb: Phonegap & D3.js | G8:408, G8:423 | AT
+| Torsdag| 08:15 - 12:00 | Labb: [Phonegap](exercises/ex15.html) & [D3.js](exercises/ex14.html) | G8:408, G8:423 | AT
 | Söndag | Midnatt | [**Deadline inl.2**](assignments/as2.html) | | |
 | ------------- |-------------| ---------| -------- |
 | **Vecka 10** | | | |
