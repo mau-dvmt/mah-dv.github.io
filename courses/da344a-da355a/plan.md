@@ -5,70 +5,66 @@ code: "da344a-da355a"
 
 # Planering
 
-Nedan ser ni en planering för kursen (AT = Anton Tibblin, AF = Aleksander Fabijan):
+Nedan ser ni en planering för kursen:
+- Lärare: Anton Tibblin (AT), Johan Holmberg (JH)
+- Assistenter: Cajsa Nilsson (CN), Emma Indahl (EI)
 
-| Vecka 3 | | | |
+| **Vecka 14** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | [Kursintroduktion](lectures/le1.html) | G8:425 | AT
-| Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till HTML](lectures/le2.html) | NI:A0507 | AT
-| Torsdag| 08:15 - 12:00 | **APP** - Fö: [Intro CSS Labb](lectures/le4.html): [(1a)](exercises/ex1.html), [(1b)](exercises/ex2.html) + [(1c)](exercises/ex3.html) | G8:423 | AT
-| Torsdag| 08:15 - 12:00 | **IA** - Labb: [Intro JS](exercises/ex5.html) | G8:408 | AF
+| Måndag | 10:15 - 12:00 | Kursintroduktion | NI:A0506 | AT & JH
+| Tisdag | 13:15 - 15:00 | **IA** - Introduktion till JS | NI:C0315 | JH
+| Tisdag | 13:15 - 15:00 | **APP** - Introduktion till HTML & CSS | NI:A0513 | AT, CN/EI
+| Torsdag| 08:15 - 17:00 | **IA** - [Bootcamp: JS](/courses/da344a-da355a/exercises/ex2.html) | FM: G8:405, EM: NI:C0315 | JH, CN/EI
+| Torsdag| 08:15 - 17:00 | **APP** - [Bootcamp: HTML & CSS](/courses/da344a-da355a/exercises/ex1.html) | FM: G8:407, EM: NI:A0418 | AT
 | ------------- |-------------| ---------| -------- |
-| **Vecka 4** | | | |
+| **Vecka 15** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | **APP** - [Layout med CSS](lectures/le5.html) | NI:A0502	 | AT
-| Måndag | 10:15 - 12:00 | **IA** - [Repetition JavaScript 2](lectures/le6.html) | NI:A0506 | AF
-| Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till JavaScript](lectures/le7.html)| NI:A0307 | AT
-| Tisdag | 13:15 - 15:00 | **IA** - Extra: JavaScript | G8:507 | AF
-| Torsdag| 08:15 - 12:00 | **APP** - Labb: [Layout CSS](exercises/ex4.html) + [Intro JS](exercises/ex5.html) | G8:423 | AT
-| Torsdag| 08:15 - 12:00 | **IA** - Labb: [JS DOM](exercises/ex6.html)| G8:408 | AF
+| Måndag | 08:15 - 10:00 | **IA** - Mer om JS & DOM | OR:D328 | JH
+| Tisdag | 13:15 - 15:00 | **APP** - Introduktion till JS & DOM | OR:B423 | JH
+| Torsdag| 08:15 - 12:00 | **IA** - Labb: [Intro DOM](/courses/da344a-da355a/exercises/ex4.html) | G8:405 | JH, CN/EI
+| Torsdag| 08:15 - 12:00 | **APP** - Labb: [Intro JS](/courses/da344a-da355a/exercises/ex3.html), [Intro DOM](/courses/da344a-da355a/exercises/ex4.html) | G8:407 | JH, CN/EI
 | ------------- |-------------| ---------| -------- |
-| **Vecka 5** | | | |
+| **Vecka 16** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | [Responsiv design](lectures/le8.html)| NI:A0506 | AT
-| Tisdag | 13:15 - 17:00 | Labb: [JS DOM](exercises/ex6.html)  | 	NI:A0418, NI:A0506 | AT + AF
-| Torsdag| 08:15 - 12:00 | Labb: [Responsiv design](exercises/ex7.html) | G8:408, G8:423 | AT + AF
+| Måndag | 10:15 - 12:00 | Responsiv webb | NI:A0506 | AT
+| Tisdag | 13:15 - 15:00 | Responsiva ramverk |	NI:A0506 | AT
+| Torsdag| 13:15 - 17:00 | Labb: [Responsiv webb](/courses/da344a-da355a/exercises/ex5.html) & [Responsiva ramverk](/courses/da344a-da355a/exercises/ex6.html) | OR:D326, OR:E323 | AT, CN, EI
 | ------------- |-------------| ---------| -------- |
-| **Vecka 6** | | | |
+| **Vecka 17** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | [Introduktion till jQuery](lectures/le9.html) | NI:A0506 | AT
-| Tisdag | 13:15 - 17:00 | [Introduktion till ajax](lectures/le10.html) + Labb: [jQuery](exercises/ex8.html)  | NI:A0407 | AT
-| Torsdag| 08:15 - 12:00 | Labb: [Ajax](exercises/ex9.html)  | G8:408, G8:423 | AT
+| Tisdag | 15:15 - 17:00 | JS: Fokus på webb | NI:A0306 | AT
+| Onsdag | 10:15 - 12:00 | **Gästföreläsning**: Front-end i praktiken | OR:C231 | [Cygni](https://cygni.se)
+| Torsdag| 08:15 - 12:00 | Labb: [Intro jQuery](/courses/da344a-da355a/exercises/ex7.html) & [Intro Ajax](/courses/da344a-da355a/exercises/ex8.html)  | OR:E323, OR:E340 | AT, CN, EI
 | ------------- |-------------| ---------| -------- |
-| **Vecka 7** | | | |
+| **Vecka 18** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | [HTML 5 & Responsiva ramverk](lectures/le11.html)  | NI:A0506 | AT
-| Tisdag | 13:15 - 17:00 | Labb: [LocalStorage](exercises/ex10.html) | NI:A0418, NI:A0506 | AT
-| Torsdag| 08:15 - 12:00 | Labb: [HTML 5 & ramverk](exercises/ex11.html)   | G8:408, G8:423 | AT
-| Söndag | Midnatt | [**Deadline inl.1**](assignments/as1.html) | | |
+| Måndag | 10:15 - 12:00 | Geolocation / LocalStorage / Cookies | NI:A0506 | AT
+| Torsdag| 08:15 - 12:00 | Labb: [Intro LocalStorage](/courses/da344a-da355a/exercises/ex9.html) & [Intro Geolocation](/courses/da344a-da355a/exercises/ex10.html)   | OR:D326, OR:E323 | AT, CN, EI
 | ------------- |-------------| ---------| -------- |
-| **Vecka 8** | | | |
+| **Vecka 19** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | <del>Media & Geolocation</del> | NI:A0506 | AT
-| Tisdag | 13:15 - 15:00 | [Geolocation, media, pakethanterare](lectures/le12.html) | NI:A0506 | AT
-| Torsdag| 08:15 - 12:00 | Labb: [Media](exercises/ex13.html) & [Geolocation](exercises/ex12.html)  | G8:408, G8:423 | AT
+| Måndag | 09:15 - 12:00 | Vue.js / React / Angular | NI:A0606 | AT
+| Tisdag | 13:15 - 15:00 | Utvecklingsmetodik, pakethanterare | NI:A0307 | JH
+| Torsdag| 08:15 - 12:00 | Labb: [Utvecklingsmetodik](/courses/da344a-da355a/exercises/ex11.html) | G8:405, G8:407 | JH, CN, EI
 | ------------- |-------------| ---------| -------- |
-| **Vecka 9** | | | |
+| **Vecka 20** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | [Phonegap, React, Vue](lectures/le13.html) | NI:A0506 | AT
-| Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0506 | AT
-| Tisdag | 15:15 - 17:00 | *Projekthandledning* | NI:A0314, NI:A0318 | AT
-| Torsdag| 08:15 - 12:00 | Labb: [Phonegap](exercises/ex15.html) & [D3.js](exercises/ex14.html) | G8:408, G8:423 | AT
-| Söndag | Midnatt | [**Deadline inl.2**](assignments/as2.html) | | |
+| Måndag | 10:15 - 12:00 | Föreläsning: Extra | NI:A0407 | AT
+| Tisdag | 13:15 - 17:00 | Labb: [Vue.js / React / Angular](/courses/da344a-da355a/exercises/ex12.html) | OR:E222, OR:E223 | AT, CN, EI
+| Torsdag| 08:15 - 12:00 | Labb: Extra | G8:405, G8:424 | AT
 | ------------- |-------------| ---------| -------- |
-| **Vecka 10** | | | |
+| **Vecka 21** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | *Projekthandledning* | NI:A0602 | AT, AF
-| Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0502 | AT, AF
-| Torsdag| 08:15 - 12:00 | Labb: Extra | G8:423 | AF
+| Måndag | 10:15 - 12:00 | *Projekthandledning* | NI:A0407 | AT
+| Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0606 | AT
+| Torsdag| 08:15 - 12:00 | Labb: Extra | G8:405 | AT
 | ------------- |-------------| ---------| -------- |
-| **Vecka 11** | | | |
+| **Vecka 22** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | *Projekthandledning* | NI:A0510 | AT, AF
-| Tisdag | 13:15 - 15:00 | *Projekthandledning* | NI:A0513 | AT, AF
-| Torsdag| 08:15 - 12:00 | Labb: Extra | G8:423 | AT
+| Måndag | 08:15 - 12:00 | *Projekthandledning* | NI:A0606| AT
+| Måndag | 13:15 - 17:00 | Labb: Extra | NI:A0606 | AT
 | ------------- |-------------| ---------| -------- |
-| **Vecka 12** | | | |
+| **Vecka 23** | | | |
 | ------------- |-------------| ---------| -------- |
-| Tisdag | 13:15 - 15:00 | *Projekthandledning* | OR:D337 | AT, AF
-| Torsdag| 08:15 - 12:00 | **Presentation av projekt** | OR:D337 | AT
+| Måndag | 08:15 - 12:00 | **Presentation av projekt** | NI:B0E07 | AT, JH
+| Tisdag | 13:15 - 17:00 | **Presentation av projekt** | NI:B0E07 | AT, JH

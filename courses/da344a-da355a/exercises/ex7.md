@@ -1,284 +1,355 @@
 ---
-title: Laboration 3
+title: Laboration 5
 code: "da344a-da355a"
 ---
 
-# Laboration 3: Media queries
+# Laboration 5 - Introduktion till jQuery
 
-I denna laboration vi bygga vår första responsiva webbplats. Målet är att skapa en webbsida som anpassar sig utefter datorer, surfplattor och mobiltelefoner.
+## Introduktion
 
-## 1. Uppgift
+jQuery är ett väldigt populärt JavaScript-bibliotek. Det är designat bl.a. för att göra det enklare att anropa och modifiera element på webbsidor, hantera händelser (t.ex. musklick), CSS-modifikationer samt skapa effekter och animationer. jQuery stödjer också plugins, och det finns många smidiga plugin som är gratis att ladda ner och använda.
 
-Vi ska nu bygga en webbsida, med valfritt innehåll. Jag tänker bygga min enligt Star Wars-tema, eftersom det är den bästa filmen som någonsin gjorts. Eftersom ni kanske inte tycker det, så är det helt okej att välja ett annat tema, lämpligen något som fångar ert intresse.
+På [jQuerys](http://jquery.com/) webbplats hittar ni bland annat [hur man kommer igång](http://jquery.com/download/) och deras [dokumentation](http://api.jquery.com/). Det är en väldigt god kunskap att kunna läsa och förstå dokumentation när man använder biliotek/ramverk och därför kommer det att vara en del utav denna laboration.
 
-Vi borde börja att fundera på hur vår webbsida ska se ut, och vilka delar som sidan ska struktureras upp av.
+## Uppgift 1 - Kom igång
 
-Denna labb kommer att föreslå olika layouter och designval kring den webbsida som ska skapas. Detta är alltså **förslag**, som framförallt riktar sig till de som inte är efarna med responsiv design. Vill du istället göra annorlunda så är det fritt fram!
-{: .info}
+Första uppgiften går ut på att vi ska komma igång med jQuery. Det första vi behöver göra då är att inkludera jQuery på vår webbplats. Det kan man göra på två sätt:
 
-## 2. Att tänka responsivt
+1. Man länkar till jQuerys JavaScript-fil(er) resurser online (där de finns tillgängliga)
+2. Man laddar ner jQuerys JavaScript-fil(er) och länkar till dem lokalt
 
-Vi har som mål att oavsett vilken enhet som användaren väljer att besöka vår webbplats genom - så ska de få en så bra upplevelse som möjligt. Vi pratade på föreläsningen om att använda "boxar" för att strukturera upp vårt innehåll på webbplatsen. Jag tänker mig att huvudelementen på sidan är följande:
+Alternativ 1 fungerar fint i denna labb, men tänk på att ni då hela tiden behöver ha internetuppkoppling så att resurserna ni länkar till är tillgängliga. Vi kommer i exemplen nedan att använda oss utav metod 1.
 
-- Sidhuvud
-- Meny
-- Innehåll
-- Sidfot
+### Inkludera jQuery på sin webbplats.
 
-Jag tänker även att startsidan ska ha några figurer med tillhörande text, i mitt fall för att marknadsföra de filmer som ingår i filmserien (här kan ni välja att presentera valfri information som relaterar till er webbplats.) En enkel struktur på sidan skulle således kunna se ut något i stil med:
+Det första vi måste göra för att kunna använda oss utav jQuerys funktioner, är att se till att vi laddar in biblioteket. Det görs lämpligen på följande sätt:
 
-![Wireframes](5/wireframes.png)
-
-Större versioner av bilderna hittar du här: [Överblick](5/wireframes.png), [Mobile](5/mobile-wireframe.png), [Tablet](5/tablet-wireframe.png), [Desktop](5/desktop-wireframe.png). *Notera att de vita mellanrummen mellan de olika delarna på sidan är för att tydligt visa deras gränser, och behöver inte återskapas senare i labben*.
-
-Jag kommer i denna labb utgå från det klassiska sättet att bygga upp layoter, genom CSS-egenskapen `float`. Det är helt okej att istället använda sig av `grids` för den övergripande layouten och `flexbox` för placering av innehåll. Mer information och bra guide kring flexbox hittar ni [här](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), och för grids [här](https://css-tricks.com/snippets/css/complete-guide-grid/).
-{: .info}
-
-### 2.1. Mobile first
-
-Vi pratade på föreläsningen om att börjar designa den mobila version av webbplatsen, då det ofta kan vara svårare att i efterhand skala ner än skala upp en webbplats. Dessutom brukar den mobila versionen vara lite enklare, då man har mindre spelrum i hur mycket man kan ta ut svängarna. Tänk nu över hur en ev. källkod skulle kunna se ut för att lyckas åstakomma ovanstående layouts genom att enbart lägga till CSS-kod.
-
-Tips! Börja att ta fram de element som bör användas, för att sedan bestämma hur dessa ska ligga i förhållande till varandra.
-{: .info}
-
-<details>
-  <summary>När ni tänkt klart kan ni jämföra men den källkod som jag använde.</summary>
-  {% highlight html linenos %}
-<!doctype html>
+```html
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-    <title>Star Wars</title>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id="wrapper">
-      <header>
-        Sidhuvud
-      </header>
-      <nav>
-        Meny
-      </nav>
-      <main>
-        Innehåll
-        <figure>Figur 1</figure>
-        <figure>Figur 2</figure>
-        <figure>Figur 3</figure>
-        <figure>Figur 4</figure>
-        <figure>Figur 5</figure>
-        <figure>Figur 6</figure>
-        <figure>Figur 7</figure>
-      </main>
-      <footer>
-        Sidfot
-      </footer>
-    </div>		
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>Into jQuery</title>
+    </head>
+    <body>
+        <h1>Min fina sida</h1>
+
+        <!-- Länkar in jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <!-- Länkar in vår egna JavaScript-fil -->
+        <script src="script.js"></script>
+    </body>
 </html>
-{% endhighlight %}
-</details>
+```
 
-#### 2.1.1. Färgläggning utav layouten
+Nu kan vi alltså använda oss utav jQuerys funktioner i vårt JavaScript-dokument `script.js`. Får att testa att det verkligen fungera, så lägga till följande kod i `script.js´:
 
-Nu är det dags att färglägga våra element, enligt bilderna ovan. Det är bra att göra detta innan vi går vidare och lägger in mer innehåll - så att vi har koll på att allt ser ut, innan vi börjar fylla på med information. Tänk på att strukutera upp er CSS-fil så att ni har koll på vilka CSS-egenskaper som gäller vilka målenheter, t.ex. denna uppdelning:
+```js
+// Event som körs när sidan laddats klart
+$(document).on("ready", function(){
+    // Sidan har laddat klart
+    alert("Sidan har laddat klart!");
+});
+```
 
-- Generella egenskaper (typsnitt, gemensamma färger, etc.)
-- CSS för mobiltelefoner
-- CSS för tablets
-- CSS för desktop
+Fungerar allt som det ska? Toppen! Då går vi vidare! (annars fråga lärare i labbsalen)
 
-Det skulle kunna se ut något i stil med:
-{% highlight html linenos %}
+## Uppgift 2 - Lär känna jQuery
+
+Vi ska nu introduceras till jQuerys syntax, alltså hur vi skriver för att använda den funktionalitet som jQuery erbjuder. Bra att veta är att `$` används för att leta upp element genom jQuery och `$.` används för att använda funktioner genom jQuery. Här några snabba exempel på hur man hittar element i sitt HTML-dokument genom jQuery
+
+```js
+// Hämtar alla paragrafer
+$("p");
+// Hämtar alla element med klassen "center"
+$(".center");
+// Hämtar elementet med id "start"
+$("#start");
+```
+
+Som ni kan se så liknade detta väldigt mycket funktionerna `document.querySelectorAll` och `document.querySelector` som vi tidigare använt. Skillnaden är att vi använder samma funktion i jQuery för att hämta ett eller flera element.
+
+### Ändra CSS-egenskaper genom jQuery
+
+jQuery har många [användbara CSS-funktioner](http://api.jquery.com/category/css/). En av de enklare, för att ändra CSS-egenskaper för ett eller flera element ser ut på följande sätt `.css("egenskap", "värde")`. Exempel:
+
+```js
+// Ge alla paragrafer på sidan blå text-färg
+$("p").css("color", "blue");
+// Gör alla element med klassen "important" fetstilda
+$(".important").css("font-weight", "bold");
+// Ge elementet med id="contact" grön bakgrund
+$("#contact").css("background-color", "green");
+```
+
+### Er tur att testa på att ändra CSS-egenskaperna för olika element
+
+Ladda ner [denna HTML-fil](9/ex.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+
+- Ge webbsidan grå bakgrundsfärg
+- Ge alla `<section>`-element grön bakgrundsfärg
+- Ge huvudrubriken på sidan blå textfärg
+- Ge länkarna på sidan gul textfärg & gör så att de inte länge är understrukna. För att se hur man kan ange flera egenskaper för ett element [läs jQuerys dokumentation om detta](http://api.jquery.com/css/#css-properties).
+
+### Ta reda på ett värde för en CSS-egenskap för ett element
+
+Precis som man kan modifiera CSS-egenskaper för olika element på webbplatsen, så kan man även ta reda på vilket värde en viss CSS-egenskap som ett element har. Detta gör man också med funktionen `.css` men nu skickar man bara med ett argument - alltså vilken egenskap vi vill veta värdet för. Exempel:
+
+```js
+// Vilken bakgrundsfärg har elementet med id:t "start"
+$("#start").css("background-color");
+```
+
+### Er tur att testa på att leta upp CSS-egenskaperna för olika element
+
+Ladda ner [denna HTML-fil](9/ex2.html), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+
+- Ta reda på vilken bakgrundsfärg webbsidan har
+- Ta reda på vilket text-storlek som huvudrubriken har
+- Ta reda på vilken text-storlek som paragraferna har
+- Ta reda på höjden för elementet med id "primary"
+
+Ett smidigt sätt att se egenskaperna är att skriva ut dessa i loggen (`console.log`)
+{:.info}
+
+## 3. Händelser i jQuery
+
+Vi har pratar en del om att webbplatser är händelsedrivna. T.ex.
+
+- När användaren klickar på knappen ska vi...
+- När sidan har laddat klart ska vi...
+- När användren för muspekaren över menyn ska vi...
+- etc.
+
+Vi skötte detta i förra labben genom funktionen `element.addEventListener`, där vi sedan kunde specificera vilken funktion som skulle köras (alt. en anonym funktion) när användaren utlöste en händelse (t.ex. klickade på något). jQuery har en inbyggd funktion för detta, nämligen `.on()` (och en funktion för att ta bort, `.off()`. Exempel på detta:
+
+```js
+// När användaren klickar på elementet med id "start" ska vi köra funktionen "welcome"
+$("#start").on("click", welcome);
+
+// När användaren klickar på en paragraf ska vi köra en anonym funktion
+$("p").on("click", function(){
+    // Denna kod körs när användaren klickat på en paragraf
+});
+
+// När användaren klickar på elementet med klassen "make-green" ska vi göra det
+// elementets text grön
+$(".make-green").on("click", function(){
+    // Se hur vi enl. jQuery-syntax använder "this" för att göra det elementet
+    // vi klickade på grönt
+    $(this).css("color", "green");
+});
+```
+
+### Övningar
+
+Ladda ner [denna HTML-fil](9/ex2.html)), länka in jQuery (på valfritt sätt) samt skapa en egen JavaScript-fil att jobba i (glöm inte att länka in denna i HTML-dokumentet). Era uppgifter änr nu att göra följande i jQuery:
+
+- När man klickar på en paragraf ska paragrafen man klickar på bli röd
+- När man för muspekaren över någon av rubrikerna, ska rubriken bli understruken (och när man för bort muspekaren ska den inte längre vara understruken)
+- När man dubbelklickar på en paragraf ska texten bli större (större för varje gång man dubbelklickar)
+
+## 4. Nyttiga funktioner i jQuery
+
+Det finns några funktioner gällande att lägga till/ta bort element, animera element, visa/dölja element som kan vara bra att kunna. Här kommer några:
+
+```js
 /*
-  Här skiver ni generella egenskaper
+    el  Representerar en selektor (t.ex. "p", ".min-klass", "#mitt-id")
 */
 
-@media screen and(max-width:480px){
-  /*
-    Egenskaper för mobiler
-  */
-}
+// Visar ett eller flera element
+$(el).show();
+// Med animation (i milisekunder)
+$(el).show(500);
+// Visar ett element so det är dolt/döljer ett element om det visas
+$(el).toggle();
 
-@media screen and (min-width: 480px) and (max-width: 1024px){
-  /*
-    Egenskaper för tablets
-  */
-}
+// Döljer ett eller flera element
+$(el).hide();
+// Med animation (i milisekunder)
+$(el).hide(500);
 
-@media screen and (min-width: 1025px){
-  /*
-    Egenskaper för desktop
-  */
-}
-{% endhighlight %}
+// Tonar in/ut ett element (tid i milisekunder)
+$(el).fadeIn(200);
+$(el).fadeOut(200);
 
-Tänk på att webbläsarna har  *förbestämda* CSS-egensker för olika element (t.ex. rubriker, paragrafer, etc.). Detta kan man nollställa genom s.k. *CSS-reset*, exempel på en sådan kan du hitta [här](http://meyerweb.com/eric/tools/css/reset/).
-{: .info}
+// Fäller ut/in ett element (tid i milisekunder)
+$(el).slideUp(200);
+$(el).slideDown(200);
 
-Kontrollera sedan att webbsidan fungerar som förväntat, t.ex. genom att besöka den genom din mobiltelefon eller genom [Chromes utvecklingskonsol](https://developer.chrome.com/devtools) där du kan klicka på den lilla *telefonen* i utvecklingsverktygets fält uppe till vänster. Skulle det vara några konstigheter här så fråga läraren om tips & trix.
+// Tar bort ett eller flera element
+$(el).remove();
 
-<details>
-  <summary>När ni fått allt att fungera som det ska, kan ni jämföra med min version av CSS-koden. <strong>OBS.</strong> Jag har använt mig av <a href="5/reset.css">denna reset</a>.</summary>
-  {% highlight css linenos %}
-#wrapper{
-  overflow: hidden;
-}
-header{
-  background-color: orange;
-}
-nav{
-  background-color: lightblue;
-}
-main{
-  background-color: lightgreen;
-}
-figure{
-  background-color: lightyellow;
-}
-footer{
-  background-color: pink;
-}
+// Lägger till som första barn till ett element
+$(el).prepend("T.ex. lite text...");
 
-@media screen and (max-width:480px){
-  body{
-    margin: 5px;
-  }
-  header, nav, main, figure, footer{
-    padding: 10px;
-    margin-bottom: 5px;
-  }
-}
-{% endhighlight %}
-</details>
+// Lägger till som sista barn till ett element
+$(el).append("T.ex. lite text...");
 
-Nu borde det se ut något i stil med:
+// Hämtar texten för ett element
+$(el).text();
+// Ersätter texten för ett element
+$(el).text("Ny text");
 
-![Överblick](5/mobile-wireframe.png)
+// Hämtar HTML för ett element
+$(el).html();
+// Ersätter HTML för ett element
+$(el).html("<b>Ny HTML</b>");
 
-Glöm inte att inkludera `viewport`-egenskaper, så att webbsidan visas korrekt i mobiltelefoner!
-{: .info}
+// Hämtar värdet från ett element (t.ex. <input>, <select>, etc)
+$(el).val();
+// Ersätter värdet för ett element
+$(el).val("Nytt värde");
 
-### 2.2. Tablet second
+// Hämtar ett attributs värde från ett element
+$(el).attr("attribut");
+// Ersätter/lägger till ett värde för ett attribut för ett element
+$(el).attr("attribut", "värde");
 
-När vi lyckats få till vår layout för mobilversionen utav vår webbplats är det dags att ta tag i tablet-versionen. Här tänkte jag nu att vi skulle introducera två nya sätt att positionera element i webbläsaren, nämligen positionering genom **fixed**, och då passar vi på att även nämna **absolute**.
+// Lägger till en klass för ett element
+$(el).addClass("new-class");
+// Tar bort en klass för ett element
+$(el).removeClass("new-class");
 
-Både CSS-egenskapen `position: absolute` och `position: fixed` innebär att man placerar ett HTML-element på en absolut plats i förhållande till webbläsarfönstret (eller elementets förälder). Skillanden är att `position: fixed` är som "fastklistrad" på skärmen (när man skrollar så stannar den kvar på samma plats, och berörs alltså inte utav skrollningen). Detta passar ju jättebra till vår meny som vi **alltid** vill ha tillgänglig till vänster i var tablet-version. Element med `position: absolute` "följer med" när man skrollar på webbsidan och lämpar sig då till vår innehållskolumn till höger på webbsidan. Alltså:
+// Och många fler väldigt smidiga funktioner
+```
 
-- Sidhuvud: `position: fixed`
-- Meny: `position: fixed`
-- Sidfot: `position: fixed`
-- Innehåll: oförändrad
+Fler nytta funktioner finns ni i [jQuerys dokumentation](http://api.jquery.com/)
+{:.info}
 
-**Sidhuvudet** skulle kunna vara 20% bred och 10% hög, alltså ligga högst uppe till vänster på skärmen.
+## 5. Något större övningar med jQuery
 
-**Menyn** skulle kunna vara 20% bred och 80% hög, samt ha 10% till toppen av webbläsaren (`top: 10%`) alltså ligga under sidhuvudet till vänster på vår sida.
+### 5.1. Gör miniräknare för räknesättet multiplikation
 
-**Sidfoten** skulle kunna vara 20% bred och 80% hög, samt ha 90% till toppen av webbläsaren (`top: 90%`) alltså ligga under menyn, längst ner till vänster på vår sida.
+Gränssnittet ska bestå utav följande:
 
-**Innehållet** skulle då kunna vara 80% bred där höjden anpassar sig efter innehållet, och ligga till höger på vår sida.
+- En textruta för tal 1
+- En textruta för tal 2
+- En textruta (ej redigerbar) för resultatet
 
-Då borde vi ha fixat till vår layout får vår tablet också!
+Resultatet ska beräknas så fort som det finns två tal i båda rutorna. Exemepel på hur det skulle kunna se ut när det är klart:
 
-<details>
-  <summary>Min lösning hittar ni här (adderas till befintlig CSS-kod)</summary>
-  {% highlight css linenos %}
-@media screen and (min-width: 480px) and (max-width: 1024px){
-  body{
-    background-color: lightgreen;
-  }
-  header, nav, main, figure, footer{
-    padding: 10px;
-  }
-  header{
-    position: fixed;
-    width: 20%;
-    height: 10%;
-    padding: 10px;
-  }
-  nav{
-    position: fixed;
-    width: 20%;
-    top: 10%;
-    bottom: 10%;
-  }
-  main{
-    width: 80%;
-    float: right;
-  }
-  figure{
-    margin: 2%;
-    width: 46%;
-    float: left;
-  }
-  footer{
-    position: fixed;
-    width: 20%;
-    height: 10%;
-    top: 90%;
-  }
-}
-  {% endhighlight %}
-</details>
+![Resultat](9/calc.png)
 
-Nu borde det se ut något i stil med:
+### 5.2. Validering av formulär
 
-![Överblick](5/tablet-wireframe.png)
+Ni ska nu validera ett formulärs data innan det skickas iväg. De fält som ni ska ha är följande:
 
-### 2.3. Desktop third
+- Namn
+- Ålder
+- Epost
 
-Nu är det dags bygga ihop den sista vyn, alltså när man surfar in genom en dator. Denna del lämnar jag till er - det borde ni fixa vid detta laget, och när ni är klara borde det se ut något i stil med:
+När användaren vill skicka iväg formuläret (använd händelsen `submit` för formulärselementet) ska ni validera så att användaren matat in korrekt data. Om inte - så ska ni göra bakgrundsfärden röd för de fält som inte valideras. Dessutom ska ni - så fort ett fält har korrekt data i sig - göra det vitt igen. Det skulle kunna se ut t.ex. såhär:
 
-![Överblick](5/desktop-wireframe.png)
+![Resultat](9/validation.png)
 
-## 3. Att snygga till sin webbplats
+Att utgå från i denna uppgift, HTML:
 
-När vi är nöjda med hur vår grundläggande struktur ser ut på vår webbplats är det dags att lägga till lite innehåll på webbplats! Jag tänker mig att vi lägger till följande:
+```html
+<form action="#" method="get" id="newsletter">
+    <!-- Era indatafält med etiketter -->
+    <input type="submit" value="Skicka">
+</form>
+```
 
-- Sidhuvud
-  - En titel på webbsidan
-  - En ev. logotyp som man vill
-- Meny
-  - Minst 4st meny-alternativ (tänk på att menyalternativen ska vara enkla att klicka på när man surfar in med en mobiltelefon/tablet). Länkarna kan dock fejkas, de behöver inte leda någonstans.
-- Innehåll
-  - En beskrivande text om webbsidan
-  - Några figurer/bilder med bildtexter som representerar er webbplats innehåll
-- Sidfot
-  - Vem som gjort sidan, el. liknande
+JavaScript:
 
-### 3.1. Mobilversionen
+```js
+// När användaren klickar på "skicka"-knappen
+$("#newsletter").on("submit", function(e){
+    // Hindrar formuläret från att skickas iväg.
+    e.preventDefault();
+    //... er kod som validerar formuläret
 
-Jag tänker mig att det skulle kunna se ut någonting i stil med:
+    // Om allt går bra, skicka iväg formuläret
+    $("#newsletter").submit();
+});
+```
 
-![Mobil](5/starwars-mobile.png)
+Parametern `e` som skickar med i funktionen ovan är ett `event`-objekt som innehåller information om själva händelsen. Bland annat kan man hindra *standaradbeteende* för olika element, i detta fallet hindra att formuläret skickas iväg när man klickar på en `submit`-knapp. Andra exempel där man kan hindra standardbeteend skulle vara att man kan hindra länkar från att gå till en annan webbplats när man klickar på dem. Parametern `e` skickas alltid med (om man anger den) vid händelse-funktioner.
 
-#### Tips
+### 5.3. Filmlista
 
-- För att få länkarna (`<a>`-elementen) under varandra, använd egenskapen `display: block`
-- För att bilderna inte ska bli större än föräldra-elementet, använd egenskapen `max-width: 100%`
-- För att göra element lika breda som webbläsarfönstret, använd egenskapen `width: 100%`
-- För att inkludera ev. `border` och `padding` i den totala bredden för ett element, använd egenskapen `box-sizing: border-box`
+Vi ska nu skapa oss en lista på filmer som vi sett, samt ge betyg till dessa filmerna. Uppgiften börjar är uppdelad i olika steg, för olika svårighetsgrad. Men såhär tänker vi oss att det kan se ut när det är klart (jag har använt [bootstrap](http://getbootstrap.com/) för att snabbt få till ett snyggt utseende):
 
-### 3.2. Tabletversionen
+![Result](9/movies.png)
 
-Jag tänker mig att det skulle kunna se ut någonting i stil med:
+#### Kunna lägga till en film
 
-![Tablet](5/starwars-tablet.png)
+Det första vi vill göra att att ge användaren möjlighet att lägga till en film. Användaren behöver då ange två saker:
 
-#### Tips
+1. Titel för filmen
+2. Betyget för filmen
 
-- Anta att ert sidhuvud/sidfot är 10% höga (av webbläsarens höjd). För att få er text centrerade vertikalt i dessa element, ange (för texten) egenskapen `line-height: 10vh` (10vh motsvarar en radhöjd för 10% av webbläsarens höjd = lika hög som sidhuvud/sidfot)
-- För att lägga bilderna (som ju ligger i `<figure>`-element) bredvid varandra, ange för `<figure>` t.ex. en bredd på 46%, en marginal åt alla håll på 2% (blir ju totalt 50%) och använd sedan egenskapen `float: left` för att de ska hamna bredvid varandra.
+Vi ska sedan ha en knapp, *Spara film*, som när man klickar på den så ska filmen sparas i listan av filmer. Vi vill här visuellt visa filmens betyg genom stjärnor, och möjligheten att ta bort en film genom ett kryss. Ikoner för detta kan ni t.ex. hitta på [iconfinder](http://iconfinder.com/). Glöm inte att kolla licensen på bilderna, alltid bra att ha koll på! Exempel på hur ni kan bygga upp ert `<li>`-element för en film skulle kunna vara enligt följande:
 
-### 3.2. Desktopversionen
+```html
+<li data-grade="5" data-title="Star Wars">
+	Star Wars
+	<img src="delete.png" alt="Delete movie">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+	<img src="star.png" alt="Star">
+</li>
+```
 
-Jag tänker mig att det skulle kunna se ut någonting i stil med:
+Där vi använder oss utav `data-`-attribut, där vi kan spara information om filmen direkt ner i HTML-koden (t.ex. om vi skulle vilja sortera filmerna efter detta senare). Mer om detta kan ni läsa [här](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes).
 
-![Desktop](5/starwars-desktop.png)
+Använd jQuery-funktionen `.val()` för att hämta indata från användaren (text-rutan och drop down-menyn). Använd sedan jQuery-funktionen `.append()` för att lägga till filmen sist i listan på era filmer.
 
-## Nu då?
+Det kan vara en idé att ha en funktion som genererar antalet stjärnor (i HTML-kod), beroende på vilket betyg man ger filmen
+{:.info}
 
-Det finns mycket roligt kvar att göra för att snygga till vår webbplats ännu mer! Här kommer några förslag som kan vara roligt att pyssla med:
+#### Bättre hantering av indata från användaren
 
-- Ange en snyggare font, som du hämtar från [Google fonts](https://www.google.com/fonts)
-- Gör så att era figurer får rundade hörn genom egenskapen [`border-radius`](http://www.w3schools.com/cssref/css3_pr_border-radius.asp)
+Nu ska vi se till att användaren verkligen ger oss rätt information när vi skapar en film. Kontrollera att:
+
+1. Användaren skriver in en titel
+2. Att användaren väljer ett betyg (och inte *Välj betyg här...*)
+3. Återställ formuläret när filmen är tillagd (tips, använd jQuery-funktionen `.trigger("reset")` för ert formulär)
+
+Skulle användaren inte mata in korrekt indata ska ni visa detta på ett lämpligt sätt för användare, och be denna (helst på ett vänligt sätt) att mata in korrekt information.
+
+#### Kunna ta bort en film från listan
+
+Vi vill nu kunna ta bort en film från listan, detta genom att klicka på bilden på det röda krysset. Använd funktionen `.remove()` för att göra detta. Notera att ni vill ta bort hela `<li>`-elementet och bör således navigera er upp från bild-elementet till dess förälder, vilket ni kan göra genom `.parent()`.
+
+Tänk på att det även ska fungera att ta bort en film som ni lagt till genom formuläret
+{:.info}
+
+#### Sortera våra filmer
+
+Det är dags att sortera vår lista av filmer! Eftersom sorteringsfunktionen inte alltid är självklar, och man ofta använder plugins för att underlätta sortering, så får nu följande kod:
+
+```js
+$("#movie-list").find('li').sort(function(a, b) {
+	return $(b).attr('data-grade') - $(a).attr('data-grade');
+})
+.appendTo($("#movie-list"));
+```
+
+Det som händer är helt enkelt att vi letar upp alla `<li>`-element i listan `#movie-list` (mitt `<ul>`-element) och sorterar dessa efter attributet `data-grade`, vilket ju är betyget. Vill vi istället sortera listan efter alfabetisk ordning så kan vi använda följande kod:
+
+```js
+$("#movie-list").find('li').sort(function(a, b){
+	a = a.getAttribute('data-title');
+	b = b.getAttribute('data-title');
+	return a < b ? -1 : a > b ? 1 : 0;
+}).appendTo($("#movie-list"));
+```
+
+#### Bonus: Antalet filmer
+
+Visa på lämpligt ställe på er sida hur många filmer som listan innehållet.
+
+#### Bonus: Färglägg filmerna
+
+- Betyg 4-5: Grön bakgrundsfärg
+- Betyg 2-3: Gul bakgrundsfärg
+- Betyg 1: Röd bakgrundsfärg
+
+### Extra
+
+Lös [uppgift 6](/courses/da344a-da355a/exercises/ex4.html#uppgift-6) från den förra labben, fast denna gången med jQuery. Vilka för- och nackdelar upplevde du med de olika lösningarna som du gjort?

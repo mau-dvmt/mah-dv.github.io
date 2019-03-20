@@ -1,123 +1,210 @@
 ---
-title: Laboration 1c
+title: Laboration 1
 code: "da344a-da355a"
 ---
 
-# Laboration 1c: CSS
+# Laboration 1 - Introduktion till JavaScript
 
-## 1. Syfte
+Syfte med laborationen:
 
-CSS, _Cascading Style Sheets_, utgör grunden för i princip alla visuella aspekter av en modern webbplats. CSS är inte begränsat till webbsidor i HTML, utan är ett generellt språk för stilmallar med många användningsområden. Webben är dock dess största anvädningsområde och det är detta som ska utforskas i denna laboration.
+* att skapa ett första JavaScript-projekt.
+* att göra sig bekant med en webbkonsoll från valfri webbläsare.
+* att exekvera grundläggande JavaScript-kod.
 
-## 2. Lärandemål
 
-Efter genomförd laboration ska du:
+Att skapa ett JavaScript-projekt behöver inte vara mer än en HTML-fil (t.ex. `index.html`) och en JavaScript-fil (t.ex `main.js`), namnen på era filer spelar ingen roll så länge ni håller koll på era sökvägar. Placera dessa filer i samma mapp. Att koppla samman en JavaScript-fil med en HTML-fil görs på följande vis:
 
-*   veta hur CSS skrivs (selektor och deklarationsblock).
-*   veta hur CSS appliceras på ett HTML-dokument.
-*   kunna ändra grundläggande CSS-egenskaper, som färger och storlekar
+HTML:
 
-## 3. Uppgift
+```html
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Test</title>
+    </head>
+    <body>
+        <!--
+        Observera att vi placerar alltid <script>
+        precis innan vi stänger <body>, dvs. sist.
+        -->
+        <script src="main.js"></script>
+    </body>
+</html>
+```
 
-I denna laboration ska du utgå ifrån ett färdigt HTML-dokument för att gradvis bygga på detta med CSS. På vägen kommer du att stöta på många av de grundläggande koncept som krävs för att utforma webbsidor.
+JavaScript:
 
-Börja med att spara hem detta [HTML-dokument](2/forskning.html) (högerklicka, välj “Spara som” eller motsvarande, alternativt kopiera källkoden). Studera hur detta dokument är uppbyggt - HTML-strukturen är viktigt för hur CSS-reglerna ska utformas.
+```javascript
+var name = "Jane Doe";
+var age = 33;
+```
 
-När du öppnar dokumentet i en webbläsare så kommer du finna att det inte är så visuellt tilltalande. Detta kan avhjälpas med stilmall skriven i CSS! Genom en sådan stilmall kan webbläsarens standardvärde för presentation överskrivas och eget utseende definieras. Först krävs en plats att skriva CSS på - detta kan göras med elementet `style`, som infogas inom head:
 
-{% highlight html linenos %}
-<style type="text/css">
-/* Här ska CSS skrivas */
-</style>
-{% endhighlight %}
+Öppna nu er HTML-fil i en valfri webbläsare och därefter webbkonsollen (t.ex. `alt + cmd + j` / `alt + ctrl + j` i Google Chrome). Ni bör nu ha tillgång till dessa variabler som ni själva definerat i er JavaScript-fil - testa att skriva in namnet på en variabel och tryck `Enter`, exemplet nedan utgår från webbläsaren Google Chrome.
 
-### 3.1. Grundstil
+![Webbkonsollen](7/webconsole_1.png) _Figur 1. All JavaScript-kod är tillgänglig genom webbkonsollen._
 
-När du lagt till `style`-taggen är det dags att faktiskt skriva lite CSS! Om du inte gjort det, läs kurslitteratur, och/eller Sitepoint (som följande länkar går till) om [CSS-regler](http://reference.sitepoint.com/css/rulesets) och [deklarationsblock](http://reference.sitepoint.com/css/declarationblocks). Det kan även vara bra att undersöka hur [kommentarer fungerar](http://reference.sitepoint.com/css/comments), eftersom välkommenterad kod alltid är lättare att förstå.
+Nu bör ni ha ert första fungerande JavaScript-projekt vilket innebär att ni kan gå vidare till nästa del. __Observera__ att kommande exempel och laborationer utgår från att ni har en existerande HTML-fil som inkluderar en JavaScript-fil.
 
-Fortsätt sedan med att skriva en CSS-regel som anger bakgrundfärg (`background-color`) och textfärg (`color`) för `body` (för dina färgval kan du använda [Color Scheme Designer](http://colorschemedesigner.com/)).
+För att få en utskrift, dvs. att slippa behöva skriva in namn på variabler i konsollen manuellt, kan vi använda följande kod i våra JavaScript-filer:
 
-Övergå därefter till att ändra på textens storlek och typsnitt (fortfarande i CSS-regeln för `body`, eftersom den påverkar allt innehåll i dokumentet). Detta gör du med egenskaperna font-size respektive `font-family`
+```javascript
+// Skapa en variabel som vi vill skriva ut
+var hobby = "Programming";
+// Utskrift i konsollen
+console.log( hobby );
+```
 
-#### 3.1.2 Om typsnitt - tänk på
+Pröva nu att öppna er HTML-fil igen (eller ladda om / uppdatera i webbläsaren). Ni bör nu få något liknande det som visas i figur 2.
 
-*   Alla typsnitt finns inte installerade överallt. [Denna tabell](http://media.24ways.org/2007/17/fontmatrix.html) kan hjälpa dig att avgöra hur vanliga typsnitt är.
-*   Ange gärna mer än ett typsnitt. Genom att ge en lista på flera typsnitt så kan man även styra andra- och tredjeval (osv.). Typsnitten separeras helt enkelt med kommatecken: `font-family: Helvetica, Arial, sans-serif;`.
-*   Ange alltid typsnittsfamilj som sistaval. Detta handlar oftast om typsnitt med eller utan [seriffer](http://sv.wikipedia.org/wiki/Serif) (`sans-serif` eller `serif`).
-*   Om ett typsnitt har fler än ett ord i namnet så måste det anges inom citattecken, ex: `"Times New Roman"`.
-*   I moderna webbläsare går det dock att inkludera egna typsnitt, tack vare [@font-face](http://reference.sitepoint.com/css/at-fontface) i CSS. På webbintro.se görs detta med hjälp av typsnitt från [Google web fonts](http://www.google.com/webfonts).
+![Webbkonsollen](7/webconsole_2.png) _Figur 2. Automatisk utskrift genom `console.log`._
 
-### 3.2. Extern CSS-mall
+Använd `console.log(värde/variabel/uträkning);` för att göra en utskrift automatiskt i webbkonsollen.
+{: .info}
 
-Fram till hit har du skrivit din CSS i en _inbäddad mall_ (med taggen `style`). Det är nästan alltid bättre att hålla sin CSS-kod i en _extern mall_, alltså en helt separat fil. På det viset kan samma stilmall användas i flera HTML-dokument, samtidigt som man separerar på presentation och struktur.
+JavaScript-kommentarer kan skrivas på ett av två vis:
 
-Kopiera all din CSS-kod till en ny, tom textfil. Spara denna fil i samma mapp som ditt HTML-dokument, med filändelsen `.css`. När du verifierat att filen är sparad kan du ta bort `style`-taggen, inklusive allt innehåll och sedan applicera den externa mallen istället. Detta gör du genom taggen `link`:
+* `// Kommentar som sträcker sig över en rad`
+* `/* Kommentar som kan sträcka sig över flera rader */`
 
-{% highlight html linenos %}
-<link href="minmall.css" type="text/css" rel="stylesheet">
-{% endhighlight %}
+Låt oss pröva att göra lite utskrifter av olika typer:
 
-Om dokumenttypen HTML5 används, kan attributet `type` hoppas över:
+```javascript
+// Testa utskrift av olika typer av värden, och en vektor
+console.log( 5 );
+console.log( "Hello World!" );
+console.log( true );
+console.log( ["Sweden", "Denmark", "Finland"] );
+```
 
-{% highlight html linenos %}
-<link href="minmall.css" rel="stylesheet">
-{% endhighlight %}
+__Fråga 1.__ Vad händer, och varför, om vi skriver följande?
 
-Du bör byta namnet `minmall.css` till det faktiskta filnamn som du sparade din mall som. Om allt går bra så bör ditt dokument se ut precis som innan. Kontrollera annars filnamn och att HTML-dokument och CSS-fil faktiskt är sparade i samma mapp.
+```javascript
+// Observera att det är inga citationstecken
+console.log( hello );
+```
 
-### 3.3. Avvikande stilar & länkar
+Utöver att endast skriva ut värden kan vi även skriva ut resultatet av en uträkning eller en jämförelse.
 
-När man arbetar med CSS så är det en bra strategi att skriva så generella regler som möjligt. Det sparar jobb och gör koden mer kompakt, genom att minska upprepning. Men ofta vill man ha några avvikande egenskaper; allt bör ju inte se likadant ut. Skriv en regel som byter typsnitt för alla rubriker (`h1-h6`). Du kan även ändra färg eller andra egenskaper som du tycker passar.
+```javascript
+// Uträkningar
+console.log( 5 + 12 );
+console.log( 12 - 20 );
+console.log( 80 / 4 );
+console.log( 10 * 100 );
+// Det går även att konkatenera (addera) strängar
+console.log( "Wat" + "son" );
+console.log( "Sherlock" + " Holmes" );
 
-Något som av användbarhetsmässiga skäl ofta har en distinkt stil är länkar. Dessa är också speciella i den bemärkelsen att de har en viss internaktivitet; de ser oftast annorlunda ut när de är besökta eller när muspekaren svävar ovanför. För att definiera stilar för dessa olika tillstånd används psuedoklasser. I detta skede behöver du inte fördjupa dig i vad begreppet innebär (men om du vill erbjuder [W3C mer information](http://www.w3.org/TR/CSS21/selector.html#pseudo-classes)). Studera följande exempel, som är det typiska användningen:
+// Jämförelser
+console.log( 10 > 8 );
+console.log( 15 == 10 );
+console.log( 34 >= 12 );
+console.log( 12 < 5 );
+console.log( 12 <= 12 );
+// Det går även att jämföra strängar
+console.log( "Watson" == "Watson" );
+console.log( "Sherlock" != "Watson" );
+// Vi kan jämföra längden
+console.log( "Bo".length > "Johannes".length );
 
-{% highlight css linenos %}
-a{
-  /* Här definieras grundstilen för alla länkar */
-}
-a:visited{
-  /* Gäller bara besökta länkar */
-}
-a:hover, a:focus{
-  /* Gäller bara när muspekaren är över (hover), eller när
-  länken är markerad med hjälp av tangenbordet (focus) */
-}
-{% endhighlight %}
+// Slutligen kan vi även kombinera uträkningar och jämförelser
+console.log( 5 + 5 > 2 );
+console.log( 10 / 2 == 5 );
+console.log( 8 * 2 != 200 );
+```
 
-Använd denna mall för att bestämma hur dina länkar ska se ut. Se till att skillnaden mellan de tre tillstånden är tillräckligt stor så att användaren märker det.
+__Uppgift 1.__ Färdigställ exemplet nedan. Samtliga utskrifter måste ge värdet `true` och ni får endast använda följande operatorer __en__ gång: `<, >, <=, ==, !=`.
 
-### 3.4. Identiteter
+```javascript
+// Förtydliga gärna vilken uppgift utskrifterna kommer ifrån
+console.log( "Uppgift 1." );
+console.log( 5 * 2   12 );
+console.log( 55   22 );
+console.log( 16 / 4   4 );
+console.log( 8 + 2   128 );
+console.log( 32 * 8   255 );
+```
 
-Studera sedan följande tre CSS-regler. Läs igenom dem, jämför med strukturen på HTML-dokumentet och försök tänka dig vad resultatet kan bli. Klistra sedan in dessa regler i dokumentet och se vad som händer.
+När vi arbetar med strängar (text) uppstår det ibland fall där vi endast vill skriva ut en del av en sträng. T.ex. om vi skulle vilja skriva ut `"Hello"` från strängen `"Hello World!"` kan vi använda mig av metoden `substring`. Denna metod fungerar på så vis att vi kan bestämma ett start och slut _index_ (tänk på att en sträng är en vektor av karaktärer där vi börjar räkna från 0). För att förstå hur detta fungerar kan ni experimentera med exemplet nedan.
 
-{% highlight html linenos %}
-table{
-  background-color:#ffff99;
-  border:1px solid #cccccc;
-  width:300px;
-}
-thead{
-  background-color:#ffff33;
-}
-td, th{
-  padding:5px;
-}
-{% endhighlight %}
+```javascript
+// Tips: tänk att värdet 0 är innan första bokstaven
+console.log( "Hello World!".substring(0, 5) );
+console.log( "Foo bar".substring(4, 7) );
+console.log( "What is your name?".substring(8, 12) );
 
-Som du bör ha noterat förändrar dessa stilregler utseendet för båda tabellerna i dokumentet. Behåll dessa stilregler, men komplettera med en ny som endast påverkar den andra tabellen (valfritt utseende).
+// Ett alternativ till att skriva ovanstående exempel
+var string1 = "Hello World!";
+var string2 = "Foo bar";
+var string3 = "What is your name?";
 
-För att åstadkomma detta behöver du kunna identifiera den andra tabellen i din CSS. Detta görs naturligt nog med HTML-attributet `id`. Den andra tabellen har redan en identitet definierad, `id="personal"`. Du kan således använda selektorn `#personal` för att välja ut denna tabell. Skapa en sådan regel och ändra till exempel bakgrundfärgen.
+console.log( string1.substring(0, 5) );
+console.log( string2.substring(4, 7) );
+console.log( string3.substring(8, 12) );
+```
 
-### 3.5. Klasser
+__Fråga 2.__ Vad händer, och varför, om vi skriver följande?
 
-En identitet är unik och kan endast förekomma en gång i samma HTML-dokument. Du kan ha flera id med olika namn, men för att påverka flera element samtidigt bör klasser användas. Det fungerar på precis samma vis som identiteter, men HTML-attributet heter, naturligt nog, `class` och i CSS används punkt (`.minklass`) istället för brädgård (`#mittid`).
+```javascript
+var name = "Jane Doe";
+// Vi utelämnar den andra siffran
+console.log( name.substring(5) );
+```
 
-Skapa en CSS-regel som påverkar klassen `viktig` och ge den ett utmärkande utseende. De två översta listpunkterna har denna klass och får således detta utseende.
+__Uppgift 2.__ Använd metoden `substring` för att skriva ut följande delar av dessa strängar:
 
-## 4. Validering och feedback
+* Skriv ut `"Tis"` av `"Tisdag"`.
+* Skriv ut `"burgare"` av `"Hamburgare"`.
+* Skriv ut `"be back"` av `"I'll be back!"`.
 
-När du är klar kan ditt dokument se ut som bilden nedan. Exakta färger, typsnitt, osv. är valfri - men du får gärna jobba med att göra dokumentet (mer) visuellt tilltalande!
+Givet följande exempel:
 
-![](2/2b-01.png)
+```javascript
+var title = "Eloquent JavaScript";
+// Spara första delen av boktiteln i en ny variabel
+var firstPart = title.substring(0, 8);
+// Skriv ut värdet i versaler
+console.log( firstPart.toUpperCase() );
+```
 
-Såväl kursare som labbassistenter kan ge bra feedback. Se även till att såväl HTML som CSS validerar.
+__Uppgift 3.__ Använd metoden `substring`, `toUpperCase` och `toLowerCase` för att skriva ut följande delar av dessa strängar:
+
+* Skriv ut `"LEARNING"` av `"It's Learning"`.
+* Skriv ut `"good parts"` av `"JavaScript: The Good Parts"`.
+
+Likt värden och variabler kan vi givetvis utföra samma saker med vektorer.
+
+```javascript
+// En vektor av åldrar
+var ages = [20, 21, 22, 23, 24];
+
+// Utskrift av ett element (det tredje i detta fallet)
+console.log( ages[2] );
+// Jämför första och sista elementet
+console.log( ages[0] < ages[4] );
+// Summera, exempelvis de tre första elementen
+console.log( ages[0] + ages[1] + ages[2] );
+// Vi kan även skriva ut längden (antal) element
+console.log( ages.length );
+```
+
+__Uppgift 4.__ Givet vektorn som presenteras nedan, kan ni:
+
+* Skapa en variabel vars värde är summan av alla element. Skriv även ut denna i konsollen.
+* Räkna och skriv ut medelvärdet av alla element, detta görs genom `summan / antal`. Tänk på att uträkningen av medelvärdet ska vara oberoende av antal element i er vektor, dvs. ni kan inte skriva något i stil med `sum / 5`.
+* Lägg till ett element i slutet av vektorn vars värde är summan av alla element. Skriv även ut hela vektorn i konsollen.
+
+```javascript
+var numbers = [128, 256, 512, 1024, 2048];
+```
+
+__Uppgift 5.__ Givet vektorn som presenteras nedan, kan ni:
+
+* Skriva ut de tre första bokstäverna av det andra elementet.
+* Räkna och skriv ut medelvärdet för antal bokstäver för alla element.
+
+```javascript
+var countries = ["Sweden", "Denmark", "Finland", "Norway"];
+```

@@ -1,119 +1,245 @@
 ---
-title: Laboration 1d
+title: Laboration 2
 code: "da344a-da355a"
 ---
 
-# Laboration 1d: Layout med CSS
+# Laboration 2 - Introduktion till DOM
 
-I denna laboration ska du öva på positionering genom CSS och att få flera element i en webbsida att samverka. Du kommer lära dig att göra grunden till en webbplats och att använda denna på flera webbsidor.
+Syfte med laborationen:
 
-## 1. Uppgift
+* att fortsätta bakanta sig med JavaScript
+* att öva på att använda Document Object Model (DOM)
 
-Målet är att producera en layout, som likt många webbplatser på Internet består utav ett sidhuvud, en menykolumn, en innehållskolumn och en sidfot. Följande bild illustrerar målet:
+Övrigt:
 
-![Centrerad webbsida med sidhuvud överst, menykolumn till vänster och innehållskolumn till höger](2/css2-layout.png)
+* var nogranna med att dokumentera den kod som ni anser inte beskriver sig själv
 
-För tydlighetens skull är de olika områdena färglagda, det bör vara framgå vad som är vad. Notera även att denna layout ska ha begränsad bredd samt vara centrerad.
+Innan ni börjar med laborationen rekommenderas det att läsa på om funktionerna `alert`, `prompt` och `confirm` som finns tillgängliga i webbläsare utan att ni själva behöver skapa dessa.
 
-### 1.1. Skelettet
+* [alert](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+* [prompt](https://developer.mozilla.org/en-US/docs/Web/API/window/prompt)
+* [confirm](https://developer.mozilla.org/en-US/docs/Web/API/window/confirm)
 
-En bra punkt att börja på är att lista ut vilken struktur HTML-dokumentet måste ha för att kunna stödja denna layout. Det ter sig naturligt att ha fyra separata delar för de olika områdena - denna indelning bör göras med element som beskriver vad varje del av webbsidan respresenterar, t.ex. sidhuvud/navigation/sidfot/etc. Genom att ge olika id till de olika områdena kan vi sedan ge dessa olika stilar genom CSS.
+### Uppgift 1
 
-Skapa ett HTML-dokument och infoga de taggar som är lämpliga för layouten på bilden ovan (`header, nav, section, footer`-taggar). Lägg lite platshållartext i varje div, så att det syns att allt fungerar som det ska.
+I den första uppgiften kommer ni bli tilldelad HTML och CSS, er uppgift är att genom JavaScript göra så att, exempelvis, när en användare klickar på knappen "Success" så kommer klassen "success" att läggas till på elementet `<div id="message-box">`. Detta innebär att ni kommer skapa detta för samtliga av de tre knapparna som ni finner i HTML exemplet nedan.
 
-Även om det _fungerar_ så är det ännu inte så visuellt tilltalande. Skapa en extern CSS-stilmall och applicera den på HTML-dokumentet (se taggen `link` och föregående laboration). Ge sedan olika bakgrundsfärger till de fyra områdena genom att hänvisa till identiteterna du nyss skapat.
+HTML
 
-I detta skede kan det se ut såhär: ![Fyra horisontella, olikfärgade fält](2/css2-1.png)
+``` html
+<div id="message-box">
+    <p>This is a very important message box!</p>
+</div>
 
-### 1.2. Positionering
+<button type="button" id="success">Success</button>
+<button type="button" id="error">Error</button>
+<button type="button" id="info">Info</button>
+```
+CSS
+```css
+#message-box {
+    border: 1px solid black;
+    padding: 15px;
+    font-size: 20px;
+}
+.success {
+    background-color: #dff0d8;
+    border-color: #98B98B;
+}
+.error {
+    background-color: #f2dede;
+    border-color: #BE9090;
+}
+.info {
+    background-color: #d9edf7;
+    border-color: #7294A5;
+}
+```
 
-Som det nämndes ovan ska denna layout ha fast bredd och centreras. Börja med att innesluta de fyra områdena i en ny `<div>`, med id `container`. Sedan kan du i en ny CSS-regel ange bredden för denna - välj en "lagom" bredd (eller ungefär 900 pixlar vid beslutsångest).
+**Tips!** Använd [document.querySelector()](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) för att leta upp elementen du vill identifiera på din webbsida. För att ange ett attribut för ett element (t.ex. klass) så använd funktionen [setAttribute()](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute).
+{:.info}
 
-Denna div ska sedan centreras. Undersök hur `margin` kan användas i detta syfte.
+### Uppgift 2
 
-Därefter återstår det faktum att navigationen och innehållsområdet ska ligga bredvid varandra. För att åstadkomma detta krävs tre steg:
+I denna uppgiften kommer ni behöva använda er av funktionen `prompt`. Ni ska genom JavaScript göra så att när en användare klickar på knappen som ni finner nedan så ska användaren (genom `prompt`) få fylla i en text - denna text ska sedan sparas som ett nytt list-element i listan som ni också finner nedan.
 
-1.  Ange önskvärd bredd för respektive område. Var noga med att totalbredden inte blir större än bredden för `#container`.
-2.  Använd egenskapen `float` för att låta navigationen dra sig åt vänster och innehållsområdet dra sig åt höger (eller tvärt om, om du föredrar det).
-3.  Sidfoten ska alltid hamna under navigationen och innehållet. Detta kan du se till med hjälp av egenskapen `clear`.
+```html
+<ul id="items">
+    <li>The first item is free!</li>
+</ul>
 
-I detta skede bör du ha en centrerad layout, som ser ut ungefär såhär: ![Sidhuvud överst, menykolumn till vänster och innehållskolumn till höger](2/css2-2.png)
+<button type="button" id="add-item">Add item</button>
+```
 
-### 1.3. Innehåll
+För att kunna göra detta behöver vi lära oss tre saker:
 
-Nu ter det sig vara dags att fundera över vad som faktiskt ska ligga i de olika områdena. Som alltid så är det lämpligt att först bestämma vilka HTML-taggar som bäst kan beskriva informationen, för att först därefter definiera utseendet med CSS. Här följer ett förslag på vilket innehåll som bör finnas var, och vilken HTML som är lämplig.
+* Att skapa element i JavaScript
+* Att skapa text-noder i JavaScript
+* Att lägga till barn (till befintligt element) i JavaScript
 
-<table>
-    <thead>
-        <tr>
-            <th>Område</th>
-            <th>Innehåll</th>
-            <th>Lämplig HTML</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th rowspan="2">header</th>
-            <td>Logotyp</td>
-            <td><code>h1</code>
-            </td>
-        </tr>
-        <tr>
-            <td>Tagline</td>
-            <td><code>p</code>
-            </td>
-        </tr>
-        <tr>
-            <th rowspan="2">nav</th>
-            <td>Meny med länkar</td>
-            <td><code>ul</code>  <code>li</code> och <code>a</code>
-            </td>
-        </tr>
-        <tr>
-            <td>Länkar till W3C-validatorn</td>
-            <td>Den HTML som ges efter godkänd validering</td>
-        </tr>
-        <tr>
-            <th rowspan="2">section</th>
-            <td>Rubrik på innehåll</td>
-            <td><code>h2</code>
-            </td>
-        </tr>
-        <tr>
-            <td>En mängd text</td>
-            <td><code>p</code> och vad annat som ter sig lämpligt</td>
-        </tr>
-        <tr>
-            <th>footer</th>
-            <td>Upphovsrättsinformation</td>
-            <td><code>p</code>
-            </td>
-        </tr>
-    </tbody>
-</table>
-Skapa denna struktur. Om du inte kan komma på något eget ämne för innehållet så kan du _låna_ en artikel från din favorittidning (men kopiera i så fall själva texten, inte källkoden).
+Här kommer ett litet exempel för att göra detta:
 
-Därefter kan det se ut ungefär såhär: ![](2/css2-3.png)
+```javascript
+// Skapar ett <p>-element
+var p = document.createElement("p");
+// Skapar en text-nod, alltså det som ska stå i paragrafen
+var textNode = document.createTextNode("Lite torr exempeltext");
+// Lägg till text-noden till paragrafen
+p.appendChild(textNode)
+// Lägger till paragrafen som ett barn till elementet <body>
+document.querySelector("body").appendChild(p);
+```
 
-### 1.4. Bättre form
+Använd gärna exempelkoden ovan, men tänk på att anpassa den så att den passar er uppgift - d.v.s. ni ska ju göra ett `<li>`-element som innehåller den text som användaren matat in.
 
-När det gäller vidare visuell utformning av denna webbsida så finns det förstås lika många möjliga inriktningar som det finns människor. Här följer några förslag:
+### Uppgift 3
 
-*   Ta bort bakgrundfärg för `nav, section` - och lägg till bakgrundfärg för #container. Ändra bakgrundfärg för `header` och `footer`.
-*   Välj ett snyggt typsnitt och ange en textstorlek.
-*   Definiera hur länkar ska se ut (glöm inte `:visited` och `:hover`).
-*   Lägg till padding för att få lite luft mellan text och layoutens kanter. (Tänk på att padding påverkar totalbredden för ett element)
-*   Ta bort listpunkterna från navigationsmenyn och gör den mer distinkt till utseendet.
-*   Ge logotypen ett unikt utseende.
-*   Centrera texten i `footer`.
-*   Experimentera!
+Komplettera __Uppgift 2__ med en extra knapp, `<button>` - ni väljer id och text själv, som raderar det sista elementet i listan varje gång en användare klickar på denna knappen.
 
-Dokumentet kan sedan - till exempel - se ut såhär: ![](2/css2-4.png)
+**Tips** För att ta bort ett barn från ett element så använder man funktionen [removeChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild).
+{:.info}
 
-### 1.5. Flera sidor
+### Uppgift 4
 
-Eftersom all CSS ligger i en externa stilmall kan samma utseende enkelt fås på flera sidor. Kopiera ditt HTML-dokument till en ny fil. Byt ut innehållet i `section` till något annat och länka sedan mellan dina två dokument (kanske i navigationsmenyn?).
+Utifrån den HTML-lista som presenteras nedan gör så att när en användare klickar på knappen "X" i ett list-element kommer detta element att raderas från listan (dvs. hela list-elementet, inte bara knappen). __Dock__ måste användaren godkänna att elementet ska raderas från listan genom att ni använder funktionen `confirm` innan ni raderar något list-element.
 
-## 2. Validering och feedback
+```html
+<ul>
+    <li>
+        This is the first item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+    <li>
+        This is the second item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+    <li>
+        This is the third item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+    <li>
+        This is the fourth item
+        <button type="button" class="remove-list-item">X</button>
+    </li>
+</ul>
+```
 
-Som alltid, se till att dokumentet [validerar](http://validator.w3.org/). Använd [CSS-validatorn](http://jigsaw.w3.org/css-validator/) för alla stilmallar. Be kursare och labbassistenter om feedback för en djupare bild av vad som är bra och dåligt.
+**Tips** Använd funktionen [parentNode](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode) för att identifiera förälderelement till ett givet element.
+{:.info}
+
+### Uppgift 5
+
+I denna uppgiften ska ni skapa en timer, dvs. ni kommer ha en knapp som startar er timer, en knapp som stannar den och slutligen en knapp som återställer den. Det räcker att det är en timer som räknar sekunder. Inför denna uppgift rekommenderas det att kort läsa om [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval). För att kort demonstrera hur denna fungerar kan ni ta en titt på exemplet nedan. Kort kan vi beskriva det som att vi kan välja att upprepa en funktion, där varje upprepning fördröjs en viss tid (som vi själva anger i millisekunder) - vi har därmed även möjlighet att avbryta dessa uppreningar genom funktionen `clearInterval`.
+
+```javascript
+function start() {
+    // Tom variabel som kommer innehålla vårt intervall
+    var printInterval;
+    // Variabel som vi använder för att kontrollera
+    // antal gånger vi upprepat vår funktion
+    var times = 0;
+    // Tiden mellan upprepningar skrivs i millisekunder
+    // vilket innebär att 1000 = 1 sekund
+    var delay = 1000;
+
+    function print() {
+        times += 1;
+
+        if (times > 10) {
+            clearInterval(printInterval);
+        }
+
+        console.log("It has been run ", times, " times");
+    }
+
+    printInterval = setInterval(print, delay);
+}
+```
+
+För denna uppgift kan ni även utgå från följande HTML-mall.
+
+```html
+<p id="timer">0s</p>
+<button type="button" id="start-timer">Start</button>
+<button type="button" id="stop-timer">Stop</button>
+<button type="button" id="reset-timer">Reset</button>
+```
+
+För att underlätta kommer en lista presenteras nedan med lite tips, tänk på att det går att lösa problemet på en mängd olika vis och dessa tips är bara ett förslag.
+
+* Använd er av två globala variabler, `time` som representerar hur länge vår timer har pågått och `interval` som kan representera det intervall vi använder oss av för att öka vår timer.
+* Skapa tre funktioner, `start`, `stop` och `reset`. `start` skapar vårt intervall, ökar vår `time` variabel med `1` och ändrar textinnehållet på vår paragraf. `stop` denna raderar endast intervallet genom `clearInterval`. `reset` avbryter (stop) vårt intervall, återställer vår variabel `time` och återställer även vår paragrafs textinnehåll.
+* Applicera de tre funktionerna till eventet `"click"` på respektive HTML-knapp.
+
+### Uppgift 6
+
+Vi ska nu bygga en generell funktion för att visa/dölja delar av en artikel. Tanken är att vi ska bygga upp vårt dokument med rubriker, och till varje rubrik finns en sektion med innehåll. Vi tänker mig något i stil med (innehåller på er sida är naturligtvis valfritt):
+
+```html
+<article>
+  <h2>Star Wars: Episode I - The Phantom Menace</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTQ4NjEwNDA2Nl5BMl5BanBnXkFtZTcwNDUyNDQzNw@@._V1_SX214_AL_.jpg" alt="Star Wars">
+    <p>Two Jedi Knights escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to reclaim their old glory.</p>
+  </section>
+</article>
+<article>
+  <h2>Star Wars: Episode II - Attack of the Clones</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BMTY5MjI5NTIwNl5BMl5BanBnXkFtZTYwMTM1Njg2._V1_SY317_CR13,0,214,317_AL_.jpg" alt="Star Wars">
+    <p>Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padmé, while Obi-Wan investigates an
+    assassination attempt on the Senator and discovers a secret clone army crafted for the Jedi.</p>
+  </section>
+</article>
+<article>
+  <h2>Star Wars: Episode III - Revenge of the Sith</h2>
+  <section>
+    <img src="http://ia.media-imdb.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SY317_CR12,0,214,317_AL_.jpg" alt="Star Wars">
+    <p>As the Clone Wars near an end, the Sith Lord Darth Sidious steps out of the shadows, at which time Anakin succumbs to his emotions, becoming Darth Vader and putting his relationships with Obi-Wan and Padme at risk.</p>
+  </section>
+</article>
+<!-- etc. -->
+```
+
+Det vi vill ska hända nu, är när man klickar på *en rubrik i en `<article>`* så ska innehållet i den artikeln (i detta fall `<section>`, med dess innehåll) visas om det just nu döljs, eller döljas om det just nu visas.
+
+Dessutom vill vi att vi när sidan laddat klart gömmer alla artiklarnas innehåll (`<section>`-elementets innehåll) genom JavaScript. *Varför inte genom CSS?* - För att då kan de som har inaktiverat JavaScript i sin webbläsare inte se innehållet alls...
+
+Lite pseudo-kod som kan hjälpa er att komma igång:
+
+```javascript
+/*
+  Funktionen toggleNextElement som som uppgift att visa/dölja ett elements
+  kommande syskon. I vårt fall när vi klickar på en rubrik så vill vi visa/dölja
+  den kommande syskonet, som är <section>-elementet.
+*/
+function toggleNextElement(){
+  // 1. Leta upp det nästkommande syskonet
+  // 2. Kontrollera om det just nu visas eller döljs
+  // 3.a. Om det visas, dölj det
+  // 4.a. Om det döljs, visa det
+}
+
+/*
+  Funktionen döljer allt innehåll för alla våra artiklar, ser till att
+  funktionen "toggleNextElement" körs när man klicka på en <h2>-rubrik
+*/
+function start(){
+  // 1. Hämta alla <h2>-element och spara dem i en variabel
+  // 2. Loopa igenom alla <h2>-elementen och:
+  // 3.a. Dölja alla <section>-element som ligger som kommande syskon till
+  // varje rubrik
+  // 3.b. Använd en event-lyssnare för att ange att funktionen "toggleNextElement"
+  // ska köras när man klickar på en av rubrikerna.
+}
+
+/*
+  Kör funktionen "start"
+*/
+start();
+```
+
+För att referera till den rubrik som användaren klickade på, använd i funktionen "toggleNextElement" `this`. För att ta reda på hur ett element just nu visas kan ni kontrollera värdet för CSS-egenskapen "display" genom `element.style.display` och för att ändra CSS-egenskapen display anger ni ett värde, t.ex. `element.style.display = "none"` för att dölja ett element eller `element.style.display = "block"` för att visa ett element.
+{:.info}
+
+När ni sedan har fått funktionaliteten att fungera, styla gärna sidan genom CSS så att den blir visuellt tilltalande.

@@ -27,24 +27,24 @@ credits: 7.5
 menu:
    - label: Planering
      file: plan
-   - label: Föreläsningar
-     submenu: true
-     prefix: le
-     folder: lectures
-     items:
-         - name: 1. Kursintroduktion [AT]
-         - name: 2. Intro - HTML [AT]
-         - name: 3. Javascript intro [AF]
-         - name: 4. Introduktion till CSS [AT]
-         - name: 5. Layout med CSS [AT]
-         - name: 6. Javascript intro 2 [AF]
-         - name: 7. App, Intro JS [AT]
-         - name: 8. Responsive design [AT]
-         - name: 9. jQuery [AT]
-         - name: 10. Ajax [AT]
-         - name: 11. Bootstrap & LocalStorage [AT]
-         - name: 12. Geolocation, media, pakethanterare [AT]
-         - name: 13. PhoneGap, React, Vue.js [AT]
+#   - label: Föreläsningar
+#     submenu: true
+#     prefix: le
+#     folder: lectures
+#     items:
+#         - name: 1. Kursintroduktion [AT]
+#         - name: 2. Intro - HTML [AT]
+#         - name: 3. Javascript intro [AF]
+#         - name: 4. Introduktion till CSS [AT]
+#         - name: 5. Layout med CSS [AT]
+#         - name: 6. Javascript intro 2 [AF]
+#         - name: 7. App, Intro JS [AT]
+#         - name: 8. Responsive design [AT]
+#         - name: 9. jQuery [AT]
+#         - name: 10. Ajax [AT]
+#         - name: 11. Bootstrap & LocalStorage [AT]
+#         - name: 12. Geolocation, media, pakethanterare [AT]
+#         - name: 13. PhoneGap, React, Vue.js [AT]
 #         - name: 14. D3.js [AF]
    - label: Inlämningsuppgifter
      submenu: true
@@ -52,24 +52,25 @@ menu:
      folder: assignments
      items:
          - name: 1. Inlämningsuppgift 1
-         - name: 2. Inlämningsuppgift 2
+#         - name: 2. Inlämningsuppgift 2
    - label: Laborationer
      submenu: true
      prefix: ex
      folder: exercises
      items:
-         - name: Laboration 1a (APP) - Intro HTML
-         - name: Laboration 1b (APP) - Formulär/tabeller
-         - name: Laboration 1c (APP) - Intro CSS
-         - name: Laboration 1d (APP) - Layout med CSS
-         - name: Laboration 1e (APP/IA) - Intro JavaScript
-         - name: Laboration 2 - Intro DOM
-         - name: Laboration 3 - Media Queries
-         - name: Laboration 4 - Intro jQuery
-         - name: Laboration 5 - Ajax
-         - name: Laboration 6 - LocalStorage
-         - name: Laboration 7 - Ramverk
-         - name: Laboration 8 - Geolocation
-         - name: Laboration 9 - Mediahantering
-         - name: Laboration 10 - Bonus, SVG och D3.js
-         - name: Laboration 11 - Bonus, PhoneGap
+         - name: "Bootcamp APP: HTML / CSS"
+         - name: "Bootcamp IA: JavaScript"
+         - name: "Labb 1: Intro JavaScript"
+         - name: "Labb 2: Intro DOM"
+         - name: "Labb 3: Responsiv webb"
+         - name: "Labb 4: Responsiva ramverk"
+         - name: "Labb 5: jQuery"
+         - name: "Labb 6: Ajax"
+         - name: "Labb 7: LocalStorage"
+         - name: "Labb 8: Geolocation"
+         - name: "Labb 9: Utvecklingsmetodik"
+         - name: "Labb 10: JS-ramverk"
+#         - name: Laboration 8 - Geolocation
+#         - name: Laboration 9 - Mediahantering
+#         - name: Laboration 10 - Bonus, SVG och D3.js
+#         - name: Laboration 11 - Bonus, PhoneGap

@@ -24,7 +24,9 @@ Målet med kursen är att med hjälp av webbtekniker utveckla (webb)applikatione
 
 *Kursen syftar till att studenten utvecklar grundläggande kunskap och färdigheter för att konstruera webbapplikationer för mobila enheter.*
 
-Det rekommenderas att läsa igenom den kompletta [kursplanen](https://edu.mah.se/sv/Course/DA344A#Syllabus).
+Det rekommenderas att läsa igenom den kompletta kursplanen:
+- Applikationsutveckling: [DA344A - Webbapplikationer för mobila enheter](https://edu.mah.se/sv/Course/DA344A#Syllabus)
+- Informationsarkitekt: [DA355A - Flerplattformsapplikationer](https://edu.mah.se/sv/Course/DA355A#Syllabus)
 
 ### Kurslitteratur
 
@@ -40,5 +42,6 @@ Det rekommenderas att läsa igenom den kompletta [kursplanen](https://edu.mah.se
 ## Länkar
 
 * [Malmö universitet](http://mau.se)
-* [It's Learning](https://mah.itslearning.com/Index.aspx)
-* [Kursplan](https://edu.mah.se/sv/Course/DA344A#Syllabus)
+* [Canvas](https://mau.instructure.com/login/saml)
+* [Kursplan - DA344A](https://edu.mah.se/sv/Course/DA344A#Syllabus)
+* [Kursplan - DA355A](https://edu.mah.se/sv/Course/DA355A#Syllabus)
