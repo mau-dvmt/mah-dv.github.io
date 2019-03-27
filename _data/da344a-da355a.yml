@@ -46,12 +46,12 @@ menu:
 #         - name: 12. Geolocation, media, pakethanterare [AT]
 #         - name: 13. PhoneGap, React, Vue.js [AT]
 #         - name: 14. D3.js [AF]
-   #- label: Inlämningsuppgifter
-   #  submenu: true
-   #  prefix: as
-   #  folder: assignments
-   #  items:
-   #      - name: 1. Inlämningsuppgift 1
+#   - label: Inlämningsuppgifter
+#     submenu: true
+#     prefix: as
+#     folder: assignments
+#     items:
+#         - name: 1. Inlämningsuppgift 1
 #         - name: 2. Inlämningsuppgift 2
    - label: Laborationer
      submenu: true
