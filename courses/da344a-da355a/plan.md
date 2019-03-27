@@ -46,6 +46,7 @@ Nedan ser ni en planering för kursen:
 | Måndag | 09:15 - 12:00 | Vue.js / React / Angular | NI:A0606 | AT
 | Tisdag | 13:15 - 15:00 | Utvecklingsmetodik, pakethanterare | NI:A0307 | JH
 | Torsdag| 08:15 - 12:00 | Labb: [Utvecklingsmetodik](/courses/da344a-da355a/exercises/ex11.html) | G8:405, G8:407 | JH, CN, EI
+| Söndag | | **Deadline:** [Inlämningsuppgift 1](/courses/da344a-da355a/assignments/as1.html)  | |
 | ------------- |-------------| ---------| -------- |
 | **Vecka 20** | | | |
 | ------------- |-------------| ---------| -------- |
