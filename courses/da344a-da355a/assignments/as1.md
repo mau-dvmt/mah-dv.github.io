@@ -17,7 +17,7 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 *   Grundläggande JavaScript
 *   Kunna använda sig utav `localStorage` för att spara data lokalt hos besökaren.
 
-**Observera att i denna uppgift är det inte tillåtet att använda några externa ramverk/bibliotek som t.ex. Bootstrap, Foundation, MaterilizeCSS, jQuery, etc.**
+**Observera att i denna uppgift är det inte tillåtet att använda några externa ramverk/bibliotek som t.ex. Bootstrap, Foundation, MaterializeCSS, jQuery, etc.**
 
 ## Uppgiften
 
@@ -58,7 +58,7 @@ Skärmdumpar på hur det kan se ut på de olika enheterna (och hur era delar av 
 ![Resultatbild](images/mobile2.png)
 ![Resultatbild](images/mobile2b.png)
 
-#### VG- Bildspel
+#### Bildspel
 
 Här ska bildspelet ligga, se krav för detta nedan.
 
@@ -80,9 +80,9 @@ Er mobil-version av webbplatsen ska ha en meny som är utfällbar/ihopfällbar g
 
 Ni ska i er webbapp kunna spara information kring vilken stil på sidan som användaren vill visa. Det ska finnas tre olika layouter (tre olika CSS-varianter (olika CSS-dokument) på er webbplats) som användaren ska kunna välja mellan. Detta ska sparas genom **"localStorage"**, och den valda stilen ska automatiskt laddas in när användaren besöker sidan. Att välja stil på webbsidan görs lämpligen genom en drop down-meny, då den aktuella stilen är förvald.
 
-#### För VG - Ett bildspel
+#### Ett bildspel
 
-För VG ska ni även bygga ett bildspel i JavaScript som ska ha följande funktionalitet:
+Ni ska även bygga ett bildspel i JavaScript som ska ha följande funktionalitet:
 
 *   Bildspelet ska byta bild var tredje sekund när sidan laddas (när listan på bilder är slut, då börjar bildspelet om)
 *   Bilderna ska i någon mån aninmeras (t.ex. genom CSS-egenskapen `transition`)
@@ -101,16 +101,17 @@ För VG ska ni även bygga ett bildspel i JavaScript som ska ha följande funkti
 2. Er JavaScript-kod ska köras utan några fel
 3. Er HTML-kod ska vara bra skriven, tydlig, med rätt element för rätt innehåll
 4. När man sparar något i er webbapp ska feedback ges till användaren (val av utseende)
-5. Innehållet på era sidor ska följa uppgiftbeskrivningen ovan, inkluderat men ej exkluderat till:
+5. Er webbapp ska vara responsiv, och anpassa sig olika skärmstorlekar och enheter på ett smidigt, användbart och strukturerat sätt.
+6. Innehållet på era sidor ska följa uppgiftbeskrivningen ovan, inkluderat men ej exkluderat till:
     - Rätt layout på "boxarna" på startsidan för de olika enheterna
     - Rätt antal bilder på bildsidorna för de olika enheterna
-6. Designen på er sida ska vara väl strukturerad, och fokusera på att vara användbar
+7. Designen på er sida ska vara väl strukturerad, och fokusera på att vara användbar
     - T.ex. ska centrerade element ha lika mycket luft till höger/vänster om sig (inte vara förskjutna)
     - T.ex. ska man inte kunna skrolla i sidled på någon version av er webbplatsen
     - T.ex. bör element på mobilvyn vara 100% breda (med ev. padding, eller liknande) för att utnyttja skärmytan
-7. En generell helhetsbedömning av kvalitén på er uppgift kommer också att göras
+8. En generell helhetsbedömning av kvalitén på er uppgift kommer också att göras
 
-### Funktionella krav
+### Specifika krav
 
 1.  Layout
     1.  Er app ska vara anpassad för desktop, mobiltelefoner och tablets
@@ -121,15 +122,15 @@ För VG ska ni även bygga ett bildspel i JavaScript som ska ha följande funkti
     1.  Man ska kunna spara sin favoritstil av webbplatsen i appen (genom localStorage)
     2.  Sidans stil ska direkt i appen uppdateras (utan att man behöver ladda om webbsidan)
 	3.  När man sedan laddar om sidan ska den förvalda stilen visas, samt vara förvald i er drop down-meny
-4.  VG: Bildspel - se instruktioner ovan
+4.  Bildspelet ska vara implementerat enligt beskrivningen ovan
 
 **I övrigt kommer den genomgående kvalitén att bedömas.**
 
 ## Redovisning
 
-När ni är klara med en uppgift, dubbelkollat mot kravlistan och allt ser bra ut, lämnar ni in alla filer i en **ZIP-fil** på It's Learning. Ni ska även publicera er lösning på **dvwebb.mah.se** (eller webshare.mah.se) och **bifoga en länk** till er sida vid inlämningen på It's Learning.
+När ni är klara med en uppgift, dubbelkollat mot kravlistan och allt ser bra ut, lämnar ni in alla filer i en **ZIP-fil** (som ni döper enligt `Förnamn-Efternamn-Inl1.zip`) på Canvas. Ni ska även publicera er lösning på **webshare.mah.se** och **bifoga en länk** till er sida vid inlämningen på Canvas.
 
-**Inlämningsuppgiften ska sedan presenteras muntligt, via en tid [som bokas här](https://doodle.com/poll/95gvnnhnsgkmxukr)**. Vi detta redovisningstillfället ska studenten presentera sin uppgift, svara på frågor kring sin lösning samt reflektera kring ev. bra / mindre bra lösningar av uppgiften. Studenten behöver kunna redogöra för alla delar av sin kod.
+**Inlämningsuppgiften ska sedan presenteras muntligt, via en tid [som bokas här (kommer när det närmar sig)](#)**. Vi detta redovisningstillfället ska studenten presentera sin uppgift, svara på frågor kring sin lösning samt reflektera kring ev. bra / mindre bra lösningar av uppgiften. Studenten behöver kunna redogöra för alla delar av sin kod.
 
 Inlämningar som inte uppfyller dessa inlämningskrav ovan kommer inte att rättas, utan direkt skickas tillbaka som komplettering.
 {: .info}

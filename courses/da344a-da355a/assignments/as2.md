@@ -160,7 +160,7 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 
 ## Redovisning
 
-När ni är klara med en uppgift, dubbelkollat mot kravlistan och jämfört med videon ovan och allt ser bra ut, lämnar ni in alla filer i en ZIP-fil på It's Learning. Ni ska även publicera er lösning på dvwebb.mah.se och bifoga en länk till er sida vid inlämningen på It's Learning.
+När ni är klara med en uppgift, dubbelkollat mot kravlistan och jämfört med videon ovan och allt ser bra ut, lämnar ni in alla filer i en ZIP-fil på It's Canvas. Ni ska även publicera er lösning på dvwebb.mah.se och bifoga en länk till er sida vid inlämningen på Canvas.
 
 **Uppgiften ska även presenteras muntligt, tider för att boka detta kommer att komma upp när deadline närmar sig.** Tänk på att alla kraven ska vara uppfyllda när ni muntligt redovisar er uppgift.
 

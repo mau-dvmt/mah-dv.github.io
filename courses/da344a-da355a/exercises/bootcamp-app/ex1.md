@@ -101,8 +101,8 @@ Hemkatalogen går även att komma åt via krypterad FTP. FTP är ett protokoll s
 
 2. Anslut till FTP-platsen webshare. Ange följande uppgifter:
     - Adress: *ftpes://webshare.mah.se*
-    - Användarenamn: *ditt datorid till Its Learning*
-    - Lösenord: *ditt lösenord till Its Learning*
+    - Användarenamn: *ditt datorid till Canvas*
+    - Lösenord: *ditt lösenord till Canvas*
 
 ![Anslut till filezilla](filezilla1.png)
 

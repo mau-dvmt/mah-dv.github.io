@@ -27,7 +27,7 @@ Se till att komma ihåg det lösenord som ni använder för databasen - vi komme
 
 ## 2. Skapa din databas
 
-1. Logga in [här](http://ddwap.mah.se/mysqlbrowser) och ange ditt datorid (samma som till It's Learning) och det lösenord som du precis skapade.
+1. Logga in [här](http://ddwap.mah.se/mysqlbrowser) och ange ditt datorid (samma som till Canvas) och det lösenord som du precis skapade.
 2. Välj uppe till vänster i gränssnittet (klicka på den) den databas som har samma namn som ert datorid.
 3. Skapa den tabell som vi behöver för att hålla reda på vår media, enligt följande:
 
@@ -56,8 +56,8 @@ Vi kommer i denna labb att använda oss utav ett php-skript (en php-fil) som age
 För att ladda upp filen på dvwebb, så behöver vi först ansluta till dvwebb. Detta fungerar på samma sätt, genom FTP som när ni laddat upp filer på webshare. Så öppna valfritt FTP-program (t.ex. FileZilla) och anslut med följande uppgifter:
 
 - Host: `ftpes://dvwebb.mah.se`
-- Username: `Ditt It's Learning-användarnamn`
-- Password: `Ditt It's Learning-lösenord`
+- Username: `Ditt Canvas-användarnamn`
+- Password: `Ditt Canvas-lösenord`
 
 Ladda sedan upp filen `server.php` i root-mappen för din dvwebb.
 
