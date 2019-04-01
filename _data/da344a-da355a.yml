@@ -27,12 +27,12 @@ credits: 7.5
 menu:
    - label: Planering
      file: plan
-#   - label: Föreläsningar
-#     submenu: true
-#     prefix: le
-#     folder: lectures
-#     items:
-#         - name: 1. Kursintroduktion [AT]
+   - label: Föreläsningar
+     submenu: true
+     prefix: le
+     folder: lectures
+     items:
+         - name: 1. Kursintroduktion [AT]
 #         - name: 2. Intro - HTML [AT]
 #         - name: 3. Javascript intro [AF]
 #         - name: 4. Introduktion till CSS [AT]
