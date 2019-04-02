@@ -13,7 +13,7 @@ Nedan ser ni en planering för kursen:
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | [Kursintroduktion](/courses/da344a-da355a/lectures/le1.html) | NI:A0506 | AT & JH
 | Tisdag | 13:15 - 15:00 | **IA** - Introduktion till JS | NI:C0315 | JH
-| Tisdag | 13:15 - 15:00 | **APP** - Introduktion till HTML & CSS | NI:A0513 | AT
+| Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till HTML & CSS](/courses/da344a-da355a/lectures/le2.html) | NI:A0513 | AT
 | Torsdag| 08:15 - 17:00 | **IA** - [Bootcamp: JS](/courses/da344a-da355a/exercises/ex2.html) | FM: G8:405, EM: NI:C0315 | JH, CN/EI
 | Torsdag| 08:15 - 17:00 | **APP** - [Bootcamp: HTML & CSS](/courses/da344a-da355a/exercises/ex1.html) | FM: G8:407, EM: NI:A0418 | AT, CN/EI
 | ------------- |-------------| ---------| -------- |
