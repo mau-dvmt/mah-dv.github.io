@@ -3,9 +3,9 @@ title: Laboration 9
 code: "da344a-da355a"
 ---
 
-# Laboration 9 - Mediahantering med server-API
+# Laboration: extra - Mediahantering med server-API
 
-Syftet med denna laboration är att vi ska lära oss att ladda upp media genom ett webbgränssnitt. Vi vill sedan spara denna media någonstans (vilket kommer att vara på er dvwebb), för att sedan kunna visa upp detta för användaren igen. Vi kommer således att fokusera på:
+Syftet med denna laboration är att vi ska lära oss att ladda upp media genom ett webbgränssnitt. Vi vill sedan spara denna media någonstans (vilket kommer att vara i en databas på er dvwebb), för att sedan kunna visa upp detta för användaren igen. Vi kommer således att fokusera på:
 
 - Bilder
 - Video
@@ -18,7 +18,7 @@ Tanken är att vi ska ha en databas som håller information om den uppladdade me
 
 ## 1. Aktivera dvwebb/ddwap
 
-`dvwebb` och `ddwap` är **samma sak** och refererar till samma plats, som dumt nog har två olika namn. Så när ni läser/hör detta så syftar vi på den webbpubliseringstjänst som Malmö högskola erbjuder som har stöd för databas (MySQL). Ni hittar tjänsten [här](http://ddwap.mah.se/dotnet/index.aspx). Så börja med följande:
+`dvwebb` och `ddwap` är **samma sak** och refererar till samma plats, som dumt nog har två olika namn. Så när ni läser/hör detta så syftar vi på den webbpubliseringstjänst som Malmö universitet erbjuder som har stöd för databas (MySQL). Ni hittar tjänsten [här](http://ddwap.mah.se/dotnet/index.aspx). Så börja med följande:
 
 1. [Aktivera dvwebb här](https://ddwap.mah.se/dotnet/create/)
 
@@ -39,7 +39,7 @@ CREATE TABLE `media` (
   `type` varchar(100) NOT NULL,
   `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 ```
 
 - Testa att ställa en SQL-fråga så att ni ser att det fungerar, t.ex. `SELECT * FROM media`.
@@ -70,7 +70,7 @@ Ladda sedan upp filen `server.php` i root-mappen för din dvwebb.
 
 ### 4.1. Ladda upp medie-objekt
 
-Ni skickar enklast ett anrop genom att skicka iväg ett formulär, genom ajax - som vi tittade på vid [föreläsningen](../lectures/le12.html). Det som krävs från servern är minimum (ska skicks med metoden `POST`):
+Ni skickar enklast ett anrop genom att skicka iväg ett formulär, genom ajax - som vi tittade på vid [föreläsningen (ej publicerad än)](#). Det som krävs från servern är minimum (ska skicks med metoden `POST`):
 
 - "media" (filen som ska laddas upp)
 - "type" (vilken typ är objektet? (audio/video/photo)
@@ -166,7 +166,7 @@ Ett exempelsvar från anropet ovan kan se ut såhär:
 }
 ```
 
-## 5. Er uppgift
+## 5. Övningar för att skapa ert media-bibliotek
 
 ### 5.1. Titel till medie-objekten
 

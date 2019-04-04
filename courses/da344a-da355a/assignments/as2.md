@@ -4,6 +4,8 @@ code: "da344a-da355a"
 ---
 # Inlämningsuppgift 2: Ajax, media, m.m.
 
+**OBS.** Denna inlämningsuppgift behöver endast göra om man väljer att inte delta och redovisa kursens laborationer.
+
 ## 1. Inledning
 
 I den andra inlämningsuppgiften ska vi fokusera på funktionalitet som ofta används i webbappar. Vi kommer främst att titta på hantering av externa API, samt hur vi kan lagra inforamtion kring detta hos klienten. Dessutom ska vi göra det möjligt för användaren att ladda upp media (bild, ljud, video), och sedan visa upp denna media enligt användarens önskemål. Slutligen ska vi även göra appen lättillgänglig för användarna genom att knyta en ikon till appen som visas om användaren bokmärker er webbplats på "skrivbordet" för iOS- och Android-enheter.
@@ -32,7 +34,7 @@ Notera att designen för webbplatsen är **helt fri** för denna uppgift (så l�
 
 Första delen av uppgiften är att skapa en bra/tydlig layout för desktop, tablets och mobila enheter. Använd här ett externt CSS-ramerk för att åstakomma detta.
 
-### 3.2. Visa aktuellt väder på startsidan (för **VG**)
+### 3.2. Visa aktuellt väder på startsidan
 
 Er första funktion som ni ska implementera är att visa användaren vad det är för väder där han/hon befinner sig just nu. Detta genom att först ta reda på vår plats (genom HTML5 geolocation) och sedan genom ett valfritt väder API ta reda på:
 
@@ -62,7 +64,7 @@ Det ska också visas två knappar vid varje film:
 
 **Observera** att bilderna ovan visar på *hur* webbplatsens layout/struktur ska vara, *inte* hur den grafiska formgivningen ska vara. Använd gärna en egen design på er sida.
 
-### 3.2.3. Funktion: Filmbibliotek (för **VG**)
+### 3.2.3. Funktion: Filmbibliotek
 
 I filmbiblioteket ska användaren kunna spara (och ta bort) filmer i sitt filmbibliotek. Dessa filmerna ska finnas sparade i localStorage. Tips för att spara filmerna är att spara dem som JSON (då localStorage endast sparar text).
 
@@ -84,7 +86,7 @@ Observera att bilderna kan hindras att visas genom `hotlinking`, det är okej. M
 
 ### 3.3. Funktion: Fånga media
 
-På denna sida ska vi fånga media från användarens enhet. Det vi ska fånga är antingen foto/ljud/video. Varje media ska ha en typ (audio/video/photo) och en titel (en sträng). Dessa ska sparas i databasen tillsammans med sökvägen för bilden/ljudklippet/videon). Media-objektet ska sparas på servern och informationen ska sparas i en MySQL-databas. Själva sparande sker genom PHP (*[Vi kommer labba på detta i vecka 8](../exercises/ex13.html)*). Formuläret ska skickas genom AJAX och lämpligt meddelande, samt hur feedback kring uppladdningen (t.ex. % klar av uppladdningen), ska visas så att användaren vet om media-objektet sparades eller inte. Efter lyckad uppladdning ska formuläret återställas.
+På denna sida ska vi fånga media från användarens enhet. Det vi ska fånga är antingen foto/ljud/video. Varje media ska ha en typ (audio/video/photo) och en titel (en sträng). Dessa ska sparas i databasen tillsammans med sökvägen för bilden/ljudklippet/videon). Media-objektet ska sparas på servern och informationen ska sparas i en MySQL-databas. Själva sparande sker genom PHP (*[Här finns en labb som visar hur detta ska ske](../exercises/extra-media.html)*). Formuläret ska skickas genom AJAX och lämpligt meddelande, samt hur feedback kring uppladdningen (t.ex. % klar av uppladdningen), ska visas så att användaren vet om media-objektet sparades eller inte. Efter lyckad uppladdning ska formuläret återställas.
 
 Knappen som man klickar på ska vara någon av följande:
 
@@ -129,7 +131,7 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
     - Er app ska vara anpassad för desktop, mobiltelefoner och tablets
     - Er app ska beté sig på ett bra sätt för olika skärmupplösningar (olika enheter)
     - Ni ska använda er utav ett CSS-ramverk för att skapa layouten på er webbplats
-7. Funktion: Visa aktuellt väder (för **VG**)
+7. Funktion: Visa aktuellt väder
     - Ni ska använda er utav ett externt API för att hämta information om vädret
     - Ni ska använda Ajax för att genomföra och presentera resultatet vädersökningen
     - Ni ska skriva ut: Temperatur (celcius), visa bild & beskrivning på aktuellt väder
@@ -138,8 +140,8 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 8. Funktion: Sök film
     - Ni ska använda er utav ett externt API för att hämta information om filmer/söka efter filmer
     - Ni ska använda Ajax för att genomföra och presentera resultatet av sökningen
-    - Man ska kunna spara sökta filmer som 1) Favoritfilm och (för VG) i sitt filmbibliotek
-9. Funktion: Filmbibliotek (för **VG**)
+    - Man ska kunna spara sökta filmer som 1) Favoritfilm och 2) i sitt filmbibliotek
+9. Funktion: Filmbibliotek
     - Filmerna ska sparas i "localStorage" (lämpligsvis genom JSON)
     - Man ska kunna lägga till/ta bort filmer
     - Filmerna ska visas med cover, titel, år, speltid
@@ -161,8 +163,6 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 ## Redovisning
 
 När ni är klara med en uppgift, dubbelkollat mot kravlistan och jämfört med videon ovan och allt ser bra ut, lämnar ni in alla filer i en ZIP-fil på It's Canvas. Ni ska även publicera er lösning på dvwebb.mah.se och bifoga en länk till er sida vid inlämningen på Canvas.
-
-**Uppgiften ska även presenteras muntligt, tider för att boka detta kommer att komma upp när deadline närmar sig.** Tänk på att alla kraven ska vara uppfyllda när ni muntligt redovisar er uppgift.
 
 Bifogas ingen länk till dvwebb så kommer inlämningsuppgiften inte att rättas. Det samma gäller att ladda upp en ZIP-fil med alla filer till er webbplats.
 {:.info}

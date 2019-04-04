@@ -52,7 +52,7 @@ menu:
      folder: assignments
      items:
          - name: 1. Inlämningsuppgift 1
-#         - name: 2. Inlämningsuppgift 2
+         - name: 2. Inlämningsuppgift 2
    - label: Laborationer
      submenu: true
      prefix: ex
