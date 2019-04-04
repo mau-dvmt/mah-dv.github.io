@@ -7,7 +7,7 @@ code: "da344a-da355a"
 
 Syfte med laborationen:
 
-* att fortsätta bakanta sig med JavaScript
+* att fortsätta bekanta sig med JavaScript
 * att öva på att använda Document Object Model (DOM)
 
 Övrigt:
