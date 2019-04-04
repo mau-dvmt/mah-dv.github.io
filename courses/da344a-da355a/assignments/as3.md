@@ -27,7 +27,7 @@ Din uppgift här är att skapa en mindre webbapplikation, med någon funktionali
 2. Minst två externa bibliotek ska användas
     - Notera att ramverk så som React / vue.js / Angular *inte* kan användas i denna uppgift som externa bibliotek. Dock går det bra att skriva sin webbapplikation i något av dessa ramverken, om så önskas.
 
-För att konkretisera omfattningen av webbapplikationern, så skulle följande vara lagom stora webbapplikationer (men hitta gärna på eget projekt =)):
+För att konkretisera omfattningen av webbapplikationen, så skulle följande vara lagom stora webbapplikationer (men hitta gärna på eget projekt =)):
 
 - En webbapplikation som visualiserar valutakursen för Bitcoin i ett diagram:
     - Med API:t: [https://www.coindesk.com/api](https://www.coindesk.com/api)
@@ -46,14 +46,14 @@ För att konkretisera omfattningen av webbapplikationern, så skulle följande v
 
 ### Del 2 - Versionshantera projektet
 
-Ni ska versionshantera ert projekt genom Github. Här ska ni använda god versionshanteringsmetodik som t.ex. [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). Ni kommer sedan att lämna in länken till ert github-projekt på Canvas så att vi kan bedöma ert arbete.
+Ni ska versionshantera ert projekt genom Github. Här ska ni använda god versionshanteringsmetodik som t.ex. [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). Ni kommer sedan att lämna in länken till ert GitHub-projekt på Canvas så att vi kan bedöma ert arbete.
 
 Tänk på att göra detta direkt från projektets start. Detta är inget man kan fixa i slutet genom en *quick fix*.
 {:.info}
 
 ### Del 3 - Paket- och beroendehantering
 
-Ni ska använda ett verktyp för att hantera era externa bibliotek i er webbapplikation. Detta gör ni lämpligen genom något av verktygen:
+Ni ska använda ett verktyg för att hantera era externa bibliotek i er webbapplikation. Detta gör ni lämpligen genom något av verktygen:
 
 - [Yarn](https://yarnpkg.com/lang/en/)
 - [NPM](https://www.npmjs.com/)
@@ -62,8 +62,8 @@ Ni ska även beskriva ert projekt på ett relevant sätt, t.ex. genom er `npm-pa
 
 ### Del 4 - Instruktion för användning av er webbapplikation
 
-Ni ska avslutningsvis skriva en `readme.md` som har tydliga instruktioner om ert projekt, så som vad projektet är för något, hur man kommer igång med det, vilken licens det är publicerat under, m.m. För inspiration, titta på olika projekt på Github, hur de har löst detta.
+Ni ska avslutningsvis skriva en `readme.md` som har tydliga instruktioner om ert projekt, så som vad projektet är för något, hur man kommer igång med det, vilken licens det är publicerat under, m.m. För inspiration, titta på olika projekt på GitHub, hur de har löst detta.
 
 ## Redovisning
 
-Ni lämnar in er lösning i form av en länk till det github-repositoriet som innehåller er lösning. Detta sker på Canvas, med deadline: *publiceras inom kort*
+Ni lämnar in er lösning i form av en länk till det GitHub-repositoriet som innehåller er lösning. Detta sker på Canvas, med deadline: *publiceras inom kort*
