@@ -53,6 +53,7 @@ menu:
      items:
          - name: 1. Inlämningsuppgift 1
          - name: 2. Inlämningsuppgift 2
+         - name: 3. Inlämningsuppgift VG
    - label: Laborationer
      submenu: true
      prefix: ex
