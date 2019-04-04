@@ -23,7 +23,7 @@ Uppgiften har som syfte att bl.a. examinera följande punkter:
 - Utökad kunskap om CSS-ramverk
 - Kunna utöka tillgänglighet kring en webbapp genom att knyta en "skrivbords"-ikon till er webbapp
 
-**Vi ska i denna uppgift alltså använda oss utav ett ramverk (valfritt vilket) för att skapa vår responsiva webbplats. Exempel på ramverk är [bootstrap](http://getbootstrap.com), [foundation](http://foundation.zurb.com), [semantic UI](https://semantic-ui.com/) och [materialazeCSS](http://materializecss.com)**.
+**Vi ska i denna uppgift alltså använda oss utav ett ramverk (valfritt vilket) för att skapa vår responsiva webbplats. Exempel på ramverk är [bootstrap](http://getbootstrap.com), [foundation](http://foundation.zurb.com), [semantic UI](https://semantic-ui.com/) och [materializeCSS](http://materializecss.com)**.
 
 ## 3. Uppgiften
 
