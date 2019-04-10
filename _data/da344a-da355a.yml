@@ -36,7 +36,7 @@ menu:
          - name: 2. Intro - HTML & CSS [AT]
          - name: 3. Introduktion till JavaScript [JH]
          - name: 4. JavaScript med DOM [JH]
-#         - name: 5. Layout med CSS [AT]
+         - name: 5. JavaScript + DOM [JH]
 #         - name: 6. Javascript intro 2 [AF]
 #         - name: 7. App, Intro JS [AT]
 #         - name: 8. Responsive design [AT]

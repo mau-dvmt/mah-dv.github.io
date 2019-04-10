@@ -19,8 +19,8 @@ Nedan ser ni en planering för kursen:
 | ------------- |-------------| ---------| -------- |
 | **Vecka 15** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 08:15 - 10:00 | **IA** - Mer om JS & DOM | OR:D328 | JH
-| Tisdag | 13:15 - 15:00 | **APP** - Introduktion till JS & DOM | OR:B423 | JH
+| Måndag | 08:15 - 10:00 | **IA** - [Mer om JS & DOM](/courses/da344a-da355a/lectures/le4.html) | OR:D328 | JH
+| Tisdag | 13:15 - 15:00 | **APP** - [Introduktion till JS & DOM](/courses/da344a-da355a/lectures/le5.html) | OR:B423 | JH
 | Torsdag| 08:15 - 12:00 | **IA** - Labb: [Intro DOM](/courses/da344a-da355a/exercises/ex4.html) | G8:405 | JH, CN/EI
 | Torsdag| 08:15 - 12:00 | **APP** - Labb: [Intro JS](/courses/da344a-da355a/exercises/ex3.html), [Intro DOM](/courses/da344a-da355a/exercises/ex4.html) | G8:407 | JH, CN/EI
 | ------------- |-------------| ---------| -------- |
