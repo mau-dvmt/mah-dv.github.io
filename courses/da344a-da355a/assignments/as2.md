@@ -32,13 +32,13 @@ Notera att designen för webbplatsen är **helt fri** för denna uppgift (så l�
 
 ### 3.1. Layout i HTML/CSS
 
-Första delen av uppgiften är att skapa en bra/tydlig layout för desktop, tablets och mobila enheter. Använd här ett externt CSS-ramerk för att åstakomma detta.
+Första delen av uppgiften är att skapa en bra/tydlig layout för desktop, tablets och mobila enheter. Använd här ett externt CSS-ramverk för att åstadkomma detta.
 
 ### 3.2. Visa aktuellt väder på startsidan
 
 Er första funktion som ni ska implementera är att visa användaren vad det är för väder där han/hon befinner sig just nu. Detta genom att först ta reda på vår plats (genom HTML5 geolocation) och sedan genom ett valfritt väder API ta reda på:
 
-- Aktuell temperatur (ska visas i celcius för användaren)
+- Aktuell temperatur (ska visas i celsius för användaren)
 - En bild på det aktuella väderläget
 - Beskrivning av det aktuella väderläget
 
@@ -129,12 +129,12 @@ Vi ska slutligen ge användaren möjlighet att spara er webbplats på sin starts
 
 6. Layout
     - Er app ska vara anpassad för desktop, mobiltelefoner och tablets
-    - Er app ska beté sig på ett bra sätt för olika skärmupplösningar (olika enheter)
+    - Er app ska bete sig på ett bra sätt för olika skärmupplösningar (olika enheter)
     - Ni ska använda er utav ett CSS-ramverk för att skapa layouten på er webbplats
 7. Funktion: Visa aktuellt väder
     - Ni ska använda er utav ett externt API för att hämta information om vädret
     - Ni ska använda Ajax för att genomföra och presentera resultatet vädersökningen
-    - Ni ska skriva ut: Temperatur (celcius), visa bild & beskrivning på aktuellt väder
+    - Ni ska skriva ut: Temperatur (celsius), visa bild & beskrivning på aktuellt väder
 7. Funktion: Felhantering
     - Ni ska på ett snyggt och smidigt sätt berätta för användaren när appen är inte får korrekt svar från ajax-anrop
 8. Funktion: Sök film
