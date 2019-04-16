@@ -42,7 +42,7 @@ Er första funktion som ni ska implementera är att visa användaren vad det är
 - En bild på det aktuella väderläget
 - Beskrivning av det aktuella väderläget
 
-Ni får som använda vilket API ni vill, men detta är ett förslag (enkelt att använda): [Open Weather Map](http://openweathermap.org/API).
+Ni får som använda vilket API ni vill, här är ett förslag: [Open Weather Map](http://openweathermap.org/API). Registreringen av API-nyckeln är enkel men tänk på att det tar några minuter innan den aktiverats.
 
 ![Weather](images/ass2-weather.png)*Exempel på utseende för mobiltelefon*
 
