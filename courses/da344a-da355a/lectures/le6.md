@@ -1,5 +1,5 @@
 ---
-title: JavaScript intro 2
+title: Responsiv webbutveckling
 code: "da344a-da355a"
 ---
 
