@@ -232,7 +232,7 @@ Anledningen till att just detta vis att arbeta med layouter presenteras är för
 
 De har olika klasser för hur olika kolumner ska visas för olika enheter, så att vi kan bestämma t.ex. att två kolumner ska ligga bredvid varandra (ha en bredd på 6) för desktop och tablet, medan de ska ligga under varandra för mobil (ha en bredd på 12). För att se hur man kan ha olika enheter som mål så kan vi studera deras översiktstabell.
 
-![Bootstrap-grids](6/bootstrap-grid.jpg) _Figur 4. Här kan vi se att vi använder olika prefix för olika mål (mobil/tablet/mindre dektop/större desktop)._
+![Bootstrap-grids](6/bootstrap-grid2.png) _Figur 4. Här kan vi se att vi använder olika prefix för olika mål (mobil/tablet/mindre dektop/större desktop)._
 
 ### 3.1. Exempellayout i bootstrap
 
