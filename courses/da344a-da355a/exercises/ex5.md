@@ -31,7 +31,7 @@ Vi tänker även att startsidan ska ha några figurer med tillhörande text, i v
 
 Större versioner av bilderna hittar du här: [Överblick](5/wireframes.png), [Mobile](5/mobile-wireframe.png), [Tablet](5/tablet-wireframe.png), [Desktop](5/desktop-wireframe.png). *Notera att de vita mellanrummen mellan de olika delarna på sidan är för att tydligt visa deras gränser, och behöver inte återskapas senare i labben*.
 
-Vi kommer i denna labb utgå från det klassiska sättet att bygga upp layoter, genom CSS-egenskapen `float`. Det är helt okej (eller till och med att föredra ibland) att istället använda sig av `grids` för den övergripande layouten och `flexbox` för placering av innehåll. Mer information och bra guide kring flexbox hittar ni [här](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), och för grids [här](https://css-tricks.com/snippets/css/complete-guide-grid/).
+Vi kommer i denna labb utgå från det klassiska sättet att bygga upp layoter, genom CSS-egenskapen `float`. Det är helt okej (eller till och med att föredra i dagens labb) att istället använda sig av `grids` för den övergripande layouten och `flexbox` för placering av innehåll. Mer information och bra guide kring flexbox hittar ni [här](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), och för grids [här](https://css-tricks.com/snippets/css/complete-guide-grid/). Det bästa är ju naturligtvis att bygga layouterna i de olika tenkikerna för att lära sig för- och nackdelar med de olika teknikerna.
 {: .info}
 
 ### 2.1. Mobile first
