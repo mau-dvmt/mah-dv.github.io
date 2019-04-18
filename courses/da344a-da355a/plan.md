@@ -28,7 +28,7 @@ Nedan ser ni en planering för kursen:
 | ------------- |-------------| ---------| -------- |
 | Måndag | 10:15 - 12:00 | [Responsiv webb](/courses/da344a-da355a/lectures/le6.html) | NI:A0506 | AT
 | Tisdag | 13:15 - 15:00 | [Responsiva ramverk](/courses/da344a-da355a/lectures/le7.html) |	NI:A0506 | AT
-| Torsdag| 13:15 - 17:00 | Labb: [Responsiv webb](/courses/da344a-da355a/exercises/ex5.html) & [Responsiva ramverk](/courses/da344a-da355a/exercises/ex6.html) | OR:D326, OR:E323 | AT, CN, EI
+| Torsdag| 13:15 - 17:00 | Labb: [Responsiv webb](/courses/da344a-da355a/exercises/ex5.html) & [Responsiva ramverk](/courses/da344a-da355a/exercises/ex6.html) | OR:D326, OR:E323 | AT, CN
 | ------------- |-------------| ---------| -------- |
 | **Vecka 17** | | | |
 | ------------- |-------------| ---------| -------- |
