@@ -32,7 +32,7 @@ Nedan ser ni en planering för kursen:
 | ------------- |-------------| ---------| -------- |
 | **Vecka 17** | | | |
 | ------------- |-------------| ---------| -------- |
-| Tisdag | 15:15 - 17:00 | JS: Fokus på webb | NI:A0306 | AT
+| Tisdag | 15:15 - 17:00 | [JS: Fokus på webb](/courses/da344a-da355a/lectures/le8.html) | NI:A0306 | AT
 | Onsdag | 10:15 - 12:00 | **Gästföreläsning**: Front-end i praktiken | OR:C231 | [Cygni](https://cygni.se)
 | Torsdag| 08:15 - 12:00 | Labb: [Intro jQuery](/courses/da344a-da355a/exercises/ex7.html) & [Intro Ajax](/courses/da344a-da355a/exercises/ex8.html)  | OR:E323, OR:E340 | AT, CN, EI
 | ------------- |-------------| ---------| -------- |
