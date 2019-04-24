@@ -39,7 +39,7 @@ menu:
          - name: 5. JavaScript + DOM [JH]
          - name: 6. Responsiv webbutveckling [AT]
          - name: 7. CSS Grids & Webbramverk [AT]
-#         - name: 8. Responsive design [AT]
+         - name: 8. jQuery & Ajax [AT]
 #         - name: 9. jQuery [AT]
 #         - name: 10. Ajax [AT]
 #         - name: 11. Bootstrap & LocalStorage [AT]
