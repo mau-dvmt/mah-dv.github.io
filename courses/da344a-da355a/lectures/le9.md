@@ -11,4 +11,4 @@ Ni kan ladda ner alla dages föreläsning [Här](Localstorage, cookies, geolocat
 
 ## Dagens exempel
 
-[Ni kan ladda ner alla dagens exempel här](LocalStorage-Geo-Media.zip.zip)
+[Ni kan ladda ner alla dagens exempel här](LocalStorage-Geo-Media.zip)
