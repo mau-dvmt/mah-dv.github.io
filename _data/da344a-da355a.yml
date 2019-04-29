@@ -40,7 +40,7 @@ menu:
          - name: 6. Responsiv webbutveckling [AT]
          - name: 7. CSS Grids & Webbramverk [AT]
          - name: 8. jQuery & Ajax [AT]
-#         - name: 9. jQuery [AT]
+         - name: 9. Lagring, Geolocation, Media [AT]
 #         - name: 10. Ajax [AT]
 #         - name: 11. Bootstrap & LocalStorage [AT]
 #         - name: 12. Geolocation, media, pakethanterare [AT]

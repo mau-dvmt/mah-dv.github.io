@@ -38,7 +38,7 @@ Nedan ser ni en planering för kursen:
 | ------------- |-------------| ---------| -------- |
 | **Vecka 18** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 10:15 - 12:00 | Geolocation / LocalStorage / Cookies | NI:A0506 | AT
+| Måndag | 10:15 - 12:00 | [Lagring / Geolocation / Media](/courses/da344a-da355a/lectures/le9.html) | NI:A0506 | AT
 | Torsdag| 08:15 - 12:00 | Labb: [Intro LocalStorage](/courses/da344a-da355a/exercises/ex9.html) & [Intro Geolocation](/courses/da344a-da355a/exercises/ex10.html)   | OR:D326, OR:E323 | AT, CN, EI
 | ------------- |-------------| ---------| -------- |
 | **Vecka 19** | | | |
