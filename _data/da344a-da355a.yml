@@ -41,7 +41,7 @@ menu:
          - name: 7. CSS Grids & Webbramverk [AT]
          - name: 8. jQuery & Ajax [AT]
          - name: 9. Lagring, Geolocation, Media [AT]
-#         - name: 10. Ajax [AT]
+         - name: 10. JS-ramverk [AT]
 #         - name: 11. Bootstrap & LocalStorage [AT]
 #         - name: 12. Geolocation, media, pakethanterare [AT]
 #         - name: 13. PhoneGap, React, Vue.js [AT]
