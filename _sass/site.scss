@@ -658,3 +658,9 @@ table tbody tr:nth-child(odd) {
 .module {
     // Module-specific, or just course-related
 }
+
+.highlighter-rouge {
+    pre.highlight {
+        margin: 0px;
+    }
+}
