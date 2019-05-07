@@ -130,7 +130,7 @@ Ni ska även bygga ett bildspel i JavaScript som ska ha följande funktionalitet
 
 När ni är klara med en uppgift, dubbelkollat mot kravlistan och allt ser bra ut, lämnar ni in alla filer i en **ZIP-fil** (som ni döper enligt `Förnamn-Efternamn-Inl1.zip`) på Canvas. Ni ska även publicera er lösning på **webshare.mah.se** och **bifoga en länk** till er sida vid inlämningen på Canvas.
 
-**Inlämningsuppgiften ska sedan presenteras muntligt, via en tid [som bokas här (kommer när det närmar sig)](#)**. Vi detta redovisningstillfället ska studenten presentera sin uppgift, svara på frågor kring sin lösning samt reflektera kring ev. bra / mindre bra lösningar av uppgiften. Studenten behöver kunna redogöra för alla delar av sin kod.
+**Inlämningsuppgiften ska sedan presenteras muntligt, via en tid [som bokas här](https://doodle.com/poll/mgntrmwakvht7qx6)**. Vi detta redovisningstillfället ska studenten presentera sin uppgift, svara på frågor kring sin lösning samt reflektera kring ev. bra / mindre bra lösningar av uppgiften. Studenten behöver kunna redogöra för alla delar av sin kod.
 
 Inlämningar som inte uppfyller dessa inlämningskrav ovan kommer inte att rättas, utan direkt skickas tillbaka som komplettering.
 {: .info}
