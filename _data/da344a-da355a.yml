@@ -71,7 +71,7 @@ menu:
          - name: "Labb 8: Geolocation"
          - name: "Labb 9: Utvecklingsmetodik"
          - name: "Labb 10: JS-ramverk"
-         - name: "Labb 11: Metodik"
+#        - name: "Labb 11: Metodik"
 #         - name: Laboration 9 - Mediahantering
 #         - name: Laboration 10 - Bonus, SVG och D3.js
 #         - name: Laboration 11 - Bonus, PhoneGap
