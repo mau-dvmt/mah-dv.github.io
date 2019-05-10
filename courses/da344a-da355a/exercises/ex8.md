@@ -15,11 +15,11 @@ Börja med att kolla in [veckans föreläsning](/courses/da344a-da355a/lectures/
 
 Vi byggde på föreläsning en mycket enkelt tjänst som hämtade in ett slumpis skämt om Chuck Norris när man klickade på en knapp. Tjänsten såg ut på följande sätt:
 
-![Chuck Norris](11/cn1.jpg)
+![Chuck Norris](8/cn1.jpg)
 
 Och när man klickade på knappen "Give me a joke!" så visades ett skämt (som hämtades från [detta api](http://www.icndb.com/api/)):
 
-![Chuck Norris](11/cn2.jpg)
+![Chuck Norris](8/cn2.jpg)
 
 Koden för detta exempel, som vi kommer att utgå från, kan ni hämta [här](/courses/da344a-da355a/lectures/le8.html).
 
@@ -41,7 +41,7 @@ Gör nu så att man kan välja mellan kategorierna:
 
 Er tjänst borde därefter se ut enligt följande:
 
-![Chuck Norris](11/cn3.jpg)
+![Chuck Norris](8/cn3.jpg)
 
 - **Bonus**: Tänk på att validera så att användaren väljer en av kategorierna (all categories/nerd/explict), annars ska inget ajax-anrop ske. Utan användaren ska istället meddelas att en kategori måste väljas.
 
@@ -51,7 +51,7 @@ När detta fungerar bra, så går vi vidare till nästa del!
 
 Vi ska nu skräddarsy tjänsten ännu mer! Detta så att istället för namnet "Chuck Norris" i våra skämt, så ska vi kunna ange vilket namn som skämtet ska handla om. Något i stil med:
 
-![Chuck Norris](11/cn4.jpg)
+![Chuck Norris](8/cn4.jpg)
 
 Läser man dokumentationen för [api:t under rubriken "Changing the name of the main character"](http://www.icndb.com/api/) så ser man att vi kan skicka med följande parametrar för att ange för och efternamn för skämtet:
 
@@ -60,7 +60,7 @@ Läser man dokumentationen för [api:t under rubriken "Changing the name of the 
 
 Det är nu er uppgift att implementera detta, så att vi kan skicka med namnet. Det borde se ut något i stil med detta när det är klart:
 
-![Chuck Norris](11/cn5.jpg)
+![Chuck Norris](8/cn5.jpg)
 
 - **Bonus**: Tänk på att validera så att användaren skriver in något namn. Validera detta och meddela användaren att ett för- och efternamn måste finnas.
 - **Bonus 2**: Gör så att namnet "Chuck Norris" är förinskrivet i text-fälten.
@@ -69,11 +69,11 @@ Det är nu er uppgift att implementera detta, så att vi kan skicka med namnet. 
 
 Just nu hämtas bara ett skämt åt gången, er uppgift nu blir att användaren kan ange hur många skämt som ska hämtas. Detta genom att ange en valfri siffra. I API-dokumentationen läs under rubriken `Fetching multiple random jokes`.
 
-![Chuck Norris](11/cn6.jpg)
+![Chuck Norris](8/cn6.jpg)
 
 Ni ska sedan skriva ut alla skämten som hämtas och resultatet borde se ut såhär:
 
-![Chuck Norris](11/cn7.jpg)
+![Chuck Norris](8/cn7.jpg)
 
 - **Bonus**: Kontrollera att användare skriver in en siffra mellan 1 och 10.
 
@@ -96,10 +96,10 @@ Vi ska nu kunna söka efter olika filmer genom att ange en titel för en film. F
 
 När ovanstående frågor är besvarade så är det dags att gå vidare! Jag tänker mig att filmsökningstjänsen ska se ut något i stil med:
 
-![MovieFinder](11/mf1.jpg)
+![MovieFinder](8/mf1.jpg)
 
 Vi vill nu, när användaren skrivit in *minst 3 tecken i sökrutan* kalla på API:t, göra en sökning och sedan visa upp svaren på ett lämpligt sätt. T.ex.
 
-![MovieFinder](11/mf2.jpg)
+![MovieFinder](8/mf2.jpg)
 
 Fundera på hur ni ska lösa detta, fråga gärna. Men denna delen av laborationen är det meningen att ni själva ska förstå det API som ni använder (läs dokumentationen) samt hur ni skriver ut filmernas resultat. Tankesättet liknar väldigt mycket det som ni har gjort i Chuck Norris-delen av denna labb.
