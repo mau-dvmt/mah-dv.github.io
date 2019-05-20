@@ -62,10 +62,11 @@ Nedan ser ni en planering för kursen:
 | ------------- |-------------| ---------| -------- |
 | **Vecka 22** | | | |
 | ------------- |-------------| ---------| -------- |
-| Måndag | 08:15 - 12:00 | *Projekthandledning* | NI:A0606| AT
-| Måndag | 13:15 - 17:00 | Labb: Extra | NI:A0606 | AT
+| Måndag | 10:15 - 12:00 | *Projekthandledning* | NI:A0606| AT
+| Måndag | 13:15 - 17:00 | Labb: Extra | G8:405 | AT
 | ------------- |-------------| ---------| -------- |
 | **Vecka 23** | | | |
 | ------------- |-------------| ---------| -------- |
 | Måndag | 08:15 - 12:00 | **Presentation av projekt** | NI:B0E07 | AT, JH
+| Måndag | 13:15 - 17:00 | Labb: Extra | G8:405 | AT, JH
 | Tisdag | 13:15 - 17:00 | **Presentation av projekt** | NI:B0E07 | AT, JH
